@@ -7,3 +7,6 @@ https://docs.google.com/document/u/1/d/e/2PACX-1vTGBw-C-cs2ZNH0Jv_NXZDObQXBvyiuQ
 - Michael Salvati
 - Gerald Blackmon
 - George Trendafilov
+
+# mentors
+- tbd
