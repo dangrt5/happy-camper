@@ -1,12 +1,14 @@
 # c718_findcampsiteinfo
 
 # info
-https://docs.google.com/document/u/1/d/e/2PACX-1vTGBw-C-cs2ZNH0Jv_NXZDObQXBvyiuQMtIw85c8Pa1fY4H0ImjHLciA6-PlqIBzHnr6opDQgLVeXyI/pub
+https://docs.google.com/spreadsheets/d/1wmJD2AH_p4Mizz1f5rtS9i-jzMZ99k47UHe0QDsge_E/edit#gid=0
 
 # team members
-- Michael Salvati
-- Gerald Blackmon
-- George Trendafilov
+- David Ahn
+- Randy Dang
+- Rachel Pan
+- Tien Pham (Torie)
+- Hyun Kim (Hank)
 
-# mentors
+# Mentors
 - tbd
