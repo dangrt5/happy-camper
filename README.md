@@ -7,7 +7,6 @@ https://docs.google.com/spreadsheets/d/1wmJD2AH_p4Mizz1f5rtS9i-jzMZ99k47UHe0QDsg
 - David Ahn
 - Randy Dang
 - Rachel Pan
-- Tien Pham (Torie)
 - Hyun Kim (Hank)
 
 # Mentors
