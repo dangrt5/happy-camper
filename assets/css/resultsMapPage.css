@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #284E35;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  height: 15%;
+  margin: 0;
+  position: inline-block;
+}
+
+.header .hamburger {
+  width: 15%;
+}
+
+.header .map {
+  width: 15%;
+  position: absolute;
+  right: 0;
+}
+
+.header input {
+  width: 70%;
+  font-size: 3em;
+  position: absolute;
+  top: 2%;
+}
+
+.results {
+  position: relative;
+  padding: 1%;
+}
+
+.googleMap {
+  position: relative;
+}
+
+.googleMap img {
+  width: 95%;
+  display: block;
+  margin: auto;
+}
+
+.card {
+  background-color: #C4C4C4;
+  width: 95%;
+  position: relative;
+  padding: 2%;
+  margin: auto;
+  margin-top: 2%;
+
+}
+
+.card img {
+  width: 50%;
+}
+
+.info {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  font-family: Anaheim;
+  line-height: 10px;
+  position: absolute;
+  right: 0%;
+  bottom: 15%;
+
+}
+
+.info h1 {
+  font-size: 5em;
+}
+
+.info h3 {
+  font-size: 2em;
+}
