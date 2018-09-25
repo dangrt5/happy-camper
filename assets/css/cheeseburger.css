@@ -10,35 +10,35 @@ body {
   background-color: black;
 }
 
-.sidebar {
-  display: inline-block;
-  width: 90%;
-  height: 100%;
-  background-color: #365F44;
-}
-
 h1 {
   font-family: Raleway;
   color: white;
-
-
 }
 
-.sidebar > div {
-  border-bottom: 2px solid black;
-  margin: 0;
+.sidebar {
+  display: inline-block;
+  width: 90%;
+  height: 100vh;
+  background-color: #365F44;
 }
 
-.sidebar div:not(.exit) h1 {
+.sidebar .pages h1 {
   text-align: center;
-  font-size: 9em;
-  text-shadow: 10px 10px black
+  font-size: 6em;
+  text-shadow: 5px 5px black;
+  line-height: 100%;
 }
 
-.exit h1  {
+.sidebar .exit h1  {
   text-align: right;
   margin-right: 3%;
-  font-size: 2.8em;
+  font-size: 3em;
+}
+
+.sidebar .pages {
+  position: absolute;
+  left: 15%;
+  top: 25%;
 }
 
 .content {
