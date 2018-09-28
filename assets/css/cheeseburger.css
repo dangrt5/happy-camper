@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   width: 100vw;
   height: 100vh;
@@ -17,33 +13,19 @@ h1 {
 
 .sidebar {
   display: inline-block;
-  width: 90%;
+  width: 55%;
   height: 100vh;
   background-color: #365F44;
 }
 
-.sidebar .pages h1 {
-  text-align: center;
-  font-size: 6em;
-  text-shadow: 5px 5px black;
-  line-height: 100%;
-}
-
-.sidebar .exit h1  {
-  text-align: right;
-  margin-right: 3%;
-  font-size: 3em;
-}
-
 .sidebar .pages {
   position: absolute;
-  left: 15%;
-  top: 25%;
+  left: 3%;
+  top: 15%;
 }
 
-.content {
-  display: inline-block;
-  width: 10%;
-  background-color: green;
-  height: 100%;
+.sidebar .pages h1 {
+  font-size: 4em;
+  font-weight: 300;
+  line-height: 225%;
 }
