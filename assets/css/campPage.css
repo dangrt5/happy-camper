@@ -39,9 +39,10 @@ h1, h3, p {
     height: 13%;
     position: absolute;
     top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
     border: 2px solid black;
     border-radius: 10px;
-    margin: 0 auto;
 }
 
 .shortcuts div {
@@ -108,7 +109,69 @@ h1, h3, p {
     height: 50%;
     overflow: scroll;
 }
+.amenity-container{
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+}
+.amenity-column{
+    width: 50%;
+}
 
-.amentity-item img {
+.amenity-item {
+    position: relative;
+    padding: 10px;
     height: 4vh;
+}
+
+.amenity-item img {
+    height: 100%;
+    padding-right: 6px;
+}
+
+.amenity-item span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.weather-item {
+    display: flex;
+    height: 10vh;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 3vh;
+}
+.weather-item > div,.weather-symbol img{
+    height: 100%;
+    padding: 1vw;
+}
+.weather-day, .weather-temp  {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.weather-other{
+    height: 25%;
+    padding-bottom: 5px;
+    /* padding: 5px; */
+}
+
+.weather-other img{
+    height: 100%;
+}
+
+.weather-other span {
+    padding-left: 10px;
+}
+
+.weather h3 {
+    margin: 0;
+}
+
+hr{
+    border-style: solid;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
