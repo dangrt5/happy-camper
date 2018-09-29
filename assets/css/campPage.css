@@ -1,48 +1,17 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #C4C4C4;
-    padding: 0;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-}
-
 h1, h3, p {
     margin: 10px;
 }
 
-.bar{
-    width: 100%;
-    height: 10%;
-    background-color: #284E35;
-    position: fixed;
-    top: 0px;
-    z-index: 1;
-}
-
-.backButton {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-}
-.backButton > img {
-    margin: 2.5vh 1vh;
-    height: 5vh;
-}
 .header {
-    position: absolute;
-    top: 10%;
+    justify-content: left;
 }
 
 .shortcuts {
     width: 95%;
-    height: 13%;
-    position: absolute;
-    top: 24%;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 15%;
     border: 2px solid black;
     border-radius: 10px;
+    margin: auto;
 }
 
 .shortcuts div {
@@ -69,8 +38,6 @@ h1, h3, p {
     width: 100%;
     overflow-x: scroll;
     margin: 10px 0;
-    position: absolute;
-    top: 38%;
 }
 
 .photos-container {
@@ -87,11 +54,6 @@ h1, h3, p {
 .photo-slide img {
     width: auto;
     height: 100px;
-}
-
-.info-container {
-    position: absolute;
-    top: 55%;
 }
 
 .info-menu ul li {
@@ -168,10 +130,4 @@ h1, h3, p {
 
 .weather h3 {
     margin: 0;
-}
-
-hr{
-    border-style: solid;
-    margin-left: 3vw;
-    margin-right: 3vw;
 }

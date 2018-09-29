@@ -1,15 +1,6 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #284E35;
-    padding: 0;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-}
-
 .landing-page-container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,18 +21,25 @@ form {
 
 .submit-input {
     width: 80vw;
-    height: 10vw;
+    height: 12vw;
+    font-size: 1.5em;
+    border-style: none;
+    border-radius: 5px;
     font-family: 'Raleway', sans-serif;
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
 }
 
 .submit-button {
-    background-color: #381D1D;
-    color: gray;
-    font-family: 'Raleway', sans-serif;
-    border-style: none;
     width: 80vw;
-    height: 10vw;
+    height: 12vw;
+    font-size: 1.3em;
+    border-style: none;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
     margin-top: 20px;
+    background-color: #33533e;
+    color: rgb(241, 238, 238);
+
+
 }
