@@ -15,7 +15,7 @@
 }
 
 h1,h2,h3 {
-  font-size: 3em;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -24,7 +24,18 @@ h1,h2,h3 {
   width: 49%;
 }
 
+.dev div {
+  margin: auto;
+  width: 80%;
+}
+
+.team .memberPhoto {
+  display: block;
+  width: 5em;
+  margin: auto;
+}
+
 .team img {
-  width: 7em;
+  width: 3em;
 
 }
