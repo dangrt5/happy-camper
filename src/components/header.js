@@ -26,9 +26,9 @@ class Header extends Component {
   }
 
   aboutUs = {
-    "font-size": "2em",
-    "font-weight": "200",
-    "margin-left": "5%"
+    fontSize: "2em",
+    fontWeight: "200",
+    marginLeft: "5%"
   }
 
   render() {

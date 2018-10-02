@@ -22,32 +22,34 @@ export default class CampPage extends Component {
     render(){
       const {path} = this.state;
         return (
-            <div className="container">
+            <div>
+              <Header path={path}/>
+                <div className="container">
 
-                <Header path={path}/>
-
-                <div className="camp-title">
-                    <h1>Jackson Flats</h1>
-                    <h3>California</h3>
-                </div>
-                <div className="shortcuts">
-                    <div className="website">
-                        <img src={website}/>
-                        <p>website</p>
+                    <div className="camp-title">
+                        <h1>Jackson Flats</h1>
+                        <h3>California</h3>
                     </div>
-                    <div className="call">
-                        <img src={phone}/>
-                        <p>call</p>
-                    </div>
-                    <div className="save">
-                        <img src={save}/>
-                        <p>save</p>
+                    <div className="shortcuts">
+                        <div className="website">
+                            <img src={website}/>
+                            <p>website</p>
+                        </div>
+                        <div className="call">
+                            <img src={phone}/>
+                            <p>call</p>
+                        </div>
+                        <div className="save">
+                            <img src={save}/>
+                            <p>save</p>
+                        </div>
                     </div>
                 </div>
                 <PhotoCarousel/>
 
                 <CampInfo />
             </div>
+
         )
     }
 }
