@@ -14,7 +14,7 @@ const App = () => (
         <Switch>
             <Route exact path="/" component={LandingPage}/>
             <Route path="/search" component={ResultsPage}/>
-            <Route path="/camp-page/:id" component={CampPage}/>
+            <Route path="/camp/:id" component={CampPage}/>
             <Route path="/itinerary" component={Itinerary}/>
             <Route path="/about-us" component={AboutUs}/>
             <Route component={NotFound}/>
