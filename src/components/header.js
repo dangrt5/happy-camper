@@ -31,6 +31,12 @@ class Header extends Component {
     marginLeft: "5%"
   }
 
+  itinerary = {
+    fontSize: "2em",
+    fontWeight: "200",
+    marginLeft: "15%"
+  }
+
   render() {
     const {searchInput, path} = this.state;
     switch(path) {
@@ -55,7 +61,7 @@ class Header extends Component {
         return (
           <div className="header">
             <img className="menu-btn" src={menuBtn}/>
-            <h1 style={this.aboutUs}>Itinerary</h1>
+            <h1 style={this.itinerary}>Itinerary</h1>
           </div>
         );
       default: {
