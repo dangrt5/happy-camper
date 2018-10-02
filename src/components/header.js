@@ -25,17 +25,47 @@ class Header extends Component {
     });
   }
 
+  aboutUs = {
+    "font-size": "2em",
+    "font-weight": "200",
+    "margin-left": "5%"
+  }
+
   render() {
     const {searchInput, path} = this.state;
-    return (
-      <div className="header">
-        <img className="menu-btn" src={menuBtn}/>
-        <form onSubmit={this.handleFormSubmit}>
-          <input onChange={this.handleInputChange} type="text" placeholder="City and State, or Zipcode" value={searchInput}/>
-        </form>
-        <img className="header-toggle" src={mapBtn}/>
-      </div>
-    )
+    switch(path) {
+      case "/search":
+        return (
+          <div className="header">
+            <img className="menu-btn" src={menuBtn}/>
+            <form onSubmit={this.handleFormSubmit}>
+              <input onChange={this.handleInputChange} type="text" placeholder="City and State, or Zipcode" value={searchInput}/>
+            </form>
+            <img className="header-toggle" src={mapBtn}/>
+          </div>
+        );
+      case "/about-us":
+        return (
+          <div className="header">
+            <img className="menu-btn" src={menuBtn}/>
+            <h1 style={this.aboutUs}>Meet the Team</h1>
+          </div>
+        );
+      case "/itinerary":
+        return (
+          <div className="header">
+            <img className="menu-btn" src={menuBtn}/>
+            <h1 style={this.aboutUs}>Itinerary</h1>
+          </div>
+        );
+      default: {
+        return (
+          <div className="header">
+            <img className="menu-btn" src={menuBtn}/>
+          </div>
+        )
+      }
+    }
   }
 }
 
