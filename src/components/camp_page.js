@@ -44,10 +44,11 @@ export default class CampPage extends Component {
                             <p>save</p>
                         </div>
                     </div>
-                </div>
+
                 <PhotoCarousel/>
 
                 <CampInfo />
+                </div>
             </div>
 
         )
