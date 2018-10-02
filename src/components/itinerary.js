@@ -12,11 +12,12 @@ export default class Itinerary extends Component {
     render(){
       const {path} = this.state;
         return (
-          <div className="container">
+          <div>
             <Header path={path}/>
-            <h1>Itinerary</h1>
+            <div className="container">
+              <h1>Itinerary</h1>
+            </div>
           </div>
-
         )
     }
 }

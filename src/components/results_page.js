@@ -14,19 +14,21 @@ export default class ResultsPage extends Component {
     render(){
       const {path} = this.state;
       return (
-        <div className="container">
+        <div>
           <Header path={path}/>
-            <div className="card">
-              <img src={resultImg}/>
-            <div className="info">
-              <h1>Park Name</h1>
-              <h3>123 Park Street</h3>
-              <h3>Big Bear Lake, CA</h3>
-              <h3>Phone #</h3>
-              <h3>URL: facebook.com</h3>
+          <div className="container">
+              <div className="card">
+                <img src={resultImg}/>
+              <div className="info">
+                <h1 className="parkName">Park Name</h1>
+                <h3>123 Park Street</h3>
+                <h3>Big Bear Lake, CA</h3>
+                <h3>Phone #</h3>
+                <h3>URL: facebook.com</h3>
+              </div>
+              </div>
             </div>
-            </div>
-      </div>
+          </div>
       )
     }
 }

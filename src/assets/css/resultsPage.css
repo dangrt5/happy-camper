@@ -14,19 +14,20 @@
   display: inline-block;
   width: 50%;
   text-align: center;
-  line-height: 10px;
+  line-height: 12px;
   position: absolute;
   right: 0%;
   bottom: 10%;
 
 }
 
-.info h1 {
-  font-size: 5em;
+.info .parkName {
+  font-size: 1.5em;
+  font-weight: 200;
 }
 
 .info h3 {
-  font-size: 1em;
+  font-size: .75em;
   font-weight: 200;
 }
 
