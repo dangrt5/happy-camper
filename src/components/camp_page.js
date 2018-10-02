@@ -29,10 +29,20 @@ import sanitaryDump from "../assets/images/icons/accessibility/018-plumbing.png"
 import sewerHookup from "../assets/images/icons/accessibility/009-sewer.png";
 
 export default class CampPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      path: props.match.path
+    }
+  }
     render(){
+      const {path} = this.state;
         return (
             <div className="container">
-                <Header/>
+          
+                <Header path={path}/>
+
                 <div className="camp-title">
                     <h1>Jackson Flats</h1>
                     <h3>California</h3>
