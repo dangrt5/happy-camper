@@ -3,11 +3,21 @@ import '../assets/css/about-us.css';
 import github from "../assets/images/github.png";
 import linkedin from "../assets/images/linkedin.png";
 import portfolio from "../assets/images/portfolio.png";
+import Header from "./header";
 
 export default class AboutUs extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      path: props.match.path
+    }
+  }
     render(){
+      const {path} = this.state;
         return (
             <div className="container">
+              <Header path={path}/>
                 <div className="team">
                     <h2>Front End Developers</h2>
                     <div className="dev">
