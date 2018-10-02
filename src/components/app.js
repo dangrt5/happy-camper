@@ -9,6 +9,8 @@ import Itinerary from "./itinerary"
 import AboutUs from "./about_us"
 import NotFound from './not_found'
 
+import CampInfo from './camp-info'
+
 const App = () => (
     <div>
         <Switch>
@@ -17,6 +19,7 @@ const App = () => (
             <Route path="/camp/:id" component={CampPage}/>
             <Route path="/itinerary" component={Itinerary}/>
             <Route path="/about-us" component={AboutUs}/>
+            <Route path="/testing" component={CampInfo} />
             <Route component={NotFound}/>
         </Switch>
     </div>
