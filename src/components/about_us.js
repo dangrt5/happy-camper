@@ -16,8 +16,9 @@ export default class AboutUs extends Component {
     render(){
       const {path} = this.state;
         return (
+          <div>
+            <Header path={path}/>
             <div className="container">
-              <Header path={path}/>
                 <div className="team">
                     <h2>Front End Developers</h2>
                     <div className="dev">
@@ -53,6 +54,7 @@ export default class AboutUs extends Component {
                     </div>
                 </div>
             </div>
+          </div>
         )
     }
 }
