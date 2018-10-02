@@ -3,8 +3,6 @@ $check = file_get_contents('campinfo.txt');
 
 $match = [];
 
-//preg_match_all('/campground-gallery[\s\S\w]*src="(.*)"/s', $check, $match);
-
 preg_match_all('/<img.*src="(.*)" class.*>/', $check, $match);
 
 print_r($match[1]);
