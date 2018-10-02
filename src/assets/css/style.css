@@ -8,6 +8,7 @@ body,html {
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 
 .header{
@@ -28,14 +29,23 @@ body,html {
     padding: 1em;
 }
 
-.header input {
-    width: 65%;
-    height: 60%;
-    font-size: 2.5em;
-    border-radius: 20px;
+.header form {
+  width: 100vw;
+  height: 5vh;
+}
+
+.header form input {
+    width: 95%;
+    height: 85%;
+    font-size: 1em;
+    border-radius: 10px;
 }
 .header input::placeholder{
     padding: .5em;
+}
+
+.header input:focus, .header input:active {
+  outline: 0;
 }
 
 .container {
