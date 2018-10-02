@@ -9,7 +9,7 @@ function scrapeWebData(resp){
     console.log(parkData)
 }
 https://thedyrt.imgix.net/photo/37886/photo/oregon-south-beach-state-park_caed16cd295e8abd41e5e75fd725015c.jpg?ixlib=rb-1.1.0
-var data = {
+var dyrtData = {
     "@type": "LocalBusiness",
     "name": "South Beach State Park",
     "aggregateRating": {
