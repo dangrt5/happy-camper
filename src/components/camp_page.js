@@ -24,7 +24,7 @@ export default class CampPage extends Component {
         return (
             <div>
               <Header path={path}/>
-                <div className="container">
+                <div className="container camp-page">
 
                     <div className="camp-title">
                         <h1>Jackson Flats</h1>
