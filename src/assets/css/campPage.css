@@ -41,7 +41,8 @@ h1, h3, p {
 }
 
 .photos-container {
-    width: 500%
+    white-space:nowrap;
+    /* width: 500% */
 }
 
 .photo-slide {
