@@ -41,7 +41,8 @@ h1, h3, p {
 }
 
 .photos-container {
-    width: 500%
+    white-space:nowrap;
+    /* width: 500% */
 }
 
 .photo-slide {
@@ -102,7 +103,8 @@ h1, h3, p {
     height: 10vh;
     align-content: center;
     justify-content: space-around;
-    margin-bottom: 3vh;
+    padding-bottom: 3vh;
+    border-bottom: 2px solid rgba(56,29,29,0.15);
 }
 .weather-item > div,.weather-symbol img{
     height: 100%;
@@ -130,4 +132,5 @@ h1, h3, p {
 
 .weather h3 {
     margin: 0;
+    font-size: 1.4em;
 }

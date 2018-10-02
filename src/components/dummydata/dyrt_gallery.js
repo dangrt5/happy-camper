@@ -1,4 +1,4 @@
-var galleryArray = [
+export default [
     'https://thedyrt.imgix.net/photo/99827/media/alabama-brushy-lake-campground_7d0227a8449429bf1d5a2497b8702528.jpeg?ixlib=rb-1.1.0&amp;w=',
     'https://thedyrt.imgix.net/photo/99818/media/alabama-brushy-lake-campground_43a174c6c0e6156647c88a39d6b019e7.jpeg?ixlib=rb-1.1.0&amp;w=',
     'https://thedyrt.imgix.net/photo/71649/media/alabama-brushy-lake-campground_91ffb83bec8a0bba786cd1b9037cec4a.jpeg?ixlib=rb-1.1.0&amp;w=',
