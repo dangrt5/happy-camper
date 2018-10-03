@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import "../assets/css/cheeseburger.css";
 
 class HamburgerMenu extends Component {
@@ -6,10 +7,10 @@ class HamburgerMenu extends Component {
     return (
       <div className="sidebar">
         <div className="pages">
-          <h1>home</h1>
-          <h1>itinerary</h1>
+          <Link to="/"><h1>home</h1></Link>
+          <Link to="/itinerary"><h1>itinerary</h1></Link>
           <h1>survival guide</h1>
-          <h1>about us</h1>
+          <Link to="/about-us"><h1>about us</h1></Link>
         </div>
       </div>
     )

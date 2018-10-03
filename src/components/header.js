@@ -3,6 +3,7 @@ import menuBtn from "../assets/images/happy-camper-logo2-white.png";
 import mapBtn from "../assets/images/icons/header/folded-paper-of-a-map.png";
 import Sidebar from "react-sidebar"
 import HamburgerMenu from "./sidebar";
+
 import "../assets/css/resultsPage.css";
 
 class Header extends Component {
