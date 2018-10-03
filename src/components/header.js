@@ -15,7 +15,7 @@ class Header extends Component {
     this.state = {
       searchInput: "",
       path: props.path,
-      sidebarOpen: true
+      sidebarOpen: false
     }
 
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
@@ -79,23 +79,53 @@ class Header extends Component {
         );
       case "/about-us":
         return (
-          <div className="header">
-            <img className="menu-btn" src={menuBtn}/>
-            <h1 style={this.aboutUs}>Meet the Team</h1>
+          <div>
+            <Sidebar
+              sidebar={<HamburgerMenu/>}
+              open={this.state.sidebarOpen}
+              onSetOpen={this.onSetSidebarOpen}
+              styles={this.sidebar}
+            >
+              <div className="header">
+                <img onClick={() => this.onSetSidebarOpen(true)} className="menu-btn" src={menuBtn}/>
+                <h1 style={this.aboutUs}>Meet the Team</h1>
+              </div>
+          </Sidebar>
           </div>
+
         );
       case "/itinerary":
         return (
-          <div className="header">
-            <img className="menu-btn" src={menuBtn}/>
-            <h1 style={this.itinerary}>Itinerary</h1>
+          <div>
+            <Sidebar
+              sidebar={<HamburgerMenu/>}
+              open={this.state.sidebarOpen}
+              onSetOpen={this.onSetSidebarOpen}
+              styles={this.sidebar}
+            >
+            <div className="header">
+              <img onClick={() => this.onSetSidebarOpen(true)} className="menu-btn" src={menuBtn}/>
+              <h1 style={this.itinerary}>Itinerary</h1>
+            </div>
+          </Sidebar>
           </div>
+
         );
       default: {
         return (
-          <div className="header">
-            <img className="menu-btn" src={menuBtn}/>
+          <div>
+            <Sidebar
+              sidebar={<HamburgerMenu/>}
+              open={this.state.sidebarOpen}
+              onSetOpen={this.onSetSidebarOpen}
+              styles={this.sidebar}
+            >
+              <div className="header">
+                <img onClick={() => this.onSetSidebarOpen(true)} className="menu-btn" src={menuBtn}/>
+              </div>
+          </Sidebar>
           </div>
+
         )
       }
     }
