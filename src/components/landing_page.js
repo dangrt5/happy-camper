@@ -9,7 +9,7 @@ export default class LandingPage extends Component {
             <div className="landing-page-container">
                 <img className="logo" src={logo}/>
                 <form>
-                    <LocationSearchInput push={this.props.history.push}/>
+                    <LocationSearchInput class="landing-page-input" push={this.props.history.push}/>
                 </form>
             </div>
         )
