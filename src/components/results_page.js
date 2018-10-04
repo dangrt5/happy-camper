@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import "../assets/css/resultsPage.css"
 import Header from "./header";
-import resultImg from "../assets/images/resultimg.png";
+
+import ResultsPageMap from "./resultsPageMap";
+import ResultsPageList from "./resultsPageList";
+import {Route} from "react-router-dom";
 
 export default class ResultsPage extends Component {
   constructor(props) {
@@ -11,24 +14,14 @@ export default class ResultsPage extends Component {
       path : props.match.path
     }
   }
+
     render(){
       const {path} = this.state;
       return (
         <div>
-          <Header path={path}/>
-          <div className="container">
-              <div className="card">
-                <img src={resultImg}/>
-              <div className="info">
-                <h1 className="parkName">Park Name</h1>
-                <h3>123 Park Street</h3>
-                <h3>Big Bear Lake, CA</h3>
-                <h3>Phone #</h3>
-                <h3>URL: facebook.com</h3>
-              </div>
-              </div>
-            </div>
-          </div>
+          <Route path="/search/:lat/:lng/list" component={ResultsPageList}/>
+          <Route path="/search/:lat/:lng/map" component={ResultsPageMap}/>
+        </div>
       )
     }
 }
