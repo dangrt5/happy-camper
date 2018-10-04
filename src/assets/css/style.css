@@ -19,7 +19,6 @@ a {
     width: 100%;
     height: 10%;
     background-color: #33533e;
-    color: white;
     position: fixed;
     top: 0px;
     z-index: 1;
@@ -32,23 +31,18 @@ a {
     padding: 1em;
 }
 
-.header form {
+
+.autocomplete-container {
   width: 100vw;
   height: 5vh;
 }
 
-.header form input {
+.header-input {
     width: 95%;
     height: 85%;
     font-size: 1em;
-    border-radius: 10px;
-}
-.header input::placeholder{
-    padding: .5em;
-}
-
-.header input:focus, .header input:active {
-  outline: 0;
+    border-radius: .5em;
+    padding-left: .5em;
 }
 
 .container {

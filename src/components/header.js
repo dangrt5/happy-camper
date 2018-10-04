@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import LocationSearchInput from './landing_page_search'
+
 import {Link} from "react-router-dom";
 import menuBtn from "../assets/images/happy-camper-logo2-white.png";
 import mapBtn from "../assets/images/icons/header/folded-paper-of-a-map.png";
@@ -11,7 +13,7 @@ import "../assets/css/resultsPage.css";
 class Header extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       searchInput: "",
       path: props.path,
@@ -80,9 +82,7 @@ class Header extends Component {
             >
             <div className="header">
               <img onClick={() => this.onSetSidebarOpen(true)} className="menu-btn" src={menuBtn}/>
-              <form onSubmit={this.handleFormSubmit}>
-                <input onChange={this.handleInputChange} type="text" placeholder="City and State, or Zipcode" value={searchInput}/>
-              </form>
+              <LocationSearchInput class="header-input" push={this.props.history.push}/>
               <img onClick={this.navigateBetweenResults} className="header-toggle" src={mapBtn}/>
             </div>
             </Sidebar>
@@ -99,9 +99,7 @@ class Header extends Component {
             >
             <div className="header">
               <img onClick={() => this.onSetSidebarOpen(true)} className="menu-btn" src={menuBtn}/>
-              <form onSubmit={this.handleFormSubmit}>
-                <input onChange={this.handleInputChange} type="text" placeholder="City and State, or Zipcode" value={searchInput}/>
-              </form>
+              <LocationSearchInput class="header-input" push={this.props.history.push}/>
               <img onClick={this.navigateBetweenResults} className="header-toggle" src={listBtn}/>
             </div>
             </Sidebar>
