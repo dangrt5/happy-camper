@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import LocationSearchInput from './landing_page_search'
 import '../assets/css/landingPage.css';
 import logo from "../assets/images/happy-camper-logo1.png";
 
@@ -8,10 +9,11 @@ export default class LandingPage extends Component {
             <div className="landing-page-container">
                 <img className="logo" src={logo}/>
                 <form>
-                    <input type="text" className="submit-input" name="location"/><br/>
-                    <button className="submit-button">Submit</button>
+                    <LocationSearchInput push={this.props.history.push}/>
                 </form>
             </div>
         )
     }
 }
+
+// this.props.history.push('/');
