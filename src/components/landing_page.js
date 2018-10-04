@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import LocationSearchInput from './landing_page_search'
+import LocationSearchInput from './input_search'
 import '../assets/css/landingPage.css';
 import logo from "../assets/images/happy-camper-logo1.png";
 
