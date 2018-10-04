@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/googleMap.css";
+import "../assets/css/google-map.css";
 
 class GoogleMap extends React.Component {
   constructor(props) {
