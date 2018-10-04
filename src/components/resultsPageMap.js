@@ -17,7 +17,7 @@ class ResultsPageMap extends Component {
     return (
       <div>
         <Header history={history} params={params} path={path}/>
-        <GoogleMap/>
+        <GoogleMap params={params}/>
       </div>
     )
   }
