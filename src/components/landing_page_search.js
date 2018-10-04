@@ -19,7 +19,7 @@ export default class LocationSearchInput extends React.Component {
       .then(results => getLatLng(results[0]))
       .then(latLng => {
           console.log('Success', latLng);
-          this.props.push(`/search`)
+          this.props.push(`/search/${latLng.lat}/${latLng.lng}/list`)
         //   `/search/${latLng.lat}/${latLng.lng}`
     })
       .catch(error => console.error('Error', error));
