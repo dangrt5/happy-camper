@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import GoogleMap from "./googleMaps";
+import GoogleMap from "./google-maps";
 import Header from "./header";
 
 class ResultsPageMap extends Component {
