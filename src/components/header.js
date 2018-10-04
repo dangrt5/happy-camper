@@ -9,9 +9,7 @@ import "../assets/css/resultsPage.css";
 class Header extends Component {
   constructor(props) {
     super(props);
-
-    console.log("header props", props);
-
+    
     this.state = {
       searchInput: "",
       path: props.path,

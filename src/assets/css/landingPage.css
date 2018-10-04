@@ -1,25 +1,15 @@
 .landing-page-container{
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
+    position: absolute;
+    top: 15%;
+    text-align: center;
+}
 
 .logo{
     width: 80vw;
-    margin-left: auto;
-    margin-right: auto
 }
 
-.landing-page-container form {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.submit-input {
+.location-search-input {
     width: 80vw;
     height: 12vw;
     font-size: 1.5em;
@@ -30,7 +20,12 @@
     text-align: center;
 }
 
-.submit-button {
+.autocomplete-dropdown-container{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* .submit-button {
     width: 80vw;
     height: 12vw;
     font-size: 1.3em;
@@ -40,6 +35,4 @@
     margin-top: 20px;
     background-color: #33533e;
     color: rgb(241, 238, 238);
-
-
-}
+} */
