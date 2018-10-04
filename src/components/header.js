@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import LocationSearchInput from './landing_page_search'
+import LocationSearchInput from './input_search'
 
 import {Link} from "react-router-dom";
 import menuBtn from "../assets/images/happy-camper-logo2-white.png";
