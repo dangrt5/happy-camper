@@ -16,12 +16,35 @@ class GoogleMap extends React.Component {
 initGoogleMap = () => {
   const {params} = this.state;
   let latLng = new google.maps.LatLng(params.lat, params.lng);
+
   const map = new window.google.maps.Map(document.getElementById("map"), {
     center: latLng,
     zoom: 10,
-    mapTypeId: "terrain"
+    mapTypeId: "terrain",
+    mapTypeControl: false,
+    fullscreenControl: false
   });
+
   let marker = new google.maps.Marker({position: latLng, map: map});
+
+  let infoWindow = new google.maps.InfoWindow({
+    content:
+    `<div className="infoWindow">
+      <img src={resultImg}/>
+      <div className="info">
+        <h1 className="parkName">Peter's So Gay</h1>
+        <h3>123 Park Street</h3>
+        <h3>San Diego, CA</h3>
+        <h3>Phone #</h3>
+        <h3>URL: facebook.com</h3>
+      </div>
+    </div>`
+  });
+
+  marker.addListener("click", () => {
+    infoWindow.open(map, marker)
+  })
+
 }
 
 
