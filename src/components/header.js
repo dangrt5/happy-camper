@@ -64,7 +64,7 @@ class Header extends Component {
   }
 
   sidebar = {
-    sidebar: { height: "100vh", width: "50vw", "overflowY": "unset" },
+    sidebar: { height: "100vh", width: "50vw", "overflowY": "unset", position: "fixed" },
     overlay: {backgroundColor: "rgba(0,0,0,0.85)"}
   }
 
