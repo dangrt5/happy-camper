@@ -2,6 +2,7 @@ import React from "react";
 import resultImg from "../assets/images/resultimg.png";
 import Header from "./header";
 
+
 class ResultsPageList extends React.Component {
   constructor(props) {
     super(props);
@@ -36,4 +37,4 @@ class ResultsPageList extends React.Component {
   }
 }
 
-export default ResultsPageList;
+export default ResultsPageList
