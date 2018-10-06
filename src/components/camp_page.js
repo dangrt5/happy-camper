@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import {getSingleItem, clearSingleItem} from '../actions'
+
 import Header from './header';
 import CampInfo from './camp-info'
 import PhotoCarousel from './camp_images_carousel'
@@ -11,7 +14,7 @@ import website from "../assets/images/icons/shortcuts/internet.png";
 import phone from "../assets/images/icons/shortcuts/phone.png";
 import save from "../assets/images/icons/shortcuts/save.png";
 
-export default class CampPage extends Component {
+class CampPage extends Component {
   constructor(props) {
     super(props);
 
@@ -19,6 +22,13 @@ export default class CampPage extends Component {
       path: props.match.path
     }
   }
+    componentDidMount(){
+        // console.log("item id:", this.props.match.params.itemId)
+        // this.props.getSingleItem(this.props.match.params.itemId);
+    }
+    componentWillUnmount(){
+        this.props.clearSingleItem();
+    }
     render(){
       const {path} = this.state;
         return (
@@ -54,3 +64,10 @@ export default class CampPage extends Component {
         )
     }
 }
+function mapStateToProps(state){
+    return {
+        item: state.list.single
+    }
+}
+
+export default connect(mapStateToProps, {getSingleItem, clearSingleItem})(CampPage)

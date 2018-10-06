@@ -6,13 +6,20 @@ import ResultsPageMap from "./results_page_map";
 import ResultsPageList from "./results_page_list";
 import {Route} from "react-router-dom";
 
-export default class ResultsPage extends Component {
+import { connect } from 'react-redux';
+import {getResultsData} from '../actions/index'
+
+class ResultsPage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       path : props.match.path
     }
+  }
+
+  componentDidMount(){
+    // this.props.getResultsData();
   }
 
     render(){
@@ -25,3 +32,11 @@ export default class ResultsPage extends Component {
       )
     }
 }
+
+function mapStateToProps(state){
+  return {
+      list: state.list.results
+  }
+}
+
+export default connect(mapStateToProps, {getResultsData})(ResultsPage)
