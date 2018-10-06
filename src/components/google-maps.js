@@ -4,17 +4,23 @@ import "../assets/css/google-map.css";
 class GoogleMap extends React.Component {
   constructor(props) {
     super(props);
-    console.log("Google Map Props", props);
+
     this.state = {
-      params: props.params
+      showModal: true,
+      markerDetails: null
     }
   }
+
   componentDidMount() {
     this.initGoogleMap();
   }
 
+openGoogleMapMarker = (e) => {
+  googleMapModal.style
+}
+
 initGoogleMap = () => {
-  const {params} = this.state;
+  const {params} = this.props;
   let latLng = new google.maps.LatLng(params.lat, params.lng);
 
   const map = new window.google.maps.Map(document.getElementById("map"), {
@@ -32,7 +38,7 @@ initGoogleMap = () => {
     `<div className="infoWindow">
       <img src={resultImg}/>
       <div className="info">
-        <h1 className="parkName">Peter's So Gay</h1>
+        <h1 className="parkName">Parky Park</h1>
         <h3>123 Park Street</h3>
         <h3>San Diego, CA</h3>
         <h3>Phone #</h3>
@@ -49,8 +55,14 @@ initGoogleMap = () => {
 
 
   render() {
+    const { showModal } = this.state;
+
     return (
-      <div id="map"></div>
+      <div>
+        <div id="map"></div>
+        { showModal ? <div className="google-modal">Hi</div> : <div></div>  }
+      </div>
+
     )
   }
 }
