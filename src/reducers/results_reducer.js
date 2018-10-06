@@ -12,6 +12,7 @@ export default function(state = DEFAULT_STATE, action){
             console.log(action.payload)
             // return {...state, single: action.payload.data};
         case types.GET_RESULTS_DATA:
+            return {...state, results: action.payload}
             // return {...state, all: action.payload.data};
         default:
             return state;

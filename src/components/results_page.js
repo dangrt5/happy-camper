@@ -19,10 +19,13 @@ class ResultsPage extends Component {
   }
 
   componentDidMount(){
-    // this.props.getResultsData();
+    console.log("HERE IN RESULTS PAGE")
+    this.props.getResultsData();
+   
   }
 
     render(){
+      console.log(this.props);
       const {path} = this.state;
       return (
         <div>

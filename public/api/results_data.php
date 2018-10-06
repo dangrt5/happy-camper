@@ -1,15 +1,15 @@
 <?php
-
+header("Access-Control-Allow-Origin: *");
+require_once("mysql_connect.php");
 
 $output =[
     'success'=> false,
     'error'  => []
 ];
-$city = $_POST['city'];
+//$city = $_GET['city'];
+$city = 'Yosemite';
 
-require_once("mysql_connect.php");
-
-if( $city !== '' ){
+if( $city ){
     $query = "SELECT id, park_name, addr , phone ,main_url , park_desc ,
                  weather_overview, direction_info  , regulation_info , park_website
             FROM park_info WHERE city = '$city'   order by park_name";

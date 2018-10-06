@@ -1,14 +1,18 @@
 import types from './types';
 import axios from 'axios';
 
+
 // const BASE_URL = 'http://api.reactprototypes.com';
 // const API_KEY = '?key=originalkeyname';
 
-export function getResultsData(lat, lng){  //async and await unnecessary with redux-promise
-    const resp = axios.get(`/search/${lat}/${lng}`);
+export async function getResultsData(lat, lng){ 
+    //async and await unnecessary with redux-promise
+    const resp = await axios.get(`http://localhost:8888/public/api/results_data.php`, {lat, lng});
+    const results = resp.data.data;
+    console.log(results);
     return {
         type: types.GET_RESULTS_DATA,
-        payload: resp
+        payload: results
     }
 }
 
