@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+       var data_object = {};
+
+        var ajaxParams = {
+            data: data_object,
+            dataType: 'json',
+            url: '',
+            method: 'post',
+            success: getStudent, 
+            error: ""
+        }
+
+       $(document).ready(start);
+
+        function start(){
+            $("#select").change( function(){
+                console.log($("#select option:selected").val());
+                if($("#select option:selected").val() =="type2"){
+                     $("#detail").show();   
+                }
+            })
+
+            $("button").click( function(){
+                var phpFile;
+                if($("#select option:selected").val() =="type1"){
+                    phpFile = 'results_data.php';
+                }else{
+                    phpFile = 'park_details_data.php'; 
+                }
+                $('#parkform').attr( 'action' , phpFile );
+                $('#parkform').submit();
+                // data_object.city = $('#city').val();
+                // data_object.id = $('#id').val();
+                // data_object.detail  = $('#detail').val();
+                // ajaxParams.data = data_object;
+                // $.ajax(ajaxParams);
+            })
+        }
+
+        function  getStudent(response){
+            if(response.success){
+                for( var i  in  response.data) {
+                    // var    student = {};
+                    // student.id = response.data[i].id;
+                    // student.name = response.data[i].name;
+                    // student.course =  response.data[i].course;
+                    // student.grade =  response.data[i].grade;
+                    // student_array.push(student);
+                    // updateStudentList();
+                }
+                console.log('msg success', response.data);
+            }else{
+                console.log(response.errors);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="parkform" action="" method="POST">
+        <label>CITY</label> <input type="text" id="city" name="city"><br>
+        <!-- <label>latitude</label><input type="text"  name="lat" >
+        <label>longitude</label><input type="text"  name="lng"> -->
+        <label>park_ID</label> <input type="text"  name="id" value=1><br>
+        <label>rqtype</label>
+        <select id="select" name ="rqtype">
+            <option>type1</option>
+            <option>type2</option>
+        </select><br>
+        <select id ="detail" name ="detail" visibility: hidden>
+                <option value=1 >park_detail</option>
+                <option value=2>park_image</option>
+                <option value=3>park_amenity</option>
+                <option value=4>park_camp</option>
+        </select><br>
+        
+        <button>submit</button>
+    </form>
+</body>
+</html>
