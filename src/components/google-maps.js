@@ -1,4 +1,5 @@
 import React from "react";
+import resultImg from "../assets/images/resultimg.png";
 import "../assets/css/google-map.css";
 
 class GoogleMap extends React.Component {
@@ -6,8 +7,8 @@ class GoogleMap extends React.Component {
     super(props);
 
     this.state = {
-      showModal: true,
-      markerDetails: null
+      showInfoCard: false,
+      markerContent: {}
     }
   }
 
@@ -28,39 +29,52 @@ initGoogleMap = () => {
     zoom: 10,
     mapTypeId: "terrain",
     mapTypeControl: false,
-    fullscreenControl: false
+    fullscreenControl: false,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_BOTTOM
+    },
+    streetViewControlOptions: {
+      position: google.maps.ControlPosition.LEFT_BOTTOM
+    }
   });
 
   let marker = new google.maps.Marker({position: latLng, map: map});
 
-  let infoWindow = new google.maps.InfoWindow({
-    content:
-    `<div className="infoWindow">
-      <img src={resultImg}/>
-      <div className="info">
-        <h1 className="parkName">Parky Park</h1>
-        <h3>123 Park Street</h3>
-        <h3>San Diego, CA</h3>
-        <h3>Phone #</h3>
-        <h3>URL: facebook.com</h3>
-      </div>
-    </div>`
-  });
-
   marker.addListener("click", () => {
-    infoWindow.open(map, marker)
+    this.setState({
+      showInfoCard: true
+    })
+  })
+
+  map.addListener("click", () => {
+    this.setState({
+      markerContent: {},
+      showInfoCard: false
+    })
   })
 
 }
 
 
   render() {
-    const { showModal } = this.state;
+    const { markerContent, showInfoCard } = this.state;
 
     return (
       <div>
         <div id="map"></div>
-        { showModal ? <div className="google-modal">Hi</div> : <div></div>  }
+        { showInfoCard
+          ? <div className="google-modal">
+              <img src={resultImg}/>
+              <div className="info">
+                <h1 className="parkName">Park Name</h1>
+                <h3>123 Park Street</h3>
+                <h3>Big Bear Lake, CA</h3>
+                <h3>Phone #</h3>
+                <h3>URL: facebook.com</h3>
+              </div>
+            </div>
+          : <div></div>
+        }
       </div>
 
     )
