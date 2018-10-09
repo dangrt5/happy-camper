@@ -27,9 +27,9 @@
             $("button").click( function(){
                 var phpFile;
                 if($("#select option:selected").val() =="type1"){
-                    phpFile = 'results_data.php';
+                    phpFile = '../results_data.php';
                 }else{
-                    phpFile = 'park_details_data.php'; 
+                    phpFile = '../park_details_data.php'; 
                 }
                 $('#parkform').attr( 'action' , phpFile );
                 $('#parkform').submit();
