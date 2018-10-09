@@ -28,7 +28,7 @@ class ResultsPage extends Component {
   
       const {path} = this.state;
       return (
-        <div>
+        <div className="results">
           <Route path="/search/:lat/:lng/list" component={ResultsPageList}/>
           <Route path="/search/:lat/:lng/map" component={ResultsPageMap}/>
         </div>

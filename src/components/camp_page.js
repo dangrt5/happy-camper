@@ -38,23 +38,10 @@ class CampPage extends Component {
 
                     <div className="camp-title">
                         <h1>Jackson Flats</h1>
-                        <h3>California</h3>
+                        <h2>California</h2>
+                        <img src={save}/>
                     </div>
-                    <div className="shortcuts">
-                        <div className="website">
-                            <img src={website}/>
-                            <p>website</p>
-                        </div>
-                        <div className="call">
-                            <img src={phone}/>
-                            <p>call</p>
-                        </div>
-                        <div className="save">
-                            <img src={save}/>
-                            <p>save</p>
-                        </div>
-                    </div>
-
+                    
                 <PhotoCarousel/>
 
                 <CampInfo />

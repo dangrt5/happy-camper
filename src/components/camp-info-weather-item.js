@@ -2,6 +2,9 @@ import React from 'react';
 
 import sunnyDescriptionIcon from "../assets/images/icons/weather/sun-sunny-day-weather-symbol.png";
 import rainDescriptionIcon from "../assets/images/icons/weather/rain-weather-symbol.png"
+import snowDescriptionIcon from "../assets/images/icons/weather/cold-hail-falling-of-a-cloud-weather-interface-symbol.png"
+import cloudsDescriptionIcon from "../assets/images/icons/weather/cloud-shape-outlined-symbol.png"
+import mistDescriptionIcon from "../assets/images/icons/weather/fog.png"
 
 
 import rainIcon from "../assets/images/icons/weather/001-umbrella.png";
@@ -44,6 +47,15 @@ export default class WeatherItem extends React.Component {
         switch (description){
             case "Rain":
                 icon = rainDescriptionIcon;
+                break;
+            case "Clouds":
+                icon = cloudsDescriptionIcon;
+                break;
+            case "Snow":
+                icon = snowDescriptionIcon;
+                break;
+            case "Mist":
+                icon = mistDescriptionIcon;
                 break;
             default:
                 icon = sunnyDescriptionIcon;
