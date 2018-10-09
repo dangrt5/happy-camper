@@ -2,17 +2,17 @@
 header("Access-Control-Allow-Origin: *");
 require_once("mysql_connect.php");
 
-// $handler = curl_init();
-// curl_setopt($handler, CURLOPT_URL, "https://thedyrt.com/api/v2/campgrounds?filter%5Bsearch%5D%5Bregion%5D=CA&include=administrative-area%2Coperator%2Crecent-reviewers&modelPath=controller.model.featuredCampgrounds&page%5Bnumber%5D=1&page%5Bsize%5D=200");
-// curl_setopt($handler, CURLOPT_FOLLOWLOCATION, true);
-// $importJSON = file_get_contents('https://thedyrt.com/api/v2/campgrounds?filter%5Bsearch%5D%5Bregion%5D=CA&include=administrative-area%2Coperator%2Crecent-reviewers&modelPath=controller.model.featuredCampgrounds&page%5Bnumber%5D=1&page%5Bsize%5D=200');
-// $parkList = json_decode($importJSON, true);
+$handler = curl_init();
+curl_setopt($handler, CURLOPT_URL, "https://thedyrt.com/api/v2/campgrounds?filter%5Bsearch%5D%5Bregion%5D=CA&include=administrative-area%2Coperator%2Crecent-reviewers&modelPath=controller.model.featuredCampgrounds&page%5Bnumber%5D=1&page%5Bsize%5D=200");
+curl_setopt($handler, CURLOPT_FOLLOWLOCATION, true);
+$importJSON = file_get_contents('https://thedyrt.com/api/v2/campgrounds?filter%5Bsearch%5D%5Bregion%5D=CA&include=administrative-area%2Coperator%2Crecent-reviewers&modelPath=controller.model.featuredCampgrounds&page%5Bnumber%5D=1&page%5Bsize%5D=200');
+$parkList = json_decode($importJSON, true);
 // curl_setopt($handler, CURLOPT_TIMEOUT_MS, 1);
 // curl_setopt($handler, CURLOPT_NOSIGNAL, true);
-// curl_close($handler);
+curl_close($handler);
 
-$importJSON = file_get_contents('./parkdata_dyrt.json');
-$parkList = json_decode($importJSON, true);
+// $importJSON = file_get_contents('./parkdata_dyrt.json');
+// $parkList = json_decode($importJSON, true);
 
 $output =[
     'success'=> false,

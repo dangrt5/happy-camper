@@ -1,6 +1,5 @@
 <?php
 
-
 $output =[
     'success'=> false,
     'error'  => []
