@@ -4,25 +4,18 @@
 $output =[
     'success'=> false,
 ];
-$city = $_POST['city'];
-$lat = $_POST['lat'];
-$lng = $_POST['lng'];
+// $city = $_GET['city'];
+$lat = $_GET['lat'];
+$lng = $_GET['lng'];
 $radius = 50;
 
 require_once("mysql_connect.php");
 
-if( $city !== '' ){
-    $query = "SELECT id, park_name, addr , phone , park_desc ,
-                 weather_overview, direction_info  , regulation_info , park_website
-            FROM park_info WHERE city = '$city'   order by park_name";
-
-}else{
-    $query = "SELECT id, park_name, addr , phone , park_desc , 
-                 weather_overview, direction_info  , regulation_info , park_website,
+$query = "SELECT id, park_name, addr, phone, park_desc, 
+                 direction_info, regulation_info, park_website,
                  SQRT( POW(69.1 * (lat - {$lat}), 2) + POW(69.1 * ({$lng} - lng) * COS(lat / 57.3), 2)) AS distance
             FROM park_info  HAVING distance < '$radius'  order by park_name";
-}
-// print_r($query);
+
 $result = mysqli_query($conn, $query);
 
 if($result){
