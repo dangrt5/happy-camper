@@ -27,6 +27,7 @@ initGoogleMap = () => {
   const map = new window.google.maps.Map(document.getElementById("map"), {
     center: latLng,
     zoom: 10,
+    scrollwheel: false,
     mapTypeId: "terrain",
     mapTypeControl: false,
     fullscreenControl: false,

@@ -14,6 +14,7 @@ class ResultsPageMap extends Component {
   }
   render() {
     const {path, history, params} = this.state;
+    console.log(params)
     return (
       <div>
         <Header history={history} params={params} path={path}/>
