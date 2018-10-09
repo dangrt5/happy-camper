@@ -90,8 +90,4 @@ function execute($conn, $query , $num ){
     
 }
 
-
-
-
-
 ?>

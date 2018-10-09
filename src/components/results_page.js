@@ -25,7 +25,7 @@ class ResultsPage extends Component {
   }
 
     render(){
-      console.log(this.props);
+  
       const {path} = this.state;
       return (
         <div>

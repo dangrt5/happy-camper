@@ -5,9 +5,9 @@ import axios from 'axios';
 // const BASE_URL = 'http://api.reactprototypes.com';
 // const API_KEY = '?key=originalkeyname';
 
-export async function getResultsData(lat, lng){ 
-    //async and await unnecessary with redux-promise
-    const resp = await axios.get(`http://localhost:8888/public/api/results_data.php`, {lat, lng});
+export async function getResultsData(city){ 
+    //async and await unnecessary with redux-promise // redux-promise didn't work so used async await
+    const resp = await axios.get(`http://localhost:8888/public/api/results_data.php`, {city});
     const results = resp.data.data;
     console.log(results);
     return {
