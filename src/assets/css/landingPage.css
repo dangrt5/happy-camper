@@ -1,0 +1,38 @@
+.landing-page-container{
+    width: 100vw;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+}
+
+.logo{
+    width: 80vw;
+}
+
+.landing-page-input {
+    width: 80vw;
+    height: 12vw;
+    font-size: 1.5em;
+    border-style: none;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.autocomplete-dropdown-container{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* .submit-button {
+    width: 80vw;
+    height: 12vw;
+    font-size: 1.3em;
+    border-style: none;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 20px;
+    background-color: #33533e;
+    color: rgb(241, 238, 238);
+} */

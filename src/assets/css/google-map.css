@@ -1,0 +1,32 @@
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.google-modal {
+  position: fixed;
+  bottom: 5%;
+  left: 17%;
+  height: 155px;
+  width: 295px;
+  background-color: white;
+  display: flex;
+  flex-flow: row;
+}
+
+.google-modal img {
+  width: 50%;
+  height: 95%;
+  position: absolute;
+  left: 2.5%;
+  top: 2.5%;
+}
+
+.google-modal .info {
+  display: inline-block;
+  width: 50%;
+  line-height: 6px;
+  position: absolute;
+  right: 0%;
+  bottom: 15%;
+}

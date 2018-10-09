@@ -1,0 +1,150 @@
+.camp-page h1, .camp-page h3, .camp-page p {
+    margin: 10px;
+}
+
+.header {
+    justify-content: left;
+}
+
+.camp-title {
+    height: 14%;
+}
+
+.camp-title h2 {
+    margin: 5px 0 0 10px;
+}
+
+.camp-title img {
+    height: 8%;
+    width: auto;
+    position: absolute;
+    top: 3%;
+    right: 4%
+}
+
+.slider-container {
+    width: 100%;
+    overflow-x: scroll;
+    margin: 10px 0;
+}
+
+.photos-container {
+    white-space:nowrap;
+    /* width: 500% */
+}
+
+.photo-slide {
+    /* width: 300px;
+    height: 500px;
+    float:left; */
+    display: inline-block;
+}
+
+.photo-slide img {
+    width: auto;
+    height: 100px;
+}
+
+.info-menu ul li {
+    list-style-type: none;
+    display: inline;
+    padding-right: 40px;
+}
+.info-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.overview {
+    position: relative;
+    height: 50%;
+    overflow: scroll;
+}
+.amenity-container{
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+}
+.amenity-column{
+    width: 50%;
+}
+
+.amenity-item {
+    position: relative;
+    padding: 10px;
+    height: 4vh;
+}
+
+.amenity-item img {
+    height: 100%;
+    padding-right: 6px;
+}
+
+.amenity-item span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.weather-item {
+    display: flex;
+    height: 10vh;
+    align-content: center;
+    justify-content: space-around;
+    padding-bottom: 3vh;
+    border-bottom: 2px solid rgba(56,29,29,0.15);
+}
+.weather-item > div,.weather-symbol img{
+    height: 100%;
+    padding: 1vw;
+}
+.weather-day, .weather-temp  {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.weather-other{
+    height: 25%;
+    padding-bottom: 5px;
+    /* padding: 5px; */
+}
+
+.weather-other img{
+    height: 100%;
+}
+
+.weather-other span {
+    padding-left: 10px;
+}
+
+.weather h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.camp-page #map {
+    height: 41vh;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+}
+
+.address > div {
+    width: 64%
+}
+
+.directions-button {
+    width: 7.5em;
+    height: 2em;
+    font-size: 1em;
+    letter-spacing: .1em;
+    border-style: none;
+    border-radius: .3em;
+    font-family: 'Raleway', sans-serif;
+    background-color: #33533e;
+    color: rgb(241, 238, 238);
+    display: inline-block
+}

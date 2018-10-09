@@ -1,0 +1,40 @@
+.header-title {
+  font-size: 6em;
+  font-weight: 500;
+  padding-right: .5em;
+}
+
+.team {
+  padding: 1%;
+  margin-top: 5%;
+}
+
+.team:last-of-type {
+  margin-top: 10%;
+}
+
+.team img {
+  width: 2.5em;
+  margin-left: 2.5%;
+}
+
+.team .memberPhoto {
+  display: block;
+  width: 5em;
+  margin: auto;
+}
+
+.header h1, .team h2, .team h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+.dev {
+  display: inline-block;
+  width: 49%;
+}
+
+.dev div {
+  margin: auto;
+  width: 80%;
+}

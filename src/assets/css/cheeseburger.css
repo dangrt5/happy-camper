@@ -1,0 +1,24 @@
+.sidebar h1 {
+  color: white;
+}
+
+.sidebar {
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+  background-color: #365F44;
+}
+
+
+.sidebar .pages {
+  position: absolute;
+  left: 5%;
+  top: 15%;
+}
+
+.sidebar .pages h1 {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 225%;
+  text-align: left;
+}
