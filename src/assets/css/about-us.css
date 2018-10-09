@@ -16,7 +16,6 @@
 .team img {
   width: 2.5em;
   margin-left: 2.5%;
-
 }
 
 .team .memberPhoto {
@@ -28,7 +27,7 @@
 .header h1, .team h2, .team h3 {
   font-size: 1em;
   text-align: center;
-} */
+}
 
 .dev {
   display: inline-block;

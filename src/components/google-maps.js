@@ -20,9 +20,12 @@ openGoogleMapMarker = (e) => {
   googleMapModal.style
 }
 
-initGoogleMap = () => {
+initGoogleMap = async () => {
   const {params} = this.props;
   let latLng = new google.maps.LatLng(params.lat, params.lng);
+  let geocoder = new google.maps.Geocoder;
+
+  await geocoder.geocode({"location": latLng}, (results) => console.log("Geocoder Results:", (results[0].formatted_address.split(','))));
 
   const map = new window.google.maps.Map(document.getElementById("map"), {
     center: latLng,
