@@ -28,18 +28,18 @@ export default class AboutUs extends Component {
                         <img className="memberPhoto" src={randy} alt=""/>
                         <h3>Randy Dang</h3>
                         <div>
-                          <img src={github} alt=""/>
-                          <img src={linkedin} alt=""/>
-                          <img src={portfolio} alt=""/>
+                          <a href="https://github.com/dangrt5"><img src={github} alt=""/></a>
+                          <a href="https://linkedin.com/in/randytuandang"><img src={linkedin} alt=""/></a>
+                          <a href="http://dangrandy.com"><img src={portfolio} alt=""/></a>
                         </div>
                     </div>
                     <div className="dev">
                         <img className="memberPhoto" src={rachel} alt=""/>
                         <h3>Rachel Pan</h3>
                         <div>
-                          <img src={github} alt=""/>
-                          <img src={linkedin} alt=""/>
-                          <img src={portfolio} alt=""/>
+                          <a href="https://github.com/rpan06"><img src={github} alt=""/></a>
+                          <a href="https://linkedin.com/in/rpan/"><img src={linkedin} alt=""/></a>
+                          <a href="http://rachelmpan.com"><img src={portfolio} alt=""/></a>
                         </div>
                     </div>
                 </div>

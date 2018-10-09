@@ -5,7 +5,6 @@
 }
 
 .team {
-  background-color: white;
   padding: 1%;
   margin-top: 5%;
 }
@@ -14,7 +13,19 @@
   margin-top: 10%;
 }
 
-/* h1,h2,h3 {
+.team img {
+  width: 2.5em;
+  margin-left: 2.5%;
+
+}
+
+.team .memberPhoto {
+  display: block;
+  width: 5em;
+  margin: auto;
+}
+
+.header h1, .team h2, .team h3 {
   font-size: 1em;
   text-align: center;
 } */
@@ -27,15 +38,4 @@
 .dev div {
   margin: auto;
   width: 80%;
-}
-
-.team .memberPhoto {
-  display: block;
-  width: 5em;
-  margin: auto;
-}
-
-.team img {
-  width: 3em;
-
 }
