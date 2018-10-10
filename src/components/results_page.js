@@ -19,13 +19,11 @@ class ResultsPage extends Component {
   }
 
   componentDidMount(){
-    console.log("HERE IN RESULTS PAGE")
-    this.props.getResultsData();
-   
+    const {lat, lng} = this.props.match.params
+    this.props.getResultsData(lat, lng);
   }
 
     render(){
-  
       const {path} = this.state;
       return (
         <div className="results">
