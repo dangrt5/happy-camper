@@ -12,5 +12,27 @@
 <body>
     <div id="root"></div>
     <script src="/bundle.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initializeDOM);
+
+        function initializeDOM(){
+            if ('serviceWorker' in navigator){
+                // console.log('Service Workers: Supported')
+                window.addEventListener('load', registerServiceWorker);
+            } else {
+                console.log('Service Workers: Not Suppported')
+            }
+        }
+
+        function registerServiceWorker(){
+            navigator.serviceWorker.register('service_worker.js')
+            .then(() => {
+                // console.log('Service Worker: Registered')
+            })
+            .catch(err => {
+                console.error('Service Worker: Error', err);
+            });
+        }
+    </script>
 </body>
 </html>
