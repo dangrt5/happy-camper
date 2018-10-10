@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST');
 
 $_POST = json_decode(file_get_contents("php://input"), true);
-print_r($_POST);
+// print_r($_POST);
 
 require_once("mysql_connect.php");
 // $blah = require_once("results_data1.json");
@@ -58,7 +58,7 @@ $lng = $_POST['lng'];
 
 // var_dump ($_POST);
 
-$radius = 40;
+$radius = 50;
 
 // if( $city !== '' ){
 //     $query = "SELECT id, park_name, addr, lat, lng, phone, park_desc,
@@ -67,7 +67,7 @@ $radius = 40;
 //             echo ('if query');//testing if this is running; delete later
 
 // }else{
-    echo('else query');//testing if this is running; delete later
+    // echo('else query');//testing if this is running; delete later
     $query = "SELECT id, park_name, addr, lat, lng, phone,direction_info, regulation_info, park_website, SQRT( POW(69.1 * (lat - $lat), 2) + POW(69.1 * ($lng - lng) * COS(lat / 57.3), 2)) AS distance FROM park_info HAVING distance < '$radius' order by park_name";
 // }
 // print_r($query);
