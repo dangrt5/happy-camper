@@ -1,17 +1,17 @@
 import React from 'react';
 import dummyImage from '../assets/images/resultimg.png';
+import trash from '../assets/images/icons/trash.png'
 
 export default props => {
     return (
-        <div className="card">
-          <img src={dummyImage} alt=""/>>
-          <div className="info">
+        <div className="itinerary-card">
+          <img src={dummyImage} alt=""/>
+          <div>
             <h1>Park Name</h1>
-            <h3>123 Park Street</h3>
-            <h3>Big Bear Lake, CA</h3>
-            <h3>Phone #</h3>
-            <h3>URL: facebook.com</h3>
+            <p>Angeles Crest Hwy,</p>
+            <p>Wrightwood, CA 92397</p>
           </div>
+          <img className="trash-icon" src={trash}/>
         </div>
     )
 }
