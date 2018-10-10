@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Header from "./header";
+import ItineraryCard from './itinerary_card'
 
 export default class Itinerary extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ export default class Itinerary extends Component {
             <Header path={path}/>
             <div className="container">
               <h1>Itinerary</h1>
+              <ItineraryCard/>
             </div>
           </div>
         )
