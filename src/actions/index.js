@@ -8,7 +8,7 @@ import axios from 'axios';
 export async function getResultsData(lat, lng){ 
     // console.log("Axios Call to PHP FILE paramaters",lat, lng);
     //async and await unnecessary with redux-promise // redux-promise didn't work so used async await
-    const resp = axios({
+    const resp = await axios({
         method: "POST",
         data: { lat, lng },
         url: `http://localhost:8888/public/api/results_list.php`,
@@ -16,11 +16,12 @@ export async function getResultsData(lat, lng){
     }); 
 
     // const results = resp;
-    // console.log("PHP Call successful:", results)
+    console.log("PHP Call successful:", resp.data)
     return {
         type: types.GET_RESULTS_DATA,
         payload: resp
     }
+    
 }
 
 export function getSingleItem(itemId){
