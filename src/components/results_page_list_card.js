@@ -10,10 +10,7 @@ class CampSiteCard extends React.Component {
   }
 
   render() {
-    console.log("camp site props", this.props)
     const {park_name, addr, park_website, phone, id} = this.props.details;
-
-
     let phoneRegex = /([0-9]{3})([0-9]{3})([0-9]{4})/
     let formattedPhone = phone.replace(/[^\w\s]/gi, "-").replace(/ - $/, "")
 
