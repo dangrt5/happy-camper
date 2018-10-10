@@ -15,5 +15,3 @@ export default class LandingPage extends Component {
         )
     }
 }
-
-// this.props.history.push('/');

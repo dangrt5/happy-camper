@@ -9,12 +9,13 @@ import Itinerary from "./itinerary"
 import AboutUs from "./about_us"
 import NotFound from './not_found'
 
+import onlineOrOffline from '../hoc/online_or_offline'
 
 const App = () => (
     <div>
         <Switch>
-            <Route exact path="/" component={LandingPage}/>
-            <Route path="/search/:lat/:lng" component={ResultsPage}/>
+            <Route exact path="/" component={onlineOrOffline(LandingPage)}/>
+            <Route path="/search/:lat/:lng" component={onlineOrOffline(ResultsPage)}/>
             <Route path="/camp/:id" component={CampPage}/>
             <Route path="/itinerary" component={Itinerary}/>
             <Route path="/about-us" component={AboutUs}/>
