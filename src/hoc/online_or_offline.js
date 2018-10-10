@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 export default (WrappedComponent) => {
-    class Auth extends Component {
+    class Check extends Component {
         componentDidMount(){
             this.checkOnline();
         }
@@ -9,15 +9,16 @@ export default (WrappedComponent) => {
             this.checkOnline();
         }
         checkOnline(){
-            console.log(navigator.onLine)
-            // if(!this.props.auth){
-            //     // this.props.history.push('/sign-in')
-            // }
+            console.log("Online or Offline", window.navigator.onLine)
+
+            if(!window.navigator.onLine){
+                this.props.history.push('/itinerary')
+            }
         }
         render(){
-            return <WrappedComponent/>;
+            return <WrappedComponent {...this.props}/>;
         }
     }
 
-    return Auth
+    return Check
 }

@@ -15,7 +15,7 @@ const App = () => (
     <div>
         <Switch>
             <Route exact path="/" component={onlineOrOffline(LandingPage)}/>
-            <Route path="/search/:lat/:lng" component={ResultsPage}/>
+            <Route path="/search/:lat/:lng" component={onlineOrOffline(ResultsPage)}/>
             <Route path="/camp/:id" component={CampPage}/>
             <Route path="/itinerary" component={Itinerary}/>
             <Route path="/about-us" component={AboutUs}/>
