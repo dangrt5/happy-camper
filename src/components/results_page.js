@@ -10,25 +10,20 @@ import { connect } from 'react-redux';
 import {getResultsData} from '../actions/index'
 
 class ResultsPage extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      path : props.match.path
-    }
-  }
 
   componentDidMount(){
     const {lat, lng} = this.props.match.params
     this.props.getResultsData(lat, lng);
+    console.log("this state", this.state);
   }
 
     render(){
-      const {path} = this.state;
+
+      const {path, list} = this.props.match;
       return (
         <div className="results">
-          <Route path="/search/:lat/:lng/list" component={ResultsPageList}/>
-          <Route path="/search/:lat/:lng/map" component={ResultsPageMap}/>
+          <Route list={list} path="/search/:lat/:lng/list" component={ResultsPageList}/>
+          <Route list={list} path="/search/:lat/:lng/map" component={ResultsPageMap}/>
         </div>
       )
     }

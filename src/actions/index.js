@@ -5,7 +5,7 @@ import axios from 'axios';
 // const BASE_URL = 'http://api.reactprototypes.com';
 // const API_KEY = '?key=originalkeyname';
 
-export async function getResultsData(lat, lng){ 
+export async function getResultsData(lat, lng){
     // console.log("Axios Call to PHP FILE paramaters",lat, lng);
     //async and await unnecessary with redux-promise // redux-promise didn't work so used async await
     const resp = await axios({
@@ -13,15 +13,15 @@ export async function getResultsData(lat, lng){
         data: { lat, lng },
         url: `http://localhost:8888/public/api/results_list.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
-    }); 
+    });
 
     // const results = resp;
-    console.log("PHP Call successful:", resp.data)
+    console.log("PHP Call successful:", resp.data.data)
     return {
         type: types.GET_RESULTS_DATA,
-        payload: resp
+        payload: resp.data.data
     }
-    
+
 }
 
 export function getSingleItem(itemId){
