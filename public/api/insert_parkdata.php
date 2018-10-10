@@ -29,8 +29,8 @@ foreach($parkList["data"] as $key ){
     $parkImgUrl = checkInputData($parkImgUrl);
 
 
-    $query = "INSERT INTO `park_info`(  `PARK_ID` ,`PARK_NAME`, `LAT`,    `LNG`,  `ADDR`, `PHONE`,  `IMG_URL`,   `PARK_DESC`,  `DIRECTION_INFO`,  `PARK_WEBSITE` ) 
-    VALUES                             ('$parkID','$parkName','$parkLat','$parkLng','' ,'$parkPhone','$parkImgUrl',  '$parkDesc',  '$parkDirection',  '$parkWeb'  )";
+    $query = "INSERT INTO `park_info`(`PARK_ID` ,`PARK_NAME`, `LAT`, `LNG`, `ADDR`, `PHONE`, `IMG_URL`, `PARK_DESC`,`DIRECTION_INFO`,`PARK_WEBSITE` ) 
+    VALUES                           ('$parkID','$parkName','$parkLat','$parkLng','' ,'$parkPhone','$parkImgUrl',  '$parkDesc',  '$parkDirection',  '$parkWeb'  )";
 
     $result = mysqli_query($conn, $query);
 
@@ -59,6 +59,4 @@ function checkInputData($InputData){
     return $string;
 }
 
-print('done');
-// curl_close($handler);
 ?>
