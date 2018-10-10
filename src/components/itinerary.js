@@ -1,13 +1,20 @@
 import React, {Component} from 'react';
+import "../assets/css/itinerary.css"
 import Header from "./header";
+import ItineraryCard from './itinerary_card'
 
 export default class Itinerary extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      path: props.match.path
+      path: null,
+      list: null,
     }
+  }
+  componentDidMount(){
+    this.setState({
+      path: this.props.match.path
+    })
   }
     render(){
       const {path} = this.state;
@@ -15,7 +22,7 @@ export default class Itinerary extends Component {
           <div>
             <Header path={path}/>
             <div className="container">
-              <h1>Itinerary</h1>
+              <ItineraryCard/>
             </div>
           </div>
         )
