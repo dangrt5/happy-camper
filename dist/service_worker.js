@@ -7,12 +7,12 @@ const cacheAssets = [
 
 //Call Install Event (saves files in cacheAssets into cache)
 self.addEventListener('install', (event) => {
-    console.log('Service Worker: Installed')
+    // console.log('Service Worker: Installed')
 
     event.waitUntil(
         caches.open(cacheName)
             .then(cache => {
-                console.log('Service Worker: Caching Files');
+                // console.log('Service Worker: Caching Files');
                 cache.addAll(cacheAssets);
             })
             .then(()=>self.skipWaiting())
@@ -21,13 +21,13 @@ self.addEventListener('install', (event) => {
 
 //Call Activate Event (also erases old caches not with cacheName)
 self.addEventListener('activate', (event) => {
-    console.log('Service Worker: Activated')
+    // console.log('Service Worker: Activated')
     event.waitUntil(
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames.map(cache => {
                     if(cache !== cacheName){
-                        console.log('Service Worker: Clearing Old Cache');
+                        // console.log('Service Worker: Clearing Old Cache');
                         return caches.delete(cache);
                     }
                 })
@@ -38,10 +38,7 @@ self.addEventListener('activate', (event) => {
 
 //Call Fetch Event (saves files that are loaded into cache, also gets data from cache when offline)
 self.addEventListener('fetch', (event) => {
-    console.log('Service Worker: Fetching');
-    // event.respondWith(
-    //     fetch(event.request).catch(() => caches.match(event.request))
-    // )
+    // console.log('Service Worker: Fetching');
     try {
         event.respondWith(
             caches
