@@ -1,12 +1,11 @@
 <?php
 
-
 $output =[
     'success'=> false,
     'error'  => []
 ];    
-$id = $_POST['id'];
-$detail = $_POST['detail'];
+$id = $_GET['id'];
+$detail = $_GET['detail'];
 $jsonoutput = [];
 
 require_once("mysql_connect.php");
@@ -89,9 +88,5 @@ function execute($conn, $query , $num ){
     return json_encode($utf8_chars_string);
     
 }
-
-
-
-
 
 ?>

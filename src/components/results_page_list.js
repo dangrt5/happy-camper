@@ -6,7 +6,7 @@ import Header from "./header";
 class ResultsPageList extends React.Component {
   constructor(props) {
     super(props);
-    console.log("results page list props", props);
+    // console.log("results page list props", props);
 
     this.state = {
       history: props.history,
