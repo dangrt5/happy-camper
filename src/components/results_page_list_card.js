@@ -10,9 +10,9 @@ class CampSiteCard extends React.Component {
   }
 
   render() {
-    const {park_name, addr, park_website, phone, id} = this.props.details;
+    const {park_name, addr, park_website, phone, id, img_url} = this.props.details;
     let phoneRegex = /([0-9]{3})([0-9]{3})([0-9]{4})/
-    let formattedPhone = phone.replace(/[^\w\s]/gi, "-").replace(/ - $/, "")
+    let formattedPhone = phone.replace(/[^\w\s]/gi, "-").replace(/ [/-] $/, "")
 
     return (
       <div className="card">
@@ -20,7 +20,7 @@ class CampSiteCard extends React.Component {
         <div className="info">
           <h1 onClick={this.sendToCampPage} className="parkName">{park_name}</h1>
           <h3>{addr || "No Address Available"}</h3>
-          <h3>{<a href={`tel:${phone}`}>{formattedPhone}</a> || "No Phone # Available"}</h3>
+          <h3>{<a href={`tel:${phone}`}>{formattedPhone}</a> && phone || "No Phone # Available"}</h3>
           <a href={park_website}>Website</a>
         </div>
       </div>
