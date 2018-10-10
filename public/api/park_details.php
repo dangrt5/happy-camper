@@ -4,8 +4,8 @@ $output =[
     'success'=> false,
     'error'  => []
 ];    
-$id = $_POST['id'];
-$detail = $_POST['detail'];
+$id = $_GET['id'];
+$detail = $_GET['detail'];
 $jsonoutput = [];
 
 require_once("mysql_connect.php");

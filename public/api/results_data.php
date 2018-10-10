@@ -1,18 +1,20 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Methods: GET, POST');
+require_once("mysql_connect.php");
+
+$_POST = json_decode(file_get_contents("php://input"), true);
+
 $output =[
     'success'=> false,
 ];
-// $city = $_GET['city'];
+
 $lat = $_POST['lat'];
 $lng = $_POST['lng'];
+
 $radius = 50;
 
-require_once("mysql_connect.php");
-
-$query = "SELECT id, park_name, addr, phone, lat, lng, img_url, park_desc, 
-                 direction_info, regulation_info, park_website,
-                 SQRT( POW(69.1 * (lat - {$lat}), 2) + POW(69.1 * ({$lng} - lng) * COS(lat / 57.3), 2)) AS distance
-            FROM park_info  HAVING distance < '$radius'  order by park_name";
+$query = "SELECT id, park_name, addr, lat, lng, img_url, phone,direction_info, regulation_info, park_website, SQRT( POW(69.1 * (lat - $lat), 2) + POW(69.1 * ($lng - lng) * COS(lat / 57.3), 2)) AS distance FROM park_info HAVING distance < '$radius' order by park_name";
 
 $result = mysqli_query($conn, $query);
 
