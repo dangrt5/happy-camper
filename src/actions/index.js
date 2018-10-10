@@ -11,7 +11,7 @@ export async function getResultsData(lat, lng){
     const resp = await axios({
         method: "POST",
         data: { lat, lng },
-        url: `http://localhost:8888/public/api/results_list.php`,
+        url: `http://localhost:8888/public/api/results_data.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
 
