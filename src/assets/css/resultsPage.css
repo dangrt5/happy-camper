@@ -3,27 +3,26 @@
   width: 100%;
   position: relative;
   border-bottom: 2px solid rgba(56,29,29,0.15);
-  padding: 2%;
+  padding: 1%;
 }
 
 .card img {
   width: 50%;
+  display: inline-block;
 }
 
 .info {
   display: inline-block;
-  width: 50%;
-  text-align: center;
-  line-height: 12px;
   position: absolute;
-  right: 0%;
-  bottom: 10%;
-
+  top: 5%;
+  width: 49%;
+  text-align: center;
 }
 
 .info .parkName {
-  font-size: 1.5em;
-  font-weight: 200;
+  font-size: .85em;
+  font-weight: 400;
+  width: 98%;
 }
 
 .info h3 {
