@@ -37,3 +37,17 @@ export function clearSingleItem(){
         type: types.CLEAR_SINGLE_ITEM
     }
 }
+
+export function addItem(item){
+    return{
+        type: types.ADD_ITEM,
+        payload: item
+    }
+}
+
+export function removeItem(itemId){
+    return{
+        type: types.REMOVE_ITEM,
+        payload: itemId
+    }
+}

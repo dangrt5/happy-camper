@@ -1,11 +1,19 @@
 import types from '../actions/types'
 const DEFAULT_STATE = {
     results: [],
-    single: {}
+    single: {},
+    itinerary: []
 }
 
 export default function(state = DEFAULT_STATE, action){
     switch(action.type){
+        case types.ADD_ITEM:
+            state.itinerary.push(action.payload)
+            return {...state}
+        case types.REMOVE_ITEM:
+            //EDIT FILTER DEPENDING ON PARK ID VARIABLE NAME
+            const filteredItinerary = state.itinerary.filter(item => item.ID !== action.payload)
+            return {...state, itinerary: filteredItinerary}
         case types.CLEAR_SINGLE_ITEM:
             return {...state, single: {}}
         case types.GET_SINGLE_ITEM:
@@ -13,7 +21,6 @@ export default function(state = DEFAULT_STATE, action){
             // return {...state, single: action.payload.data};
         case types.GET_RESULTS_DATA:
             return {...state, results: action.payload}
-            // return {...state, all: action.payload.data};
         default:
             return state;
     }
