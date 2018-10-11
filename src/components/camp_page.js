@@ -26,8 +26,8 @@ class CampPage extends Component {
     }
   }
     componentDidMount(){
-        // console.log("item id:", this.props.match.params.itemId)
-        // this.props.getSingleItem(this.props.match.params.itemId);
+        console.log("item id:", this.props.match.params.itemId)
+        this.props.getSingleItem(66019); //need to change back to be dynamic
 
         // if(checkitinerary){
         //     this.setState({
