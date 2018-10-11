@@ -18,12 +18,6 @@ class ResultsPageList extends React.Component {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    if(this.props !== prevProps) {
-      this.render();
-    }
-  }
-
   render() {
     const {history, match: {path, params}} = this.props
     const {list} = this.props;
