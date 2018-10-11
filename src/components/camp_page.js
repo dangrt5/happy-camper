@@ -44,7 +44,7 @@ class CampPage extends Component {
         if(!this.props.item.parkinfo){
             return <h1>LOADING...</h1>
         }
-        const name = this.props.item.parkinfo[0].park_name
+        // const name = this.props.item.parkinfo[0].park_name
         const {path, checkSave} = this.state;
         console.log('Camp Page: ', this.props)
         return (
