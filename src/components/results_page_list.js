@@ -22,6 +22,7 @@ class ResultsPageList extends React.Component {
     const {history, match: {path, params}} = this.props
     const {list} = this.props;
 
+
     const campDetails = list.map(item => {
       return <CampSiteCard history={history} key={item.id} details={item}/>
     });

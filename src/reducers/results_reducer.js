@@ -17,8 +17,7 @@ export default function(state = DEFAULT_STATE, action){
         case types.CLEAR_SINGLE_ITEM:
             return {...state, single: {}}
         case types.GET_SINGLE_ITEM:
-            console.log(action.payload)
-            // return {...state, single: action.payload.data};
+            return {...state, single: action.payload.data};
         case types.GET_RESULTS_DATA:
             return {...state, results: action.payload}
         default:
