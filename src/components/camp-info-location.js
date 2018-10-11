@@ -4,8 +4,8 @@ import GoogleMap from "./google-maps";
 export default class Location extends React.Component {
     render(){
         const params = {
-            lat: 33.4797555,
-            lng: -119.029083
+            lat: this.props.lat,
+            lng: this.props.lng
         }
         const address1 = "Angeles Crest Hwy"
         const address2 = "Wrightwood, CA 92397"

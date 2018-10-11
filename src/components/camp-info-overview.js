@@ -1,93 +1,108 @@
 import React from 'react';
 
-import reservable from "../assets/images/icons/accessibility/008-calendar.png";
-import wheelchair from "../assets/images/icons/accessibility/002-wheelchair.png";
-import picnicTables from "../assets/images/icons/accessibility/015-tables.png";
-import drinkingWater from "../assets/images/icons/accessibility/010-liquid.png";
-import electricHookups from "../assets/images/icons/accessibility/012-plug.png";
-import waterHookups from "../assets/images/icons/accessibility/004-water-1.png";
-import firesAllowed from "../assets/images/icons/accessibility/005-fire.png";
-import firewood from "../assets/images/icons/accessibility/013-log.png";
-import market from "../assets/images/icons/accessibility/006-shop.png";
-import phoneService from "../assets/images/icons/accessibility/007-load.png";
-import wifi from "../assets/images/icons/accessibility/003-wifi-signal.png";
-import petsAllowed from "../assets/images/icons/accessibility/014-pets.png";
-import alcoholAllowed from "../assets/images/icons/accessibility/011-alcohol.png";
-import showers from "../assets/images/icons/accessibility/001-water.png";
-import toilets from "../assets/images/icons/accessibility/wc.png";
-import trash from "../assets/images/icons/accessibility/016-trash.png";
-import sanitaryDump from "../assets/images/icons/accessibility/018-plumbing.png";
-import sewerHookup from "../assets/images/icons/accessibility/009-sewer.png";
+import reservableIcon from "../assets/images/icons/accessibility/008-calendar.png";
+import wheelchairIcon from "../assets/images/icons/accessibility/002-wheelchair.png";
+import picnicTablesIcon from "../assets/images/icons/accessibility/015-tables.png";
+import drinkingWaterIcon from "../assets/images/icons/accessibility/010-liquid.png";
+import electricHookupsIcon from "../assets/images/icons/accessibility/012-plug.png";
+import waterHookupsIcon from "../assets/images/icons/accessibility/004-water-1.png";
+import firesAllowedIcon from "../assets/images/icons/accessibility/005-fire.png";
+import firewoodIcon from "../assets/images/icons/accessibility/013-log.png";
+import marketIcon from "../assets/images/icons/accessibility/006-shop.png";
+import phoneServiceIcon from "../assets/images/icons/accessibility/007-load.png";
+import wifiIcon from "../assets/images/icons/accessibility/003-wifi-signal.png";
+import petsAllowedIcon from "../assets/images/icons/accessibility/014-pets.png";
+import alcoholAllowedIcon from "../assets/images/icons/accessibility/011-alcohol.png";
+import showersIcon from "../assets/images/icons/accessibility/001-water.png";
+import toiletsIcon from "../assets/images/icons/accessibility/wc.png";
+import trashIcon from "../assets/images/icons/accessibility/016-trash.png";
+import sanitaryDumpIcon from "../assets/images/icons/accessibility/018-plumbing.png";
+import sewerHookupIcon from "../assets/images/icons/accessibility/009-sewer.png";
+import notAvaliableIcon from '../assets/images/icons/accessibility/prohibition-signal.png'
 
 export default class Overview extends React.Component {
     render(){
+        // console.log('Overview Props ', this.props)
+        const {direction_info, park_desc, park_website, phone} = this.props.item.parkinfo[0];
+
+        let {amenites} = this.props.item
+        if(typeof amenites["reservable"] === 'string'){
+            for(let key in amenites){
+                amenites[key] = JSON.parse(amenites[key].toLowerCase())
+            }
+        }
+
         return (
             <div className="overview">
-                    <h3>Description</h3>
-                    <p>Primitive camping is available (seven sites; $15 per night per site; reservations required). Picnic table, food storage box, and pit toilet are provided. No water is available. Distance from landing to campground is one-half mile and includes a 157-stair climb. \n\nWARNING: Western gulls nest on Anacapa Island From April through mid-August. During this time, visitors will encounter seabird rookery conditions: guano, strong odor, constant noise, bird carcasses, and birds protecting their territory.</p>
-                    <h3>Amenities</h3>
-                    <div className="amenity-container">
-                        <div className="amenity-column">
-                            <div className="amenity-item">
-                                <img src={reservable}/> <span>Reservable</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={wheelchair}/><span>ADA Access</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={picnicTables}/> <span>Picnic Tables</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={drinkingWater}/><span>Drinking Water</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={electricHookups}/> <span>Electric Hookups</span>
-                            </div>
-                            <div className="amenity-item">
-                                    <img src={waterHookups}/><span>Water Hookups</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={firesAllowed}/><span>Fires Allowed</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={firewood}/> <span>Firewood</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={market}/><span>Market</span>
-                            </div>
+                <h3>Website</h3>
+                    <p>{park_website}</p>
+                <h3>Phone</h3>
+                    <p>{phone}</p>
+                <h3>Description</h3>
+                    <p>{park_desc}</p>
+                <h3>Amenities</h3>
+                <div className="amenity-container">
+                    <div className="amenity-column">
+                        <div className="amenity-item">
+                            <img src={amenites["reservable"] ? reservableIcon : notAvaliableIcon}/> <span>Reservable</span>
                         </div>
-                        <div className="amenity-column">
-                            <div className="amenity-item">
-                                <img src={phoneService}/> <span>Phone Service</span>
-                            </div>
-                            <div className="amenity-item">
-                                    <img src={wifi}/><span>Wifi</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={petsAllowed}/><span>Pets Allowed</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={alcoholAllowed}/> <span>Alcohol Allowed</span>
-                            </div>
-                            <div className="amenity-item">
-                                    <img src={showers}/><span>Showers</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={toilets}/> <span>Toilets</span>
-                            </div>
-                            <div className="amenity-item">
-                                <img src={trash}/><span>Trash</span>
-                            </div>
-                            <div className="amenity-item">
-                                    <img src={sanitaryDump}/><span>Sanitary Dump</span>
-                            </div>
-                            <div className="amenity-item">
-                                    <img src={sewerHookup}/> <span>Sewer Hookups</span>
-                            </div>
+                        {/* <div className="amenity-item">
+                            <img src={wheelchairIcon}/><span>ADA Access</span>
+                        </div> */}
+                        <div className="amenity-item">
+                            <img src={amenites["picnic-table"] ? picnicTablesIcon : notAvaliableIcon}/> <span>Picnic Tables</span>
+                        </div>
+                        <div className="amenity-item">
+                            <img src={amenites["drinking-water"] ? drinkingWaterIcon : notAvaliableIcon}/><span>Drinking Water</span>
+                        </div>
+                        <div className="amenity-item">
+                            <img src={amenites["electric-hookups"] ? electricHookupsIcon : notAvaliableIcon}/> <span>Electric Hookups</span>
+                        </div>
+                        <div className="amenity-item">
+                                <img src={amenites["water-hookups"] ? waterHookupsIcon : notAvaliableIcon}/><span>Water Hookups</span>
+                        </div>
+                        <div className="amenity-item">
+                            <img src={amenites["fires-allowed"] ? firesAllowedIcon : notAvaliableIcon}/><span>Fires Allowed</span>
+                        </div>
+                        <div className="amenity-item">
+                            <img src={amenites["firewood"] ? firewoodIcon : notAvaliableIcon}/> <span>Firewood</span>
+                        </div>
+                        <div className="amenity-item">
+                            <img src={amenites["market"] ? marketIcon : notAvaliableIcon}/><span>Market</span>
                         </div>
                     </div>
-
+                    <div className="amenity-column">
+                        <div className="amenity-item">
+                            <img src={amenites["mobile-service"] ? phoneServiceIcon : notAvaliableIcon}/> <span>Phone Service</span>
+                        </div>
+                        <div className="amenity-item">
+                                <img src={amenites["wifi"] ? wifiIcon : notAvaliableIcon}/><span>Wifi</span>
+                        </div>
+                        <div className="amenity-item">
+                            <img src={amenites["pets-allowed"] ? petsAllowedIcon : notAvaliableIcon}/><span>Pets Allowed</span>
+                        </div>
+                        {/* <div className="amenity-item">
+                            <img src={alcoholAllowedIcon}/> <span>Alcohol Allowed</span>
+                        </div> */}
+                        <div className="amenity-item">
+                                <img src={amenites["showers"] ? showersIcon : notAvaliableIcon}/><span>Showers</span>
+                        </div>
+                        <div className="amenity-item">
+                            <img src={amenites["toilets"] ? toiletsIcon : notAvaliableIcon}/> <span>Toilets</span>
+                        </div>
+                        <div className="amenity-item">
+                            <img src={amenites["trash"] ? trashIcon : notAvaliableIcon}/><span>Trash</span>
+                        </div>
+                        <div className="amenity-item">
+                                <img src={amenites["sanitary-dump"] ? sanitaryDumpIcon : notAvaliableIcon}/><span>Sanitary Dump</span>
+                        </div>
+                        <div className="amenity-item">
+                                <img src={amenites["sewer-hookups"] ? sewerHookupIcon : notAvaliableIcon}/> <span>Sewer Hookups</span>
+                        </div>
+                    </div>
                 </div>
+
+            </div>
         )
     }
 }

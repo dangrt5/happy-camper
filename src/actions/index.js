@@ -1,21 +1,13 @@
 import types from './types';
 import axios from 'axios';
 
-
-// const BASE_URL = 'http://api.reactprototypes.com';
-// const API_KEY = '?key=originalkeyname';
-
 export async function getResultsData(lat, lng){
-    // console.log("Axios Call to PHP FILE paramaters",lat, lng);
-    //async and await unnecessary with redux-promise // redux-promise didn't work so used async await
     const resp = await axios({
         method: "POST",
         data: { lat, lng },
         url: `http://localhost:8888/public/api/results_data.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
-
-    // const results = resp;
     console.log("resultsData PHP Call successful:", resp.data.data)
     return {
         type: types.GET_RESULTS_DATA,
@@ -24,15 +16,13 @@ export async function getResultsData(lat, lng){
 }
 
 export async function getSingleItem(itemId){
-    console.log('axios sending to php: ', itemId);
     const resp = await axios({
         method: "POST",
         data: { itemId },
         url: `http://localhost:8888/public/api/park_details.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
-    // axios.get(`/item/${itemId}`);
-    console.log ("POST singleItem PHP Call success:", resp.data.data);
+    // console.log ("POST singleItem PHP Call success:", resp.data.data);
     return {
         type: types.GET_SINGLE_ITEM,
         payload: resp.data.data
@@ -46,6 +36,7 @@ export function clearSingleItem(){
 }
 
 export function addItem(item){
+    // localStorage.setItem('itinerary', resp.data.token)
     return{
         type: types.ADD_ITEM,
         payload: item
@@ -53,6 +44,7 @@ export function addItem(item){
 }
 
 export function removeItem(itemId){
+    // localStorage.removeItem('token')
     return{
         type: types.REMOVE_ITEM,
         payload: itemId
