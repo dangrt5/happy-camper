@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import "../assets/css/itinerary.css"
 import Header from "./header";
 import ItineraryCard from './itinerary_card'
@@ -10,23 +11,20 @@ const dummyData = [{
   image: "https://thedyrt.imgix.net/photo/52799/photo/alabama-brushy-lake-campground_21af9c56af3dd46ea2516cc2f8b18c5d.jpg"
 }]
 
-export default class Itinerary extends Component {
+class Itinerary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      path: null,
-      list: null,
+      path: props.match.path,
+      list: props.itinerary
     }
   }
-  componentDidMount(){
-    this.setState({
-      path: this.props.match.path
-    })
-  }
     render(){
-      const {path} = this.state;
-      const {itineraryList} = dummyData.map((item,index)=>{
-          <ItineraryCard key={item} data={item}/>
+      //list variable will replace dummyData
+      // console.log('Itinerary state', this.state)
+      const {path, list} = this.state;
+      const itineraryList = dummyData.map((item,index)=>{
+          return <ItineraryCard key={index} data={item}/>
       })
         return (
           <div>
@@ -38,3 +36,11 @@ export default class Itinerary extends Component {
         )
     }
 }
+
+function mapStateToProps(state){
+  return {
+      itinerary: state.list.itinerary
+  }
+}
+
+export default connect(mapStateToProps)(Itinerary)
