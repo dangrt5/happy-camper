@@ -1,20 +1,13 @@
 import React, {Component} from "react";
 import GoogleMap from "./google-maps";
 import Header from "./header";
+import {connect} from "react-redux";
+import {getResultsData} from "../actions";
 
 class ResultsPageMap extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      history: props.history,
-      path: props.match.path,
-      params: props.match.params
-    }
-  }
   render() {
-    const {path, history, params} = this.state;
-    console.log(params)
+    const {list, history, match: {path, params}} = this.props;
+
     return (
       <div>
         <Header history={history} params={params} path={path}/>
@@ -24,4 +17,10 @@ class ResultsPageMap extends Component {
   }
 }
 
-export default ResultsPageMap;
+function mapStateToProps(state){
+  return {
+      list: state.list.results
+  }
+}
+
+export default connect(mapStateToProps, {getResultsData})(ResultsPageMap)

@@ -1,5 +1,7 @@
 import React from "react";
 import resultImg from "../assets/images/resultimg.png";
+import {getResultsData} from "../actions";
+import {connect} from "react-redux";
 import "../assets/css/google-map.css";
 
 class GoogleMap extends React.Component {
@@ -8,28 +10,28 @@ class GoogleMap extends React.Component {
 
     this.state = {
       showInfoCard: false,
-      markerContent: {}
+      markerContent: {},
     }
   }
 
-  componentDidMount() {
-    this.initGoogleMap();
-  }
-
-openGoogleMapMarker = (e) => {
-  googleMapModal.style
+componentDidMount() {
+  this.initGoogleMap();
 }
 
-initGoogleMap = async () => {
-  const {params} = this.props;
-  let latLng = new google.maps.LatLng(params.lat, params.lng);
-  let geocoder = new google.maps.Geocoder;
+componentDidUpdate(prevProps) {
+  if(this.props !== prevProps) {
+    this.initGoogleMap();
+  }
+}
 
-  await geocoder.geocode({"location": latLng}, (results) => console.log("Geocoder Results:", (results[0].formatted_address.split(','))));
+initGoogleMap = () => {
+  console.log("this props", this.props);
+  const {list, params} = this.props;
+  let latLng = new google.maps.LatLng(params.lat, params.lng);
 
   const map = new window.google.maps.Map(document.getElementById("map"), {
     center: latLng,
-    zoom: 10,
+    zoom: 8,
     scrollwheel: false,
     mapTypeId: "terrain",
     mapTypeControl: false,
@@ -42,39 +44,43 @@ initGoogleMap = async () => {
     }
   });
 
-  let marker = new google.maps.Marker({position: latLng, map: map});
-
-  marker.addListener("click", () => {
-    this.setState({
-      showInfoCard: true
-    })
-  })
+  for(let i = 0 ; i < list.length; i++) {
+    let latLng = new google.maps.LatLng(list[i].lat, list[i].lng);
+    let geocoder = new google.maps.Geocoder;
+    let marker = new google.maps.Marker({position: latLng, map: map, location: list[i]});
+    marker.addListener("click", () => {
+     this.setState({
+       showInfoCard: true,
+       markerContent: marker.location
+     })
+   });
+  };
 
   map.addListener("click", () => {
     this.setState({
       markerContent: {},
       showInfoCard: false
     })
-  })
-
+  });
 }
 
 
   render() {
-    const { markerContent, showInfoCard } = this.state;
+    const { markerContent: {park_name, addr, phone, park_website}, showInfoCard } = this.state;
+    const {list} = this.props;
 
     return (
       <div>
         <div id="map"></div>
+
         { showInfoCard
           ? <div className="google-modal">
               <img src={resultImg}/>
               <div className="info">
-                <h1 className="parkName">Park Name</h1>
-                <h3>123 Park Street</h3>
-                <h3>Big Bear Lake, CA</h3>
-                <h3>Phone #</h3>
-                <h3>URL: facebook.com</h3>
+                <h1 className="parkName">{park_name}</h1>
+                <h3>{addr || "No Address Available"}</h3>
+                <h3>{phone ? <a href={`tel:${phone}`}>{phone}</a> : "No Phone # Available"}</h3>
+                <a href={park_website}>Website</a>
               </div>
             </div>
           : <div></div>
@@ -85,4 +91,10 @@ initGoogleMap = async () => {
   }
 }
 
-export default GoogleMap;
+function mapStateToProps(state){
+  return {
+      list: state.list.results
+  }
+}
+
+export default connect(mapStateToProps, {getResultsData})(GoogleMap)
