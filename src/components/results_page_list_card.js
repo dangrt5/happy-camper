@@ -15,12 +15,12 @@ class CampSiteCard extends React.Component {
     let formattedPhone = phone.replace(/[^\w\s]/gi, "-").replace(/ [/-] $/, "")
 
     return (
-      <div className="card">
+      <div className="resultList card">
         <img onClick={this.sendToCampPage} src={resultImg}/>
         <div className="info">
           <h1 onClick={this.sendToCampPage} className="parkName">{park_name}</h1>
           <h3>{addr || "No Address Available"}</h3>
-          <h3>{phone ? <a href={`tel:${formattedPhone}`}>{formattedPhone}</a> : "No Phone # Available"}</h3> 
+          <h3>{phone ? <a href={`tel:${formattedPhone}`}>{formattedPhone}</a> : "No Phone # Available"}</h3>
           <a href={park_website}>Website</a>
         </div>
       </div>

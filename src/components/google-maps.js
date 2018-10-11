@@ -52,15 +52,16 @@ initGoogleMap = () => {
      this.setState({
        showInfoCard: true,
        markerContent: marker.location
-     })
+     });
    });
+
   };
 
   map.addListener("click", () => {
     this.setState({
       markerContent: {},
       showInfoCard: false
-    })
+    });
   });
 }
 
