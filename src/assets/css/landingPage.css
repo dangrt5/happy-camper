@@ -1,3 +1,29 @@
+@media (min-width: 600px) {
+
+  .logo{
+      width: 50vw;
+  }
+
+  .landing-page-input {
+      width: 60vw;
+      height: 10vw;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .logo{
+      width: 80vw;
+  }
+
+  .landing-page-input {
+      width: 75vw;
+      height: 7vh;
+  }
+
+}
+
 .landing-page-container{
     width: 100vw;
     position: absolute;
@@ -5,13 +31,8 @@
     text-align: center;
 }
 
-.logo{
-    width: 80vw;
-}
 
 .landing-page-input {
-    width: 80vw;
-    height: 12vw;
     font-size: 1.5em;
     border-style: none;
     border-radius: 5px;
