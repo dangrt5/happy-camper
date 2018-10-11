@@ -50,14 +50,14 @@ foreach($parkList["data"] as $key ){
 
         $insertQuery = "INSERT INTO `park_image`(`ID`, `PARK_ID` ,`PARK_IMG_URL` ) 
                         VALUES ( default, $keyID[id],'$photoUrl')";
-        print_r($insertQuery);
+        // print_r($insertQuery);
         $insertResult = mysqli_query($conn, $insertQuery); 
         $insertQuery = '';    
 
         $count++;
     }
     
-    
+    print('done');
 }   
 
 ?>
