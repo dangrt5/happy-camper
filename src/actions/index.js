@@ -16,19 +16,26 @@ export async function getResultsData(lat, lng){
     });
 
     // const results = resp;
-    console.log("PHP Call successful:", resp.data.data)
+    console.log("resultsData PHP Call successful:", resp.data.data)
     return {
         type: types.GET_RESULTS_DATA,
         payload: resp.data.data
     }
-
 }
 
-export function getSingleItem(itemId){
-    const resp = axios.get(`/item/${itemId}`);
+export async function getSingleItem(itemId){
+    console.log('axios sending to php: ', itemId);
+    const resp = await axios({
+        method: "POST",
+        data: { itemId },
+        url: `http://localhost:8888/public/api/park_details.php`,
+        headers: {"Content-Type": "application/x-www-form-urlencoded"}
+    });
+    // axios.get(`/item/${itemId}`);
+    console.log ("POST singleItem PHP Call success:", resp.data.data);
     return {
         type: types.GET_SINGLE_ITEM,
-        payload: resp
+        payload: resp.data.data
     }
 }
 

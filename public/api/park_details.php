@@ -1,17 +1,20 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Methods: GET, POST');
+require_once("mysql_connect.php");
+
+$_POST = json_decode(file_get_contents("php://input"), true);
 
 $output =[ ];    
 $parkArray = array();
 $imgArray = array();
-$id = $_POST['id'];
-
-require_once("mysql_connect.php");
+$id = $_POST['itemId'];
 
 for( $type =1; $type <= 4 ; $type++){
     // park detail
     if($type == 1 ){
         $query = "SELECT id, park_name,addr,phone, lat, lng, park_desc, direction_info, regulation_info,park_website
-                FROM park_info   WHERE ID = '$id'";
+                FROM park_info   WHERE ID = $id";
         $result = mysqli_query($conn, $query);
 
         if($result){
@@ -32,7 +35,7 @@ for( $type =1; $type <= 4 ; $type++){
      // park amenity
         $query = "SELECT park_amenity.AMENITY_TYPE, park_amenity.DETAIL    FROM `park_info`
                 JOIN `park_amenity` ON `park_amenity`.`PARK_ID` = `park_info`.`ID`
-                WHERE `park_info`.`ID` = '$id'";
+                WHERE `park_info`.`ID` = $id";
         $result = mysqli_query($conn, $query);
 
         if($result){
@@ -49,7 +52,7 @@ for( $type =1; $type <= 4 ; $type++){
         $query = "SELECT park_camp.CAMPSITE_TYPE, park_camp.CAMP_DETAIL 
                 FROM `park_info`
                 JOIN `park_camp` ON `park_camp`.`PARK_ID` = `park_info`.`ID`
-                WHERE park_info.ID = '$id'";
+                WHERE `park_info`.`ID` = $id";
         $result = mysqli_query($conn, $query);
         
         if($result){
@@ -64,7 +67,7 @@ for( $type =1; $type <= 4 ; $type++){
     // park img
         $query = "SELECT   PARK_IMG_URL  FROM  `park_image`  
                     LEFT JOIN `park_info` ON `park_info`.`ID` = `park_image`.`park_ID`
-                    WHERE `park_info`.`ID` = '$id' ";
+                    WHERE `park_info`.`ID` = $id";
          $result = mysqli_query($conn, $query);
          if($result){
             if(mysqli_num_rows($result)> 0){
