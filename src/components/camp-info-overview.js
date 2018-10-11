@@ -24,7 +24,7 @@ export default class Overview extends React.Component {
         return (
             <div className="overview">
                     <h3>Description</h3>
-                    <p>Primitive camping is available (seven sites; $15 per night per site; reservations required). Picnic table, food storage box, and pit toilet are provided. No water is available. Distance from landing to campground is one-half mile and includes a 157-stair climb. \n\nWARNING: Western gulls nest on Anacapa Island From April through mid-August. During this time, visitors will encounter seabird rookery conditions: guano, strong odor, constant noise, bird carcasses, and birds protecting their territory.</p>
+                    <p>Description</p>
                     <h3>Amenities</h3>
                     <div className="amenity-container">
                         <div className="amenity-column">

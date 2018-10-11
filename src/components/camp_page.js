@@ -21,17 +21,19 @@ class CampPage extends Component {
     }
   }
     componentDidMount(){
-        // console.log("item id:", this.props.match.params.itemId)
-        this.props.getSingleItem(this.props.match.params.itemId);
+        this.props.getSingleItem(this.props.match.params.id); //66019
+        // this.setState({
+        //     name: this.props.item.parkinfo[0].park_name
+        // })
         // if(checkitinerary){
         //     this.setState({
         //         checkSave: true
         //     })
         // }
     }
-    // componentDidUpdate(){
-    //     console.log(this.checkItinerary())
-    // }
+    componentDidUpdate(){
+        // console.log(this.checkItinerary())
+    }
     // checkItinerary(){
     //     let check = false;
     //     const thisId = this.props.item.parkinfo[0].id;
@@ -61,23 +63,23 @@ class CampPage extends Component {
 
     }
     render(){
-        // console.log('Camp Page State', this.state)
-        console.log('Camp Page Props', this.props)
-      const {path, checkSave} = this.state;
+        const {item} = this.props
+        // console.log('Camp Page Props', this.props)
+        const {path, checkSave} = this.state;
         return (
             <div>
               <Header path={path}/>
                 <div className="container camp-page">
 
                     <div className="camp-title">
-                        <h1>Jackson Flats</h1>
-                        <h2>California</h2>
+                        <h1>{item.parkinfo ? item.parkinfo[0].park_name : 'LOADING...'}</h1>
+                        {/* <h2>California</h2> */}
                         <img onClick={this.saveFunction} src={checkSave ? isSaved : save}/>
                     </div>
 
                 <PhotoCarousel/>
 
-                <CampInfo />
+                <CampInfo {...this.props}/>
                 </div>
             </div>
 

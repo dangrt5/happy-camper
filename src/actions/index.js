@@ -1,8 +1,6 @@
 import types from './types';
 import axios from 'axios';
 
-import dummyData from '../components/dummydata/parkdata'
-
 export async function getResultsData(lat, lng){
     const resp = await axios({
         method: "POST",
@@ -10,22 +8,24 @@ export async function getResultsData(lat, lng){
         url: `http://localhost:8888/public/api/results_data.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
-
-    // const results = resp;
-    console.log("PHP Call successful:", resp.data.data)
+    console.log("resultsData PHP Call successful:", resp.data.data)
     return {
         type: types.GET_RESULTS_DATA,
         payload: resp.data.data
     }
-
 }
 
-export function getSingleItem(itemId){
-    // const resp = axios.get(`/item/${itemId}`);
-    const resp = dummyData;
+export async function getSingleItem(itemId){
+    const resp = await axios({
+        method: "POST",
+        data: { itemId },
+        url: `http://localhost:8888/public/api/park_details.php`,
+        headers: {"Content-Type": "application/x-www-form-urlencoded"}
+    });
+    // console.log ("POST singleItem PHP Call success:", resp.data.data);
     return {
         type: types.GET_SINGLE_ITEM,
-        payload: resp.data
+        payload: resp.data.data
     }
 }
 
@@ -36,6 +36,7 @@ export function clearSingleItem(){
 }
 
 export function addItem(item){
+    // localStorage.setItem('itinerary', resp.data.token)
     return{
         type: types.ADD_ITEM,
         payload: item
@@ -43,6 +44,7 @@ export function addItem(item){
 }
 
 export function removeItem(itemId){
+    // localStorage.removeItem('token')
     return{
         type: types.REMOVE_ITEM,
         payload: itemId

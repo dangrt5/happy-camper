@@ -1,14 +1,24 @@
 import React from 'react';
 import {Route, Link, Switch} from 'react-router-dom'
 
-import Swiper from 'swiper';
+import { connect } from 'react-redux';
+import {getSingleItem} from '../actions'
 
 import Overview from './camp-info-overview'
 import Location from './camp-info-location'
 import Weather from './camp-info-weather'
 
-export default class CampInfo extends React.Component {
+class CampInfo extends React.Component {
+    componentDidMount(){
+        this.props.getSingleItem(this.props.match.params.id); //66019
+    }
     render(){
+        console.log('Camp Page Props', this.props.item)
+        let description = "Loading..."
+        let {id} = this.props.match.params
+        if(typeof this.props.item.parkinfo !== 'undefined'){
+            description = this.props.item.parkinfo[0].park_desc;
+        }
         return (
             <div className="info-container">
                 <div className="info-menu">
@@ -28,3 +38,13 @@ export default class CampInfo extends React.Component {
         )
     }
 }
+
+function mapStateToProps(state){
+    return {
+        item: state.list.single,
+    }
+}
+
+export default connect(mapStateToProps, {getSingleItem})(CampInfo)
+
+//TODO: use variables in LINK TO=`${}`
