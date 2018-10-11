@@ -30,3 +30,41 @@
   right: 0%;
   bottom: 15%;
 }
+
+.google-modal .card {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.google-modal img {
+  width: 50%;
+  display: inline-block;
+}
+
+.google-modal .info{
+  display: inline-block;
+  position: absolute;
+  top: 5%;
+  width: 49%;
+  text-align: center;
+  line-height: 15px;
+}
+
+.google-modal .info .parkName {
+  font-size: .85em;
+  font-weight: 400;
+  width: 100%;
+}
+
+.google-modal .info h3 {
+  font-size: .75em;
+  font-weight: 200;
+}
+
+.google-modal .info a {
+  font-size: .85em;
+}
+.google-modal .info h3 a {
+  font-size: 1em;
+}

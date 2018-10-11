@@ -1,4 +1,4 @@
-.card {
+.resultList {
   display: inline-block;
   width: 100%;
   position: relative;
@@ -6,12 +6,12 @@
   padding: 1%;
 }
 
-.card img {
+.resultList img {
   width: 50%;
   display: inline-block;
 }
 
-.info {
+.resultList .info {
   display: inline-block;
   position: absolute;
   top: 5%;
@@ -19,19 +19,23 @@
   text-align: center;
 }
 
-.info .parkName {
+.resultList .info .parkName {
   font-size: .85em;
   font-weight: 400;
   width: 98%;
 }
 
-.info h3 {
+.resultList .info h3 {
   font-size: .75em;
   font-weight: 200;
 }
 
-.info a {
+.resultList .info a {
   font-size: .85em;
+}
+
+.resultList .info h3 a {
+  font-size: 1em;
 }
 
 .googleMap img {
