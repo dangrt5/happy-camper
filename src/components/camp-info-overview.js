@@ -22,14 +22,23 @@ import notAvaliableIcon from '../assets/images/icons/accessibility/prohibition-s
 
 export default class Overview extends React.Component {
     render(){
-        // console.log('Overview Props ', this.props)
-        const {direction_info, park_desc, park_website, phone} = this.props.item.parkinfo[0];
+        console.log('Overview Props ', this.props)
+        let {direction_info, park_desc, park_website, phone} = this.props.item.parkinfo[0];
 
         let {amenites} = this.props.item
         if(typeof amenites["reservable"] === 'string'){
             for(let key in amenites){
                 amenites[key] = JSON.parse(amenites[key].toLowerCase())
             }
+        }
+        if(park_desc === ''){
+            park_desc = 'No description avaliable.'
+        }
+        if(park_website === ''){
+            park_website = 'No website avaliable.'
+        }
+        if(phone === ''){
+            phone = 'No phone number avaliable.'
         }
 
         return (
