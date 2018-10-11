@@ -17,6 +17,7 @@ class ResultsPageList extends React.Component {
       params: props.match.params
     }
   }
+
   render() {
     const {history, match: {path, params}} = this.props
     const {list} = this.props;
