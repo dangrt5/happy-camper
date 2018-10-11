@@ -22,29 +22,7 @@ class CampPage extends Component {
   }
     componentDidMount(){
         this.props.getSingleItem(this.props.match.params.id); //66019
-        // this.setState({
-        //     name: this.props.item.parkinfo[0].park_name
-        // })
-        // if(checkitinerary){
-        //     this.setState({
-        //         checkSave: true
-        //     })
-        // }
     }
-    componentDidUpdate(){
-        // console.log(this.checkItinerary())
-    }
-    // checkItinerary(){
-    //     let check = false;
-    //     const thisId = this.props.item.parkinfo[0].id;
-    //     const itinerary = this.props.itinerary;
-    //     for (let i = 0; i < itinerary.length; i++){
-    //         if(itinerary[i].parkinfo[0].id === thisId){
-    //             check = true;
-    //         }
-    //     }
-    //     return check;
-    // }
     componentWillUnmount(){
         this.props.clearSingleItem();
     }
@@ -63,16 +41,19 @@ class CampPage extends Component {
 
     }
     render(){
-        const {item} = this.props
-        // console.log('Camp Page Props', this.props)
+        if(!this.props.item.parkinfo){
+            return <h1>LOADING...</h1>
+        }
+        const name = this.props.item.parkinfo[0].park_name
         const {path, checkSave} = this.state;
+        console.log('Camp Page: ', this.props)
         return (
             <div>
               <Header path={path}/>
                 <div className="container camp-page">
 
                     <div className="camp-title">
-                        <h1>{item.parkinfo ? item.parkinfo[0].park_name : 'LOADING...'}</h1>
+                        <h1>{name}</h1>
                         {/* <h2>California</h2> */}
                         <img onClick={this.saveFunction} src={checkSave ? isSaved : save}/>
                     </div>
@@ -94,3 +75,29 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps, {getSingleItem, clearSingleItem, addItem, removeItem})(CampPage)
+
+
+
+
+
+
+        // if(checkitinerary){
+        //     this.setState({
+        //         checkSave: true
+        //     })
+        // }
+
+    // componentDidUpdate(){
+        // console.log(this.checkItinerary())
+    // }
+    // checkItinerary(){
+    //     let check = false;
+    //     const thisId = this.props.item.parkinfo[0].id;
+    //     const itinerary = this.props.itinerary;
+    //     for (let i = 0; i < itinerary.length; i++){
+    //         if(itinerary[i].parkinfo[0].id === thisId){
+    //             check = true;
+    //         }
+    //     }
+    //     return check;
+    // }

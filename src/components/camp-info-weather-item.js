@@ -31,8 +31,6 @@ export default class WeatherItem extends React.Component {
         min = Math.round(min);
         speed = Math.round(speed);
 
-        console.log(dt)
-
         dt = new Date(dt * 1000).toDateString()
         dt = dt.split(" ")
         let day = dt[0];
