@@ -44,9 +44,9 @@ class CampPage extends Component {
         if(!this.props.item.parkinfo){
             return <h1>LOADING...</h1>
         }
-        // const name = this.props.item.parkinfo[0].park_name
+        const name = this.props.item.parkinfo[0].park_name
         const {path, checkSave} = this.state;
-        console.log('Camp Page: ', this.props)
+        // console.log('Camp Page: ', this.props)
         return (
             <div>
               <Header path={path}/>
@@ -58,7 +58,7 @@ class CampPage extends Component {
                         <img onClick={this.saveFunction} src={checkSave ? isSaved : save}/>
                     </div>
 
-                <PhotoCarousel/>
+                <PhotoCarousel images={this.props.item.park_img}/>
 
                 <CampInfo {...this.props}/>
                 </div>
