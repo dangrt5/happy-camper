@@ -1,13 +1,9 @@
 import types from './types';
 import axios from 'axios';
 
-
-// const BASE_URL = 'http://api.reactprototypes.com';
-// const API_KEY = '?key=originalkeyname';
+import dummyData from '../components/dummydata/parkdata'
 
 export async function getResultsData(lat, lng){
-    // console.log("Axios Call to PHP FILE paramaters",lat, lng);
-    //async and await unnecessary with redux-promise // redux-promise didn't work so used async await
     const resp = await axios({
         method: "POST",
         data: { lat, lng },
@@ -25,10 +21,11 @@ export async function getResultsData(lat, lng){
 }
 
 export function getSingleItem(itemId){
-    const resp = axios.get(`/item/${itemId}`);
+    // const resp = axios.get(`/item/${itemId}`);
+    const resp = dummyData;
     return {
         type: types.GET_SINGLE_ITEM,
-        payload: resp
+        payload: resp.data
     }
 }
 

@@ -12,13 +12,12 @@ export default function(state = DEFAULT_STATE, action){
             return {...state}
         case types.REMOVE_ITEM:
             //EDIT FILTER DEPENDING ON PARK ID VARIABLE NAME
-            const filteredItinerary = state.itinerary.filter(item => item.ID !== action.payload)
+            const filteredItinerary = state.itinerary.filter(item => item.parkinfo[0].id !== action.payload)
             return {...state, itinerary: filteredItinerary}
         case types.CLEAR_SINGLE_ITEM:
             return {...state, single: {}}
         case types.GET_SINGLE_ITEM:
-            console.log(action.payload)
-            // return {...state, single: action.payload.data};
+            return {...state, single: action.payload};
         case types.GET_RESULTS_DATA:
             return {...state, results: action.payload}
         default:
