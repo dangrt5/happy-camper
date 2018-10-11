@@ -1,11 +1,12 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Methods: GET, POST');
+require_once("mysql_connect.php");
 
 $output =[ ];    
 $parkArray = array();
 $imgArray = array();
 $id = $_POST['id'];
-
-require_once("mysql_connect.php");
 
 for( $type =1; $type <= 4 ; $type++){
     // park detail
