@@ -70,20 +70,24 @@ initGoogleMap = () => {
   });
 }
 
+  sendToCampSite = (e) => {
+    const {id} = this.state.markerContent
+    this.props.history.push(`/camp/${id}/overview`);
+  }
+
 
   render() {
-    const { markerContent: {park_name, addr, phone, park_website}, showInfoCard } = this.state;
+    const { markerContent: {park_name, addr, phone, park_website, img_url}, showInfoCard } = this.state;
     const {list} = this.props;
-
     return (
       <div>
         <div id="map"></div>
 
         { showInfoCard
           ? <div className="google-modal">
-              <img src={resultImg}/>
+              <img onClick={this.sendToCampSite} src={resultImg}/>
               <div className="info">
-                <h1 className="parkName">{park_name}</h1>
+                <h1 onClick={this.sendToCampSite} className="parkName">{park_name}</h1>
                 <h3>{addr || "No Address Available"}</h3>
                 <h3>{phone ? <a href={`tel:${phone}`}>{phone}</a> : "No Phone # Available"}</h3>
                 <a href={park_website}>Website</a>
