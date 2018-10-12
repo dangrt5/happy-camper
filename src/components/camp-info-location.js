@@ -7,12 +7,14 @@ export default class Location extends React.Component {
             lat: this.props.lat,
             lng: this.props.lng
         }
+        const list = [params];
+        console.log("List", list);
         const address1 = "Angeles Crest Hwy"
         const address2 = "Wrightwood, CA 92397"
 
         return(
         <div className="location">
-            <GoogleMap params={params}/>
+            <GoogleMap hideCard={true} list={list} params={params}/>
             <div className="address">
                 <div>
                     <p>{address1}</p>

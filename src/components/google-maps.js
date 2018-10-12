@@ -27,6 +27,8 @@ componentDidUpdate(prevProps) {
 initGoogleMap = () => {
   console.log("this props", this.props);
   const {list, params} = this.props;
+
+
   let latLng = new google.maps.LatLng(params.lat, params.lng);
 
   const map = new window.google.maps.Map(document.getElementById("map"), {
@@ -49,6 +51,9 @@ initGoogleMap = () => {
     let geocoder = new google.maps.Geocoder;
     let marker = new google.maps.Marker({position: latLng, map: map, location: list[i]});
     marker.addListener("click", () => {
+      if(this.props.hideCard) {
+        return;
+      }
      this.setState({
        showInfoCard: true,
        markerContent: marker.location
@@ -98,4 +103,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps, {getResultsData})(GoogleMap)
+export default GoogleMap;
