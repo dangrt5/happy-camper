@@ -14,7 +14,6 @@ class ResultsPage extends Component {
   componentDidMount(){
     const {lat, lng} = this.props.match.params
     this.props.getResultsData(lat, lng);
-    console.log("this state", this.state);
   }
 
     render(){

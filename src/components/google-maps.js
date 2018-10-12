@@ -25,7 +25,6 @@ componentDidUpdate(prevProps) {
 }
 
 initGoogleMap = () => {
-  console.log("this props", this.props);
   const {list, params} = this.props;
 
 
@@ -71,7 +70,7 @@ initGoogleMap = () => {
 }
 
   sendToCampSite = (e) => {
-    const {id} = this.state.markerContent
+    const {markerContent: {id}} = this.state
     this.props.history.push(`/camp/${id}/overview`);
   }
 
