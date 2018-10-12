@@ -22,7 +22,7 @@ import notAvaliableIcon from '../assets/images/icons/accessibility/prohibition-s
 
 export default class Overview extends React.Component {
     render(){
-        console.log('Overview Props ', this.props)
+        // console.log('Overview Props ', this.props)
         let {direction_info, park_desc, park_website, phone} = this.props.item.parkinfo[0];
 
         let {amenites} = this.props.item
