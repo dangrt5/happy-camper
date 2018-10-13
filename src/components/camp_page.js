@@ -21,8 +21,27 @@ class CampPage extends Component {
     }
   }
     componentDidMount(){
-        this.props.getSingleItem(this.props.match.params.id); //66019
+        this.props.getSingleItem(this.props.match.params.id);
+        this.checkItinerary();
     }
+    componentDidUpdate(){
+    }
+    checkItinerary(){
+        let check = false;
+        const thisId = this.props.match.params.id;
+        const itinerary = this.props.itinerary;
+        for (let i = 0; i < itinerary.length; i++){
+            if(itinerary[i].parkinfo[0].id === thisId){
+                check = true;
+            }
+        }
+        if(check){
+            this.setState({
+                checkSave: true
+            })
+        }
+    }
+
     componentWillUnmount(){
         this.props.clearSingleItem();
     }
@@ -38,7 +57,6 @@ class CampPage extends Component {
                 checkSave: false
             })
         }
-
     }
     render(){
         if(!this.props.item.parkinfo){
@@ -54,7 +72,6 @@ class CampPage extends Component {
 
                     <div className="camp-title">
                         <h1>{name}</h1>
-                        {/* <h2>California</h2> */}
                         <img onClick={this.saveFunction} src={checkSave ? isSaved : save}/>
                     </div>
 
@@ -75,29 +92,3 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps, {getSingleItem, clearSingleItem, addItem, removeItem})(CampPage)
-
-
-
-
-
-
-        // if(checkitinerary){
-        //     this.setState({
-        //         checkSave: true
-        //     })
-        // }
-
-    // componentDidUpdate(){
-        // console.log(this.checkItinerary())
-    // }
-    // checkItinerary(){
-    //     let check = false;
-    //     const thisId = this.props.item.parkinfo[0].id;
-    //     const itinerary = this.props.itinerary;
-    //     for (let i = 0; i < itinerary.length; i++){
-    //         if(itinerary[i].parkinfo[0].id === thisId){
-    //             check = true;
-    //         }
-    //     }
-    //     return check;
-    // }
