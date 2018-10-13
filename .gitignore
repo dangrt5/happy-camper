@@ -4,3 +4,4 @@ node_modules
 config.js
 public/api/mysql_connect.php
 public/api/index.html
+public/api/parkdata_dyrt.json
