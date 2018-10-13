@@ -10,16 +10,17 @@ class CampSiteCard extends React.Component {
   }
 
   render() {
-    const {park_name, addr, park_website, phone, id, img_url} = this.props.details;
-    let phoneRegex = /([0-9]{3})([0-9]{3})([0-9]{4})/
+    const {park_name, addr, park_website, phone, id, img_url, lat, lng} = this.props.details;
     let formattedPhone = phone.replace(/[^\w\s]/gi, "-").replace(/ [/-] $/, "")
 
     return (
       <div className="resultList card">
-        <img onClick={this.sendToCampPage} src={resultImg}/>
+        <div className="camp-thumbnail">
+          <img onClick={this.sendToCampPage} src={resultImg}/>
+        </div>
         <div className="info">
           <h1 onClick={this.sendToCampPage} className="parkName">{park_name}</h1>
-          <h3>{addr || "No Address Available"}</h3>
+          <h3>{addr || `lat: (${lat}), lng: (${lng})`}</h3>
           <h3>{phone ? <a href={`tel:${formattedPhone}`}>{formattedPhone}</a> : "No Phone # Available"}</h3>
           <a href={park_website}>Website</a>
         </div>
