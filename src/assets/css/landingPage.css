@@ -1,27 +1,55 @@
-@media (min-width: 600px) {
+@media (min-width: 1281px) {
+  /* Desktops */
 
   .logo{
-      width: 50vw;
+      width: 20vw;
   }
 
   .landing-page-input {
-      width: 60vw;
-      height: 10vw;
+      width: 30vw;
+      /* height: 5vw; */
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+
+  .logo{
+      width: 40vw;
+  }
+
+  .landing-page-input {
+      width: 50vw;
+      /* height: 10vw; */
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+
+  .logo{
+      width: 40vw;
+  }
+
+  .landing-page-input {
+      width: 55vw;
+      /* height: 10vw; */
   }
 
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-
+  /* Mobile Phones */
   .logo{
       width: 80vw;
   }
 
   .landing-page-input {
       width: 75vw;
-      height: 7vh;
+      /* height: 7vh; */
   }
-
 }
 
 .landing-page-container{
@@ -33,6 +61,7 @@
 
 
 .landing-page-input {
+    height: 10vh;
     font-size: 1.5em;
     border-style: none;
     border-radius: 5px;
