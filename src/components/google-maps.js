@@ -50,6 +50,13 @@ initGoogleMap = () => {
     let latLng = new google.maps.LatLng(list[i].lat, list[i].lng);
     let geocoder = new google.maps.Geocoder;
     let marker = new google.maps.Marker({position: latLng, map: map, location: list[i]});
+
+    geocoder.geocode( {"location": latLng}, (results, status) => {
+      if(status === "OK") {
+        marker.location.addr = results[0].formatted_address;
+      }
+    });
+
     marker.addListener("click", () => {
       if(this.props.hideCard) {
         return;

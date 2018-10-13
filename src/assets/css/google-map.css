@@ -10,8 +10,6 @@
   height: 155px;
   width: 295px;
   background-color: white;
-  display: flex;
-  flex-flow: row;
 }
 
 .google-modal img {
@@ -40,9 +38,9 @@
   position: absolute;
   top: 5%;
   right: 0;
-  width: 49%;
+  width: 45%;
   text-align: center;
-  line-height: 15px;
+  line-height: 12px;
 }
 
 .google-modal .info .parkName {
@@ -54,6 +52,7 @@
 .google-modal .info h3 {
   font-size: .75em;
   font-weight: 200;
+  width: 98%;
 }
 
 .google-modal .info a {
