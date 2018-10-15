@@ -10,7 +10,6 @@ $parkList = json_decode($importJSON, true);
 curl_close($handler);
 ini_set("max_execution_time", 0);
 
-
 $output =[
     'success'=> false,
     'error'  => []
@@ -22,14 +21,13 @@ foreach($parkList["data"] as $key ){
     $parkName = $key["attributes"]["name"];
     $parkName = checkInputData($parkName);
 
-    // $parkDesc = $key["attributes"]["description"];
-    // $parkDesc = checkInputData($parkDesc);
+    $parkDesc = $key["attributes"]["description"];
+    $parkDesc = checkInputData($parkDesc);
  
     $parkImgUrl = $key["attributes"]["photo-url"];
     $parkImgUrl = checkInputData($parkImgUrl);
-    print 'line 42'.$parkImgUrl;
 
-    $query = "UPDATE `park_info` SET `img_url` = '$parkImgUrl' WHERE `park_id` = $parkID";
+    $query = "UPDATE `park_info` SET `img_url` = '$parkImgUrl', `park_desc` = '$parkDesc' WHERE `park_id` = $parkID";
 
     $result = mysqli_query($conn, $query);
 
