@@ -7,7 +7,7 @@ export default class PhotoCarousel extends React.Component {
         let galleryData = [];
         for (let key in this.props.images){
             galleryData.push(
-                <Images key={key} src={this.props.images[key]}/>
+                <Images key={key} openModal={this.props.openModal} src={this.props.images[key]}/>
             )
         }
         // dyrtGallery.map((item,index)=>{

@@ -47,8 +47,8 @@ initGoogleMap = () => {
 
   for(let i = 0 ; i < list.length; i++) {
     let latLng = new google.maps.LatLng(list[i].lat, list[i].lng);
-    let geocoder = new google.maps.Geocoder;
     let marker = new google.maps.Marker({position: latLng, map: map, location: list[i]});
+
     marker.addListener("click", () => {
       if(this.props.hideCard) {
         return;
@@ -76,8 +76,7 @@ initGoogleMap = () => {
 
 
   render() {
-    const { markerContent: {park_name, addr, phone, park_website, img_url}, showInfoCard } = this.state;
-    const {list} = this.props;
+    const { markerContent: {park_name, addr, phone, park_website, img_url, lat, lng}, showInfoCard} = this.state;
     return (
       <div>
         <div id="map"></div>
@@ -87,7 +86,7 @@ initGoogleMap = () => {
               <img onClick={this.sendToCampSite} src={resultImg}/>
               <div className="info">
                 <h1 onClick={this.sendToCampSite} className="parkName">{park_name}</h1>
-                <h3>{addr || "No Address Available"}</h3>
+                <h3>{addr || `lat: (${lat}), lng: (${lng})`}</h3>
                 <h3>{phone ? <a href={`tel:${phone}`}>{phone}</a> : "No Phone # Available"}</h3>
                 <a href={park_website}>Website</a>
               </div>

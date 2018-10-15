@@ -25,7 +25,6 @@ foreach($parkList["data"] as $key ){
     $parkLat = $key["attributes"]["latitude"];
     $parkLng = $key["attributes"]["longitude"];
     $parkPhone = $key["attributes"]["phone-number"];
-    
     $parkDesc = $key["attributes"]["description"];
     $parkDesc = checkInputData($parkDesc);
     
@@ -49,10 +48,8 @@ foreach($parkList["data"] as $key ){
     } else {
         if (mysqli_affected_rows($conn) > 0 ) {
             $output['success'] = true;  
-            print('success'.$output);
         } else {
             $output['errors'][] = $query;
-            print('error'.$output);
         };
     }; 
     $query = '';
@@ -70,5 +67,4 @@ function checkInputData($inputData){
     return $string;
 }
 
-print 'done';
 ?>

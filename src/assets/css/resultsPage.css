@@ -6,17 +6,21 @@
   padding: 1%;
 }
 
-.resultList img {
+.resultList .camp-thumbnail {
   width: 50%;
+  display: inline-block;
+}
+
+.resultList img {
+  width: 95%;
   display: inline-block;
 }
 
 .resultList .info {
   display: inline-block;
-  position: absolute;
-  top: 5%;
   width: 49%;
   text-align: center;
+  vertical-align: top;
 }
 
 .resultList .info .parkName {
@@ -26,7 +30,7 @@
 }
 
 .resultList .info h3 {
-  font-size: .75em;
+  font-size: 80%;
   font-weight: 200;
 }
 

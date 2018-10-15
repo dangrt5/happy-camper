@@ -2,15 +2,31 @@ import React from 'react';
 import GoogleMap from "./google-maps";
 
 export default class Location extends React.Component {
+    state = {
+        address1: "",
+        address2: "",
+    }
+    componentDidMount(){
+        const {lat, lng} = this.props;
+        const geocoder = new google.maps.Geocoder();
+        const latLng = new google.maps.LatLng(lat,lng);
+
+        geocoder.geocode( {"location": latLng}, results => {
+            // console.log("Geocoder results", results);
+            const addressComponents = results[0].address_components;
+            this.setState({
+                address1: addressComponents[1].short_name,
+                address2: `${addressComponents[2].short_name}, ${addressComponents[4].short_name} ${addressComponents[6].short_name}`
+            })
+        })
+    }
     render(){
         const params = {
             lat: this.props.lat,
             lng: this.props.lng
         }
         const list = [params];
-        console.log("List", list);
-        const address1 = "Angeles Crest Hwy"
-        const address2 = "Wrightwood, CA 92397"
+        const {address1, address2} = this.state
 
         return(
         <div className="location">
@@ -20,7 +36,7 @@ export default class Location extends React.Component {
                     <p>{address1}</p>
                     <p>{address2}</p>
                 </div>
-                <button className="directions-button">Directions</button>
+                {/* <button className="directions-button">Directions</button> */}
             </div>
         </div>
         )

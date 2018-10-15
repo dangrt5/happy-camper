@@ -48,7 +48,7 @@ export default class Overview extends React.Component {
         return (
             <div className="overview">
                 <h3>Website</h3>
-                    <p>{park_website}</p>
+                    <a href={park_website}>{park_website}</a>
                 <h3>Phone</h3>
                     <p>{phone}</p>
                 <h3>Description</h3>
