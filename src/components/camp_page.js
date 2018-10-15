@@ -41,7 +41,6 @@ class CampPage extends Component {
             })
         }
     }
-
     componentWillUnmount(){
         this.props.clearSingleItem();
     }
@@ -57,6 +56,16 @@ class CampPage extends Component {
                 checkSave: false
             })
         }
+    }
+    openModal(event){
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById("img");
+        modal.style.display = "block";
+        modalImg.src = event.target.src;
+    }
+    closeModal(){
+        var modal = document.getElementById('myModal');
+        modal.style.display = "none";
     }
     render(){
         if(!this.props.item.parkinfo){
@@ -74,8 +83,11 @@ class CampPage extends Component {
                         <h1>{name}</h1>
                         <img onClick={this.saveFunction} src={checkSave ? isSaved : save}/>
                     </div>
-
-                <PhotoCarousel images={this.props.item.park_img}/>
+                <div id="myModal" className="modal">
+                    <span onClick={this.closeModal} className="close">&times;</span>
+                    <img className="modal-content" id="img"/>
+                </div>
+                <PhotoCarousel openModal={this.openModal} images={this.props.item.park_img}/>
 
                 <CampInfo {...this.props}/>
                 </div>
