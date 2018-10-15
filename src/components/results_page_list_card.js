@@ -16,7 +16,7 @@ class CampSiteCard extends React.Component {
     return (
       <div className="resultList card">
         <div className="camp-thumbnail">
-          <img onClick={this.sendToCampPage} src={resultImg}/>
+          <img onClick={this.sendToCampPage} src={img_url || resultImg}/>
         </div>
         <div className="info">
           <h1 onClick={this.sendToCampPage} className="parkName">{park_name}</h1>

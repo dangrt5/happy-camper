@@ -83,7 +83,7 @@ initGoogleMap = () => {
 
         { showInfoCard
           ? <div className="google-modal">
-              <img onClick={this.sendToCampSite} src={resultImg}/>
+              <img onClick={this.sendToCampSite} src={img_url || resultImg}/>
               <div className="info">
                 <h1 onClick={this.sendToCampSite} className="parkName">{park_name}</h1>
                 <h3>{addr || `lat: (${lat}), lng: (${lng})`}</h3>
