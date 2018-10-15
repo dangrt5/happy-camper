@@ -6,6 +6,10 @@ import Location from './camp-info-location'
 import Weather from './camp-info-weather'
 
 export default class CampInfo extends React.Component {
+    navClickHandler(event){
+        document.querySelector('.active').classList.remove('active')
+        event.target.classList.add("active")
+    }
     render(){
         // console.log('Camp Page Props: ', this.props)
         let {id} = this.props.match.params;
@@ -14,9 +18,9 @@ export default class CampInfo extends React.Component {
             <div className="info-container">
                 <div className="info-menu">
                     <ul>
-                        <li><Link to={`/camp/${id}/overview`}>Overview</Link></li>
-                        <li><Link to={`/camp/${id}/location`}>Location</Link></li>
-                        <li><Link to={`/camp/${id}/weather`}>Weather</Link></li>
+                        <li onClick={this.navClickHandler}><Link className='active' to={`/camp/${id}/overview`}>Overview</Link></li>
+                        <li onClick={this.navClickHandler}><Link to={`/camp/${id}/location`}>Location</Link></li>
+                        <li onClick={this.navClickHandler}><Link to={`/camp/${id}/weather`}>Weather</Link></li>
                     </ul>
                 </div>
                 <Switch>
