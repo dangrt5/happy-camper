@@ -13,7 +13,7 @@ $id = $_POST['itemId'];
 for( $type =1; $type <= 4 ; $type++){
     // park detail
     if($type == 1 ){
-        $query = "SELECT id, park_name,addr,phone, lat, lng, park_desc, direction_info, regulation_info,park_website
+        $query = "SELECT id, park_name,addr,phone, lat, lng, park_desc, direction_info, park_website
                 FROM park_info   WHERE ID = '$id'";
         $result = mysqli_query($conn, $query);
 

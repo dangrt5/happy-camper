@@ -22,7 +22,8 @@ export async function getSingleItem(itemId){
         url: `http://localhost:8888/public/api/park_details.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
-    // console.log ("POST singleItem PHP Call success:", resp.data.data);
+    // debugger;
+    console.log ("POST singleItem PHP Call success:", resp.data.data);
     return {
         type: types.GET_SINGLE_ITEM,
         payload: resp.data.data

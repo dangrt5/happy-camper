@@ -7,9 +7,10 @@ import Weather from './camp-info-weather'
 
 export default class CampInfo extends React.Component {
     render(){
-        // console.log('Camp Page Props: ', this.props)
+        console.log('Camp Page Props: ', this.props)
         let {id} = this.props.match.params;
         let {lat, lng} = this.props.item.parkinfo[0]
+        // debugger;
         return (
             <div className="info-container">
                 <div className="info-menu">
