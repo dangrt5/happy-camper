@@ -137,6 +137,11 @@
     display: block;
 }
 
+.read-more{
+    color: blue;
+    cursor: pointer
+}
+
 .amenity-container{
     width: 100vw;
     display: flex;
