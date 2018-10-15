@@ -1,45 +1,125 @@
+@media (min-width: 1281px) {
+  /* Desktops */
+
+
+  .resultList {
+    display: block;
+    width: 49%;
+    margin: auto;
+  }
+
+  .resultList .info .parkName {
+    font-size: 1.5vw;
+  }
+
+  .resultList .info h3 {
+    font-size: 1vw;
+  }
+
+  .resultList .info a {
+    font-size: 1vw;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+
+    .resultList {
+      display: block;
+      width: 49%;
+      margin: auto;
+    }
+
+    .resultList .info .parkName {
+      font-size: 1.5vw;
+    }
+
+    .resultList .info h3 {
+      font-size: 1.25vw;
+    }
+
+    .resultList .info a {
+      font-size: 1.25vw;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+
+  .resultList .info .parkName {
+    font-size: 3vw;
+  }
+
+  .resultList .info h3 {
+    font-size: 2.5vw;
+  }
+
+  .resultList .info a {
+    font-size: 2.5vw;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Low Res Tablets, Mobile Phones (Landscape) */
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile Phones */
+
+  .resultList .info .parkName {
+    font-size: 95%;
+  }
+
+  .resultList .info h3 {
+    font-size: .75em;
+  }
+
+  .resultList .info a {
+    font-size: .85em;
+  }
+
+  .resultList .info h3 a {
+    font-size: 1em;
+  }
+
+}
+
+
+
 .resultList {
-  display: inline-block;
-  width: 100%;
   position: relative;
   border-bottom: 2px solid rgba(56,29,29,0.15);
   padding: 1%;
 }
 
 .resultList .camp-thumbnail {
-  width: 50%;
   display: inline-block;
+  width: 50%;
 }
 
 .resultList img {
-  width: 95%;
+  width: 80%;
   display: inline-block;
 }
 
 .resultList .info {
   display: inline-block;
-  width: 49%;
-  text-align: center;
   vertical-align: top;
+  width: 50%;
+  text-align: center;
 }
 
 .resultList .info .parkName {
-  font-size: .85em;
-  font-weight: 400;
   width: 98%;
 }
 
 .resultList .info h3 {
-  font-size: 80%;
   font-weight: 200;
-}
-
-.resultList .info a {
-  font-size: .85em;
-}
-
-.resultList .info h3 a {
-  font-size: 1em;
 }
 
 .googleMap img {
