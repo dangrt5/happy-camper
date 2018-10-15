@@ -3,13 +3,12 @@ header("Access-Control-Allow-Origin: *");
 require_once("mysql_connect.php");
 
 $handler = curl_init();
-curl_setopt($handler, CURLOPT_URL, "https://thedyrt.com/api/v2/campgrounds?filter%5Bsearch%5D%5Bregion%5D=CA&include=administrative-area%2Coperator%2Crecent-reviewers&modelPath=controller.model.featuredCampgrounds&page%5Bnumber%5D=1&page%5Bsize%5D=200");
+curl_setopt($handler, CURLOPT_URL, "https://thedyrt.com/api/v2/campgrounds?filter%5Bsearch%5D%5Bregion%5D=CA&include=administrative-area%2Coperator%2Crecent-reviewers&modelPath=controller.model.featuredCampgrounds&page%5Bnumber%5D=1&page%5Bsize%5D=20");
 curl_setopt($handler, CURLOPT_FOLLOWLOCATION, true);
-// $importJSON = file_get_contents('https://thedyrt.com/api/v2/campgrounds?filter%5Bsearch%5D%5Bregion%5D=CA&include=administrative-area%2Coperator%2Crecent-reviewers&modelPath=controller.model.featuredCampgrounds&page%5Bnumber%5D=1&page%5Bsize%5D=200');
-$importJSON = file_get_contents('parkdata_dyrt.json');
+$importJSON = file_get_contents("https://thedyrt.com/api/v2/campgrounds?filter%5Bsearch%5D%5Bregion%5D=CA&include=administrative-area%2Coperator%2Crecent-reviewers&modelPath=controller.model.featuredCampgrounds&page%5Bnumber%5D=1&page%5Bsize%5D=20");
+
 $parkList = json_decode($importJSON, true);
 curl_close($handler);
-// print_r($parkList);
 
 
 $output =[
@@ -18,7 +17,7 @@ $output =[
 ];
 
 foreach($parkList["data"] as $key ){
- 
+
     $parkID = $key['id'];
     $parkName = $key["attributes"]["name"];
     $parkName = checkInputData($parkName);
@@ -59,9 +58,9 @@ foreach($parkList["data"] as $key ){
     $query = '';
 }; 
 
-function checkInputData($InputData){
-    if( isset($InputData)){
-        $string = $InputData;
+function checkInputData($inputData){
+    if( isset($inputData)){
+        $string = $inputData;
         $pattern = '/[\\n\']/';
         $replacement = ' ';
         $string = preg_replace($pattern, $replacement, $string);
@@ -70,4 +69,6 @@ function checkInputData($InputData){
     }  
     return $string;
 }
+
+print 'done';
 ?>
