@@ -38,6 +38,10 @@ export default class Location extends React.Component {
                 </div>
                 {/* <button className="directions-button">Directions</button> */}
             </div>
+            <div>
+                <h1>Directions Info</h1>
+                <p></p>
+            </div>
         </div>
         )
     }

@@ -21,12 +21,32 @@ import sewerHookupIcon from "../assets/images/icons/accessibility/009-sewer.png"
 import notAvaliableIcon from '../assets/images/icons/accessibility/prohibition-signal.png'
 
 export default class Overview extends React.Component {
-
- 
-
+    state = {
+        showFullDescription: false,
+    }
+    componentDidMount(){
+        if(this.props.item.parkinfo[0].park_desc === ''){
+            this.readMoreHandler()  //removes Read More if there is no park desc avaliable
+        }
+    }
+    readMoreHandler = () => {
+        this.setState({
+            showFullDescription: true,
+        })
+    }
+    editDescription(description){
+        if(description === ''){
+            return 'No description avaliable.'
+        }
+        if(this.state.showFullDescription){
+            return description
+        }
+        description = description.split(" ").slice(0,50).join(" ")
+        return description + "..."
+    }
     render(){
-        // debugger;
-        console.log('Overview Props ', this.props)
+        // console.log('Overview Props ', this.props)
+        const {showFullDescription} = this.state
         let {direction_info, park_desc, park_website, phone} = this.props.item.parkinfo[0];
 
         let {amenites} = this.props.item
@@ -35,9 +55,7 @@ export default class Overview extends React.Component {
                 amenites[key] = JSON.parse(amenites[key].toLowerCase())
             }
         }
-        if(park_desc === ''){
-            park_desc = 'No description avaliable.'
-        }
+
         if(park_website === ''){
             park_website = 'No website avaliable.'
         }
@@ -52,7 +70,8 @@ export default class Overview extends React.Component {
                 <h3>Phone</h3>
                     <p>{phone}</p>
                 <h3>Description</h3>
-                    <p>{park_desc}</p>
+                    <p>{this.editDescription(park_desc)}</p>
+                    <p className="read-more" onClick={this.readMoreHandler}>{showFullDescription ? '' : 'Read More'}</p>
                 <h3>Amenities</h3>
                 <div className="amenity-container">
                     <div className="amenity-column">
