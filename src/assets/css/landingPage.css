@@ -6,7 +6,7 @@
   }
 
   .landing-page-input {
-      width: 30vw;
+      width: 25vw;
       /* height: 5vw; */
   }
 }
@@ -15,11 +15,11 @@
   /* Laptops/Desktops */
 
   .logo{
-      width: 40vw;
+      width: 25vw;
   }
 
   .landing-page-input {
-      width: 50vw;
+      width: 25vw;
       /* height: 10vw; */
   }
 
@@ -30,15 +30,28 @@
   /* Tablets, Ipads, Portrait */
 
   .logo{
-      width: 40vw;
+      width: 30vw;
   }
 
   .landing-page-input {
-      width: 55vw;
+      width: 30vw;
       /* height: 10vw; */
   }
 
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .logo{
+      width: 50vw;
+  }
+
+  .landing-page-input {
+      width: 40vw;
+      /* height: 7vh; */
+  }
+
+}
+
 
 @media (min-width: 320px) and (max-width: 480px) {
   /* Mobile Phones */
