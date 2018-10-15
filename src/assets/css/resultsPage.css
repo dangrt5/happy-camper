@@ -10,6 +10,7 @@
 
   .resultList img {
     width: 90%;
+    height: 35vh;
   }
 
   .resultList .info .parkName {
@@ -36,7 +37,8 @@
     }
 
     .resultList img {
-      width: 90%;
+      width: 95%;
+      height: 40vh;
     }
 
     .resultList .info .parkName {
@@ -58,7 +60,8 @@
   /* Tablets, Ipads, Portrait */
 
   .resultList img {
-    width: 100%;
+    width: 90%;
+    height: 40vh;
   }
 
   .resultList .info .parkName {
@@ -80,6 +83,7 @@
 
   .resultList img {
     width: 100%;
+    height: 20vh;
   }
 
   .resultList .info .parkName {
@@ -100,7 +104,8 @@
   /* Mobile Phones */
 
   .resultList img {
-    width: 90%;
+    width: 95%;
+    height: 20vh;
   }
 
   .resultList .info .parkName {
@@ -136,6 +141,7 @@
 
 .resultList img {
   display: inline-block;
+  object-fit: cover;
 }
 
 .resultList .info {
