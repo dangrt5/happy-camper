@@ -1,4 +1,4 @@
-.camp-page h1, .camp-page h3, .camp-page p {
+.camp-page h1, .camp-page h3, .camp-page p{
     margin: 10px;
 }
 
@@ -6,12 +6,9 @@
     justify-content: left;
 }
 
-.camp-title {
+.camp-title h1 {
     height: 14%;
-}
-
-.camp-title h2 {
-    margin: 5px 0 0 10px;
+    padding-right: 12%;
 }
 
 .camp-title img {
@@ -60,6 +57,13 @@
     height: 50%;
     overflow: scroll;
 }
+
+.overview a{
+    margin: 10px;
+    word-wrap: break-word;
+    display: block;
+}
+
 .amenity-container{
     width: 100vw;
     display: flex;
