@@ -2,6 +2,5 @@
 .DS_Store
 node_modules
 config.js
-public/api/mysql_connect.php
-public/api/index.html
-public/api/parkdata_dyrt.json
+server/backendAPI/mysql_connect.php
+dist/api/parkdata_dyrt.json

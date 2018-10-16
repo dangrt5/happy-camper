@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST');
-require_once("mysql_connect.php");
+require_once("../../server/backendAPI/mysql_connect.php");
 
 $_POST = json_decode(file_get_contents("php://input"), true);
 

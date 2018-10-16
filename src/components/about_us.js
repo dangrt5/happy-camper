@@ -49,9 +49,9 @@ export default class AboutUs extends Component {
                         <img className="memberPhoto" src={david} alt=""/>
                         <h3>David Ahn</h3>
                         <div>
-                          <img src={github} alt=""/>
-                          <img src={linkedin} alt=""/>
-                          <img src={portfolio} alt=""/>
+                          <a href="https://github.com/d-ahn10"><img src={github} alt=""/></a>
+                          <a href="https://linkedin.com/in/d-ahn10"><img src={linkedin} alt=""/></a>
+                          <a href="http://devdavidahn.com"><img src={portfolio} alt=""/></a>
                         </div>
                     </div>
                     <div className="dev">
