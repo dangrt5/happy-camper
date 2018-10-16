@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {removeItem} from '../actions'
 import "../assets/css/itinerary.css"
 import Header from "./header";
 import ItineraryCard from './itinerary_card'
@@ -9,14 +10,17 @@ class Itinerary extends Component {
     super(props);
     this.state = {
       path: props.match.path,
-      list: props.itinerary
     }
   }
+  trashButton=(id)=>{
+    this.props.removeItem(id);
+  }
     render(){
-      // console.log('Itinerary state', this.props)
-      const {path, list} = this.state;
+      // console.log('Itinerary props', this.props.itinerary)
+      const {path} = this.state;
+      const list = this.props.itinerary;
       const itineraryList = list.map((item,index)=>{
-          return <ItineraryCard history={this.props.history} key={index} data={item}/>
+          return <ItineraryCard trashButton={this.trashButton} history={this.props.history} key={index} data={item}/>
       })
         return (
           <div>
@@ -35,4 +39,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps)(Itinerary)
+export default connect(mapStateToProps,{removeItem})(Itinerary)
