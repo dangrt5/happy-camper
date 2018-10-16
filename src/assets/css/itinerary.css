@@ -1,6 +1,143 @@
-.itinerary-card {
-    height: 15vh;
+@media (min-width: 1281px) {
+  /* Desktops */
+
+  .itinerary-card {
+    width: 50vw;
+    margin: auto;
+    padding: 0.5% 0;
+  }
+
+  .itinerary-card > img:first-child{
+      width: 17%;
+      height: 14vh;
+  }
+
+  .itinerary-card h1{
+      font-size: 1.9em
+  }
+
+  .itinerary-card p{
+      margin: 0;
+      font-size: 1em
+  }
+
+  .trash-icon {
+    height: 10vh;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+
+  .itinerary-card {
+    width: 60vw;
+    margin: auto;
+    padding: 0.5% 0;
+  }
+
+  .itinerary-card > img:first-child{
+      width: 20%;
+      height: 20vh;
+  }
+
+  .itinerary-card h1{
+      font-size: 1.9em
+  }
+
+  .itinerary-card p{
+      font-size: 1em
+  }
+
+  .trash-icon {
+    height: 11vh;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+
+  .itinerary-card {
+    width: 70vw;
+    margin: auto;
+    padding: 0.5% 0;
+  }
+
+  .itinerary-card > img:first-child{
+      width: 25%;
+      height: 10vh;
+  }
+
+  .itinerary-card h1{
+      font-size: 1.6em
+  }
+
+  .itinerary-card p{
+      font-size: .85em
+  }
+
+  .trash-icon {
+    height: 6vh;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Low Res Tablets, Mobile Phones (Landscape) */
+
+  .itinerary-card {
     width: 100vw;
+    padding: 0.5% 0;
+  }
+
+  .itinerary-card > img:first-child{
+      width: 25%;
+      height: 12vh;
+  }
+
+  .itinerary-card h1{
+      font-size: 1.2em
+  }
+
+  .itinerary-card p{
+      font-size: 1em
+  }
+
+  .trash-icon {
+    height: 7vh;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile Phones */
+
+  .itinerary-card {
+      height: 15vh;
+  }
+
+  .itinerary-card h1{
+      font-size: 1em;
+  }
+
+  .itinerary-card p{
+      font-size: .8em;
+  }
+
+  .itinerary-card > img:first-child{
+    height: 12vh;
+    width: 30%;
+  }
+
+  .trash-icon {
+    height: 40%;
+  }
+
+}
+
+
+.itinerary-card {
     border-bottom: 2px solid rgba(56,29,29,0.15);
     display: flex;
     align-items: center;
@@ -9,20 +146,17 @@
 
 .itinerary-card h1{
     margin: 0;
-    font-size: 1.6em
 }
 
 .itinerary-card p{
     margin: 0;
-    font-size: .8em
 }
 
 .itinerary-card > img:first-child{
-    height: 60%;
-    padding-left: 5%
+    padding-left: 5%;
+    object-fit: cover;
 }
 
 .trash-icon {
-    height: 40%;
     padding-right: 5%
 }
