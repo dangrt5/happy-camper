@@ -14,7 +14,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(cacheName)
             .then(cache => {
-                console.log('Service Worker: Caching Files');
+                // console.log('Service Worker: Caching Files');
                 cache.addAll(cacheAssets);
             })
             .then(()=>self.skipWaiting())
@@ -40,7 +40,7 @@ self.addEventListener('activate', (event) => {
 
 //Call Fetch Event (saves files that are loaded into cache, also gets data from cache when offline)
 self.addEventListener('fetch', (event) => {
-    console.log('Service Worker: Fetching ', event.request.method);
+    // console.log('Service Worker: Fetching ', event.request.method);
     if (event.request.method === 'POST'){
         return
     }

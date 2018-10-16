@@ -13,7 +13,7 @@
     <div id="root"></div>
     <script src="/bundle.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', initializeDOM);
+        // document.addEventListener('DOMContentLoaded', initializeDOM);
 
         function initializeDOM(){
             if ('serviceWorker' in navigator){
@@ -27,7 +27,7 @@
         function registerServiceWorker(){
             navigator.serviceWorker.register('/service_worker.js')
             .then(() => {
-                console.log('Service Worker: Registered')
+                // console.log('Service Worker: Registered')
             })
             .catch(err => {
                 console.error('Service Worker: Error', err);
