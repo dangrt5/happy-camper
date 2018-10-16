@@ -11,7 +11,6 @@ export default function(state = DEFAULT_STATE, action){
             state.itinerary.push(action.payload)
             return {...state}
         case types.REMOVE_ITEM:
-            //EDIT FILTER DEPENDING ON PARK ID VARIABLE NAME
             const filteredItinerary = state.itinerary.filter(item => item.parkinfo[0].id !== action.payload)
             return {...state, itinerary: filteredItinerary}
         case types.CLEAR_SINGLE_ITEM:
