@@ -28,6 +28,7 @@ export default class Location extends React.Component {
         const list = [params];
         const {address1, address2} = this.state
 
+        const {directionsInfo} = this.props
         return(
         <div className="location">
             <GoogleMap hideCard={true} list={list} params={params}/>
@@ -38,10 +39,7 @@ export default class Location extends React.Component {
                 </div>
                 {/* <button className="directions-button">Directions</button> */}
             </div>
-            <div>
-                <h1>Directions Info</h1>
-                <p></p>
-            </div>
+                {directionsInfo ? <div><h1>Directions Info</h1><p>{directionsInfo}</p></div> : ''}
         </div>
         )
     }
