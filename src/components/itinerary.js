@@ -1,30 +1,26 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {removeItem} from '../actions'
 import "../assets/css/itinerary.css"
 import Header from "./header";
 import ItineraryCard from './itinerary_card'
-
-const dummyData = [{
-  name: "Park Name",
-  address1: "Angeles Crest Hwy,",
-  address2: "Wrightwood, CA 92397",
-  image: "https://thedyrt.imgix.net/photo/52799/photo/alabama-brushy-lake-campground_21af9c56af3dd46ea2516cc2f8b18c5d.jpg"
-}]
 
 class Itinerary extends Component {
   constructor(props) {
     super(props);
     this.state = {
       path: props.match.path,
-      list: props.itinerary
     }
   }
+  trashButton=(id)=>{
+    this.props.removeItem(id);
+  }
     render(){
-      //list variable will replace dummyData
-      // console.log('Itinerary state', this.state)
-      const {path, list} = this.state;
-      const itineraryList = dummyData.map((item,index)=>{
-          return <ItineraryCard key={index} data={item}/>
+      // console.log('Itinerary props', this.props.itinerary)
+      const {path} = this.state;
+      const list = this.props.itinerary;
+      const itineraryList = list.map((item,index)=>{
+          return <ItineraryCard trashButton={this.trashButton} history={this.props.history} key={index} data={item}/>
       })
         return (
           <div>
@@ -43,4 +39,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps)(Itinerary)
+export default connect(mapStateToProps,{removeItem})(Itinerary)

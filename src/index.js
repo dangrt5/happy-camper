@@ -12,12 +12,6 @@ import App from './components/app';
 
 const store = createStore(rootReducer, {}, applyMiddleware(reduxPromise))
 
-// if(localStorage.getItem('token')){
-//     store.dispatch({
-//         // type: types.SIGN_IN
-//     });
-// }
-
 ReactDOM.render(
     <Provider store={store}>
         <Router>

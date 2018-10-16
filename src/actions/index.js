@@ -8,7 +8,7 @@ export async function getResultsData(lat, lng){
         url: `http://localhost:8888/public/api/results_data.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
-    console.log("resultsData PHP Call successful:", resp.data.data)
+    // console.log("resultsData PHP Call successful:", resp.data.data)
     return {
         type: types.GET_RESULTS_DATA,
         payload: resp.data.data
@@ -22,8 +22,7 @@ export async function getSingleItem(itemId){
         url: `http://localhost:8888/public/api/park_details.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
-    // debugger;
-    console.log ("POST singleItem PHP Call success:", resp.data.data);
+    // console.log ("POST singleItem PHP Call success:", resp.data.data);
     return {
         type: types.GET_SINGLE_ITEM,
         payload: resp.data.data

@@ -10,9 +10,6 @@ export default class PhotoCarousel extends React.Component {
                 <Images key={key} openModal={this.props.openModal} src={this.props.images[key]}/>
             )
         }
-        // dyrtGallery.map((item,index)=>{
-        //     return <Images key={index} src={item}/>
-        // })
         return(
             <div className="slider-container">
                 <div className="photos-container">

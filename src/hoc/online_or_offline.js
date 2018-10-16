@@ -9,8 +9,7 @@ export default (WrappedComponent) => {
             this.checkOnline();
         }
         checkOnline(){
-            console.log("Online or Offline", window.navigator.onLine)
-
+            // console.log("Online or Offline", window.navigator.onLine)
             if(!window.navigator.onLine){
                 this.props.history.push('/itinerary')
             }
