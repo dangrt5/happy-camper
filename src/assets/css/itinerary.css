@@ -9,12 +9,8 @@
 
 .itinerary-card h1{
     margin: 0;
-    font-size: 1.6em
-}
-
-.itinerary-card p{
-    margin: 0;
-    font-size: .8em
+    font-size: 1.2em;
+    padding: 5%
 }
 
 .itinerary-card > img:first-child{

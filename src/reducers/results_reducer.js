@@ -2,17 +2,25 @@ import types from '../actions/types'
 const DEFAULT_STATE = {
     results: [],
     single: {},
-    itinerary: []
+    itinerary: checkLocalStorage()
+}
+
+function checkLocalStorage(){
+    if(localStorage.getItem('itinerary')){
+        return JSON.parse(localStorage.getItem('itinerary'))
+    }
+    return [];
 }
 
 export default function(state = DEFAULT_STATE, action){
     switch(action.type){
         case types.ADD_ITEM:
             state.itinerary.push(action.payload)
+            localStorage.setItem('itinerary', JSON.stringify(state.itinerary))
             return {...state}
         case types.REMOVE_ITEM:
-            //EDIT FILTER DEPENDING ON PARK ID VARIABLE NAME
             const filteredItinerary = state.itinerary.filter(item => item.parkinfo[0].id !== action.payload)
+            localStorage.setItem('itinerary', JSON.stringify(filteredItinerary))
             return {...state, itinerary: filteredItinerary}
         case types.CLEAR_SINGLE_ITEM:
             return {...state, single: {}}
