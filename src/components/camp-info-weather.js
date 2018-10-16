@@ -27,6 +27,7 @@ export default class Weather extends React.Component {
         return(
         <div className="weather">
             {weatherElements}
+            <p>Powered by OpenWeather API</p>
         </div>
         )
     }

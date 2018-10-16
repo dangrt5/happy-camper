@@ -14,6 +14,7 @@ export default class CampInfo extends React.Component {
         // console.log('Camp Page Props: ', this.props)
         let {id} = this.props.match.params;
         let {lat, lng} = this.props.item.parkinfo[0]
+        let directionsInfo = this.props.item.parkinfo[0].direction_info
         return (
             <div className="info-container">
                 <div className="info-menu">
@@ -28,7 +29,7 @@ export default class CampInfo extends React.Component {
                         props => <Overview {...this.props}/>
                     }/>
                     <Route path={`/camp/:id/location`} render={
-                        props => <Location lat={lat} lng={lng}/>
+                        props => <Location lat={lat} lng={lng} directionsInfo={directionsInfo}/>
                     }/>
                     <Route path={`/camp/:id/weather`} render={
                         props => <Weather lat={lat} lng={lng}/>
