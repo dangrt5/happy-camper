@@ -5,7 +5,7 @@ export async function getResultsData(lat, lng){
     const resp = await axios({
         method: "POST",
         data: { lat, lng },
-        url: `localhost:8888/api/results_data.php`,
+        url: `http://localhost:8888/dist/api/results_data.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
     console.log("resultsData PHP Call successful:", resp.data.data)
@@ -19,7 +19,7 @@ export async function getSingleItem(itemId){
     const resp = await axios({
         method: "POST",
         data: { itemId },
-        url: `localhost:8888/api/park_details.php`,
+        url: `http://localhost:8888/dist/api/park_details.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
     // debugger;
