@@ -13,11 +13,10 @@ class Itinerary extends Component {
     }
   }
     render(){
-      //list variable will replace dummyData
-      // console.log('Itinerary state', this.state)
+      // console.log('Itinerary state', this.props)
       const {path, list} = this.state;
-      const itineraryList = dummyData.map((item,index)=>{
-          return <ItineraryCard key={index} data={item}/>
+      const itineraryList = list.map((item,index)=>{
+          return <ItineraryCard history={this.props.history} key={index} data={item}/>
       })
         return (
           <div>
