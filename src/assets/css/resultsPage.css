@@ -82,8 +82,8 @@
   /* Low Res Tablets, Mobile Phones (Landscape) */
 
   .resultList img {
-    width: 100%;
-    height: 20vh;
+    width: 95%;
+    height: 35vh;
   }
 
   .resultList .info .parkName {
