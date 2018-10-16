@@ -34,7 +34,7 @@
   /* Laptops/Desktops */
 
   .google-modal {
-    left: 37%;
+    left: 35%;
     height: 30vh;
     width: 35vw;
   }
@@ -44,16 +44,15 @@
   }
 
   .google-modal .info .parkName {
-    font-size: 1.25vw;
-    width: 100%;
+    font-size: 1.45vw;
   }
 
   .google-modal .info h3 {
-    font-size: 1vw;
+    font-size: 1.25vw;
   }
 
   .google-modal .info a {
-    font-size: 1vw;
+    font-size: 1.25vw;
   }
 
 }
@@ -118,11 +117,28 @@
 
   .google-modal {
     left: 17%;
-    height: 155px;
-    width: 295px;
+    height: 23.5vh;
+    width: 80vw;
+  }
+
+  .google-modal img {
+    width: 45%;
+  }
+
+  .google-modal .info .parkName {
+    font-size: 3.75vw;
+  }
+
+  .google-modal .info h3 {
+    font-size: 3.25vw;
+  }
+
+  .google-modal .info a {
+    font-size: 3.25vw;
   }
 
 }
+
 
 
 
