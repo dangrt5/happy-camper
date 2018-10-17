@@ -25,9 +25,15 @@ class Itinerary extends Component {
         return (
           <div>
             <Header path={path}/>
-            <div className="container">
-              {itineraryList}
-            </div>
+              <div className="container">
+                {itineraryList}
+                {window.navigator.onLine ?
+                  '' :
+                  <div className="offline-bar">
+                    <p>OFFLINE: Only saved campsites are accessible</p>
+                  </div>
+                }
+              </div>
           </div>
         )
     }

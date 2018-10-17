@@ -31,7 +31,10 @@ export default class Location extends React.Component {
         const {directionsInfo} = this.props
         return(
         <div className="location">
-            <GoogleMap hideCard={true} list={list} params={params}/>
+            {window.navigator.onLine ?
+                <GoogleMap hideCard={true} list={list} params={params}/>
+                : ''
+            }
             <div className="address">
                 <div>
                     <p>{address1}</p>

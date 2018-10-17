@@ -90,6 +90,12 @@ class CampPage extends Component {
                 <PhotoCarousel openModal={this.openModal} images={this.props.item.park_img}/>
 
                 <CampInfo {...this.props}/>
+                {window.navigator.onLine ?
+                  '' :
+                  <div className="offline-bar">
+                    <p>OFFLINE: Only saved campsites are accessible</p>
+                  </div>
+                }
                 </div>
             </div>
 
