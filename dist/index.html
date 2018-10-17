@@ -16,7 +16,7 @@
         // document.addEventListener('DOMContentLoaded', initializeDOM);
 
         function initializeDOM(){
-            if ('serviceWorker' in navigator){
+            if ('serviceWorker' in navigator && navigator.onLine){
                 // console.log('Service Workers: Supported')
                 window.addEventListener('load', registerServiceWorker);
             } else {

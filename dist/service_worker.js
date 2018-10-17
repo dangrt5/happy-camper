@@ -41,8 +41,11 @@ self.addEventListener('activate', (event) => {
 //Call Fetch Event (saves files that are loaded into cache, also gets data from cache when offline)
 self.addEventListener('fetch', (event) => {
     // console.log('Service Worker: Fetching ', event.request.method);
-    if (event.request.method === 'POST'){
-        return
+    if (event.request.method !== 'GET'){
+        return fetch(event.request)
+    }
+    if(/sockjs-node/.test(event.request.url)){
+      return fetch(event.request)
     }
     try {
         event.respondWith(

@@ -3,12 +3,12 @@ header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST');
 require_once("../../server/backendAPI/mysql_connect.php");
 
-$_POST = json_decode(file_get_contents("php://input"), true);
+// $_POST = json_decode(file_get_contents("php://input"), true);
 
 $output =[ ];
 $parkArray = array();
 $imgArray = array();
-$id = $_POST['itemId'];
+$id = $_GET['itemId'];
 
 for( $type =1; $type <= 4 ; $type++){
     // park detail

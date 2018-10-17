@@ -3,9 +3,10 @@ import axios from 'axios';
 
 export async function getResultsData(lat, lng){
     const resp = await axios({
-        method: "POST",
-        data: { lat, lng },
-        url: `http://localhost:8888/dist/api/results_data.php`,
+        method: "GET",
+        params: { lat, lng },
+        url: `http://localhost:8888/public/api/results_data.php`,
+
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
     // console.log("resultsData PHP Call successful:", resp.data.data)
@@ -17,9 +18,9 @@ export async function getResultsData(lat, lng){
 
 export async function getSingleItem(itemId){
     const resp = await axios({
-        method: "POST",
-        data: { itemId },
-        url: `http://localhost:8888/dist/api/park_details.php`,
+        method: "GET",
+        params: { itemId },
+        url: `http://localhost:8888/public/api/park_details.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
     // console.log ("POST singleItem PHP Call success:", resp.data.data);
