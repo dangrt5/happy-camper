@@ -6,8 +6,7 @@
   }
 
   .landing-page-input {
-      width: 25vw;
-      /* height: 5vw; */
+      width: 20vw;
   }
 }
 
@@ -20,7 +19,6 @@
 
   .landing-page-input {
       width: 25vw;
-      /* height: 10vw; */
   }
 
 
@@ -35,14 +33,13 @@
 
   .landing-page-input {
       width: 30vw;
-      /* height: 10vw; */
   }
 
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .logo{
-      width: 50vw;
+      width: 40vw;
   }
 
   .landing-page-input {
@@ -55,13 +52,13 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   /* Mobile Phones */
+  
   .logo{
-      width: 80vw;
+      width: 75vw;
   }
 
   .landing-page-input {
       width: 75vw;
-      /* height: 7vh; */
   }
 }
 
