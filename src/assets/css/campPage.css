@@ -1,28 +1,277 @@
-.camp-page h1, .camp-page h3, .camp-page p{
+@media (min-width: 1281px) {
+  /* Desktops */
+
+  .camp-title {
+    position: relative;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .camp-title h1 {
+    width: 95%;
+    margin: 25px auto;
+    display: inline-block;
+  }
+
+  .camp-title img {
+    width: 5%;
+  }
+
+  .slider-container {
+    width: 65%;
+    margin: auto;
+  }
+
+  .info-menu {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .info-menu ul li {
+    padding-right: 35%;
+  }
+
+  .info-menu ul li a {
+      padding-bottom: 0.5%;
+    }
+
+  .overview {
+    width: 65%;
+    overflow-x: hidden;
+    margin: auto;
+  }
+
+  .amenity-container {
+    width: 100vw;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+
+  .camp-title {
+    position: relative;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .camp-title h1 {
+    width: 90%;
+    margin: 25px auto;
+    display: inline-block;
+  }
+
+  .camp-title img {
+    width: 8%;
+  }
+
+  .slider-container {
+    width: 65%;
+    margin: auto;
+  }
+
+  .info-menu {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .info-menu ul li {
+    padding-right: 30%;
+  }
+
+  .info-menu ul li a {
+      padding-bottom: 0.5%;
+    }
+
+  .overview {
+    width: 65%;
+    overflow-x: hidden;
+    margin: auto;
+  }
+
+.amenity-container {
+  width: 95vw;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+
+  .camp-title {
+    position: relative;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .camp-title h1 {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .camp-title img {
+    width: 11%;
+  }
+
+  .slider-container {
+    width: 65%;
+    margin: auto;
+  }
+
+  .info-menu {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .info-menu ul li {
+    padding-right: 25%;
+  }
+
+  .info-menu ul li a {
+    padding-bottom: 0.5%;
+  }
+
+  .overview {
+    width: 65%;
+    overflow-x: hidden;
+    margin: auto;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Low Res Tablets, Mobile Phones (Landscape) */
+
+  .camp-page h1, .camp-page h3, .camp-page p{
+      margin: 10px;
+  }
+
+  .camp-title h1 {
+    font-size: 1.75em;
+    width: 80%;
+    display: inline-block;
+  }
+
+  .camp-title {
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .camp-title img {
+    width: 13%;
+  }
+
+  .slider-container {
+    margin: 10px 0;
+  }
+
+
+  .info-menu ul li {
+    padding-right: 20%;
+  }
+
+  .info-menu ul li a {
+    padding-bottom: 2%;
+  }
+
+  .overview {
+    width: 80%;
+    overflow: scroll;
+  }
+
+  .overview a {
     margin: 10px;
+  }
+
+  .amenity-container {
+    width: 100vw;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile Phones */
+
+  .camp-page h1, .camp-page h3, .camp-page p{
+      margin: 10px;
+  }
+
+  .camp-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .camp-title h1 {
+    font-size: 1.5em;
+    height: 14%;
+    width: 78%;
+    display: inline-block;
+  }
+
+  .camp-title img {
+      width: 15%;
+      margin-top: 2px;
+  }
+
+  .slider-container {
+      margin: 10px 0;
+  }
+
+  .info-menu ul {
+    padding: 0 10px;
+  }
+
+  .info-menu ul li {
+      padding-right: 15%;
+  }
+
+  .info-menu ul li a {
+      padding-bottom: 2%;
+    }
+
+    .overview {
+        height: 50%;
+        overflow: scroll;
+    }
+
+    .overview a {
+      margin: 10px;
+    }
+
+    .amenity-container {
+      width: 100vw;
+    }
+
+}
+
+
+
+.camp-page h3, .camp-page p{
+    /* margin: 10px; */
 }
 
 .header {
     justify-content: left;
 }
 
-.camp-title h1 {
-    height: 14%;
-    padding-right: 12%;
-}
-
 .camp-title img {
-    height: 8%;
-    width: auto;
-    position: absolute;
-    top: 3%;
-    right: 4%
+    /*  */
+    /* width: auto; */
+    /* position: absolute; */
 }
 
 .slider-container {
-    width: 100%;
     overflow-x: scroll;
-    margin: 10px 0;
 }
 
 .photos-container {
@@ -110,15 +359,14 @@
 .info-menu ul li {
     list-style-type: none;
     display: inline;
-    padding-right: 15%;
 }
 
 .info-menu ul li a {
     color: black;
     text-decoration: none;
-    padding-bottom: 2%;
     position: relative;
   }
+
 .info-menu ul li a.active {
       color: green;
   }
@@ -143,12 +391,10 @@
 
 .overview {
     position: relative;
-    height: 50%;
-    overflow: scroll;
 }
 
 .overview a{
-    margin: 10px;
+    /* margin: 10px; */
     word-wrap: break-word;
     display: block;
 }
@@ -159,7 +405,7 @@
 }
 
 .amenity-container{
-    width: 100vw;
+
     display: flex;
     flex-flow: row wrap;
 }
