@@ -47,6 +47,17 @@
     width: 100vw;
   }
 
+  .camp-page #map {
+    width: 65%;
+    height: 53vh;
+    margin: auto;
+  }
+
+  .address {
+    width: 65%;
+    margin: auto;
+  }
+
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -94,9 +105,20 @@
     margin: auto;
   }
 
-.amenity-container {
-  width: 95vw;
-}
+  .amenity-container {
+    width: 95vw;
+  }
+
+  .camp-page #map {
+    width: 65%;
+    height: 35vh;
+    margin: auto;
+  }
+
+  .address {
+    width: 65%;
+    margin: auto;
+  }
 
 }
 
@@ -141,6 +163,17 @@
   .overview {
     width: 65%;
     overflow-x: hidden;
+    margin: auto;
+  }
+
+  .camp-page #map {
+    width: 65%;
+    height: 54vh;
+    margin: auto;
+  }
+
+  .address {
+    width: 65%;
     margin: auto;
   }
 
@@ -196,6 +229,11 @@
     width: 90vw;
   }
 
+  .camp-page #map {
+      height: 50vh;
+  }
+
+
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -249,6 +287,10 @@
 
     .amenity-container {
       width: 100vw;
+    }
+
+    .camp-page #map {
+        height: 41vh;
     }
 
 }
@@ -464,10 +506,6 @@
 .weather h3 {
     margin: 0;
     font-size: 1.2em;
-}
-
-.camp-page #map {
-    height: 41vh;
 }
 
 .address {
