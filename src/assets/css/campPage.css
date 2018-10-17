@@ -47,6 +47,16 @@
     width: 100vw;
   }
 
+  .weather {
+    width: 65%;
+    margin: auto;
+  }
+
+  .weather-item {
+    height: 7vh;
+    padding: 1% 0;
+  }
+
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -94,9 +104,19 @@
     margin: auto;
   }
 
-.amenity-container {
-  width: 95vw;
-}
+  .amenity-container {
+    width: 95vw;
+  }
+
+  .weather {
+    width: 65%;
+    margin: auto;
+  }
+
+  .weather-item {
+    height: 8vh;
+    padding: 1% 0;
+  }
 
 }
 
@@ -142,6 +162,16 @@
     width: 65%;
     overflow-x: hidden;
     margin: auto;
+  }
+
+  .weather {
+    width: 65%;
+    margin: auto;
+  }
+
+  .weather-item {
+    height: 8vh;
+    padding: 1% 0;
   }
 
 }
@@ -196,6 +226,15 @@
     width: 90vw;
   }
 
+  .weather-item {
+      height: 10vh;
+      padding-bottom: 3vh;
+  }
+
+  .weather-item > div,.weather-symbol img{
+      padding: 1vw;
+  }
+
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -239,8 +278,8 @@
     }
 
     .overview {
-        height: 50%;
-        overflow: scroll;
+      height: 50%;
+      overflow: scroll;
     }
 
     .overview a {
@@ -249,6 +288,15 @@
 
     .amenity-container {
       width: 100vw;
+    }
+
+    .weather-item {
+        height: 10vh;
+        padding-bottom: 3vh;
+    }
+
+    .weather-item > div,.weather-symbol img{
+        padding: 1vw;
     }
 
 }
@@ -431,16 +479,15 @@
 
 .weather-item {
     display: flex;
-    height: 10vh;
     align-content: center;
     justify-content: space-around;
-    padding-bottom: 3vh;
     border-bottom: 2px solid rgba(56,29,29,0.15);
 }
+
 .weather-item > div,.weather-symbol img{
     height: 100%;
-    padding: 1vw;
 }
+
 .weather-day, .weather-temp  {
     display: flex;
     flex-flow: column;
