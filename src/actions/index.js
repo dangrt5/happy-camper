@@ -6,6 +6,7 @@ export async function getResultsData(lat, lng){
         method: "GET",
         params: { lat, lng },
         url: `http://localhost:8888/public/api/results_data.php`,
+
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
     // console.log("resultsData PHP Call successful:", resp.data.data)

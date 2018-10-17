@@ -1,7 +1,8 @@
 <?php
-require_once("mysql_connect.php");
+
 $importJSON = file_get_contents('parkdata_dyrt.json');
 $parkList = json_decode($importJSON, true);
+require_once("../../server/backendAPI/mysql_connect.php");
 
 ini_set("max_execution_time", 0);
 

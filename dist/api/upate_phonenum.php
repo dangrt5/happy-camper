@@ -1,6 +1,6 @@
 <?php
 
-require_once("mysql_connect.php");
+require_once("../../server/backendAPI/mysql_connect.php");
 ini_set("max_execution_time", 0);
 
 $selectQuery = "SELECT id, phone FROM `park_info`";
