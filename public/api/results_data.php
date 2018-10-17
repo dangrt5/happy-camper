@@ -3,14 +3,14 @@ header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST');
 require_once("mysql_connect.php");
 
-$_POST = json_decode(file_get_contents("php://input"), true);
+// $_POST = json_decode(file_get_contents("php://input"), true);
 
 $output =[
     'success'=> false,
 ];
 
-$lat = $_POST['lat'];
-$lng = $_POST['lng'];
+$lat = $_GET['lat'];
+$lng = $_GET['lng'];
 
 $radius = 50;
 

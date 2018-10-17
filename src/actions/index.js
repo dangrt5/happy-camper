@@ -3,8 +3,8 @@ import axios from 'axios';
 
 export async function getResultsData(lat, lng){
     const resp = await axios({
-        method: "POST",
-        data: { lat, lng },
+        method: "GET",
+        params: { lat, lng },
         url: `http://localhost:8888/public/api/results_data.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
@@ -17,8 +17,8 @@ export async function getResultsData(lat, lng){
 
 export async function getSingleItem(itemId){
     const resp = await axios({
-        method: "POST",
-        data: { itemId },
+        method: "GET",
+        params: { itemId },
         url: `http://localhost:8888/public/api/park_details.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
