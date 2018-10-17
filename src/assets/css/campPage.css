@@ -17,7 +17,6 @@
 
   .camp-title img {
     width: 5%;
-    vertical-align: middle;
   }
 
   .slider-container {
@@ -68,8 +67,7 @@
   }
 
   .camp-title img {
-    width: 10%;
-    vertical-align: middle;
+    width: 8%;
   }
 
   .slider-container {
@@ -208,8 +206,13 @@
       margin: 10px;
   }
 
+  .camp-title {
+    display: flex;
+    align-items: center;
+  }
+
   .camp-title h1 {
-    font-size: 1.25em;
+    font-size: 1.5em;
     height: 14%;
     width: 78%;
     display: inline-block;
@@ -217,7 +220,7 @@
 
   .camp-title img {
       width: 15%;
-      vertical-align: bottom;
+      margin-top: 2px;
   }
 
   .slider-container {
@@ -262,7 +265,7 @@
 }
 
 .camp-title img {
-    /* vertical-align: middle; */
+    /*  */
     /* width: auto; */
     /* position: absolute; */
 }
