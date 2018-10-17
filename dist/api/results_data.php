@@ -10,6 +10,7 @@ $output =[
 ];
 
 $lat = $_GET['lat'];
+// print ($lat);
 $lng = $_GET['lng'];
 
 $radius = 50;
@@ -31,7 +32,10 @@ if($result){
 }else{
     $output['error'][] = 'Error with query';
 }
-$utf8_chars_string = mb_convert_encoding($output, 'UTF-8', 'UTF-8');
-print_r(json_encode($utf8_chars_string));
+
+$newOutput = json_encode($output);
+echo $newOutput;
+// $utf8_chars_string = mb_convert_encoding($output, 'UTF-8', 'UTF-8');
+// print_r(json_encode($utf8_chars_string));
 
 ?>

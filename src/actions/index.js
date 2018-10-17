@@ -5,11 +5,11 @@ export async function getResultsData(lat, lng){
     const resp = await axios({
         method: "GET",
         params: { lat, lng },
-        url: `http://localhost:8888/public/api/results_data.php`,
+        url: `/api/results_data.php`,
 
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
-    // console.log("resultsData PHP Call successful:", resp.data.data)
+    console.log("resultsData PHP Call successful:", resp.data.data);
     return {
         type: types.GET_RESULTS_DATA,
         payload: resp.data.data
@@ -20,7 +20,7 @@ export async function getSingleItem(itemId){
     const resp = await axios({
         method: "GET",
         params: { itemId },
-        url: `http://localhost:8888/public/api/park_details.php`,
+        url: `/api/park_details.php`,
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
     // console.log ("POST singleItem PHP Call success:", resp.data.data);
