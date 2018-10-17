@@ -73,10 +73,10 @@ class CampPage extends Component {
         }
         const name = this.props.item.parkinfo[0].park_name
         const {path, checkSave} = this.state;
-        // console.log('Camp Page: ', this.props)
+        console.log('Camp Page: ', this.props)
         return (
             <div>
-              <Header path={path}/>
+              <Header history={this.props.history} path={path}/>
                 <div className="container camp-page">
 
                     <div className="camp-title">
