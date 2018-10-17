@@ -3,7 +3,7 @@
 require_once("../../server/backendAPI/mysql_connect.php");
 ini_set("max_execution_time", 0);
 
-$selectQuery = "SELECT id, phone FROM `park_info`";
+$selectQuery = "SELECT id, phone, park_name FROM `park_info`";
 $result = mysqli_query($conn, $selectQuery);
 
 if ( mysqli_num_rows($result) > 0 ) {
@@ -16,7 +16,9 @@ for ($i=0; $i < count($parkArray); ++$i) {
     $ID = $parkArray[$i]['id'];
     $phoneString  = $parkArray[$i]['phone'];
     $phone = checkPhoneNumber($phoneString);
-    $updatequery = "UPDATE `park_info` SET `phone` = '$phone' WHERE `ID` = '$ID'";
+    $parkName  = $parkArray[$i]['park_name'];
+    $parkName =  changeToCamelcase($parkName);
+    $updatequery = "UPDATE `park_info` SET `phone` = '$phone' , `park_name` = '$parkName' WHERE `ID` = '$ID'";
     $descripresult = mysqli_query($conn, $updatequery);
     $updatequery = '';
 }; 
@@ -30,6 +32,22 @@ function checkPhoneNumber($phoneString){
     }else{
         return $phoneString;
     }
+}
+
+
+function changeToCamelcase($inputData){
+    
+    $name_array = preg_split('/\s{1,}/', $inputData);
+    $lower_name_array = array_map( 'strtolower', $name_array);
+    
+    $strParkName="";
+    for($i=0; $i < count($lower_name_array) ; $i++){
+        // Convert the first character is uppercase 
+        $ucLetter = ucfirst( $lower_name_array[$i] );
+        $strParkName = $strParkName." ".$ucLetter;  
+    }    
+    return $strParkName;
+
 }
 
 ?>
