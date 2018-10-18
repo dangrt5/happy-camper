@@ -62,11 +62,6 @@
   }
 }
 
-body, html {
-    background-position: center;
-    background-size: auto 100%;
-}
-
 
 .landing-page-container{
     width: 100vw;
@@ -91,6 +86,33 @@ body, html {
     font-family: 'Raleway', sans-serif;
 }
 
+.landing-page-background1, .landing-page-background2, .landing-page-background3 {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.landing-page-background3{
+    top:100%;
+    animation:load_up 1s forwards;
+    animation-delay: .5s;
+    background-image: url(../images/backgrounds/wallpaper-layer3.png);
+}
+.landing-page-background2{
+    top:100%;
+    animation:load_up 1s forwards;
+    background-image: url(../images/backgrounds/wallpaper-layer2.png);
+}
+.landing-page-background1{
+    background-image: url(../images/backgrounds/wallpaper-layer1.png);
+}
+
+@keyframes load_up{
+    from{top:100%}
+    to{top:0%;}
+}
 
 /* .submit-button {
     width: 80vw;
