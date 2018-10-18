@@ -62,21 +62,27 @@
   }
 }
 
+body, html {
+    background-position: center;
+    background-size: auto 100%;
+}
+
+
 .landing-page-container{
     width: 100vw;
     position: absolute;
-    top: 15%;
+    top: 23%;
     text-align: center;
 }
 
 
 .landing-page-input {
-    height: 10vh;
+    height: 2.5em;
     font-size: 1.5em;
     border-style: none;
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
-    margin-top: 20px;
+    margin-top: 2em;
     text-align: center;
     background-color: whitesmoke;
 }
