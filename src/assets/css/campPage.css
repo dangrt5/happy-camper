@@ -526,6 +526,7 @@
 
 .overview a{
     word-wrap: break-word;
+    display: block;
 }
 
 .overview > p:first-of-type > a {
