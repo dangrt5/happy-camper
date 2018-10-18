@@ -74,7 +74,7 @@ class CampPage extends Component {
     }
     render(){
         if(!this.props.item.parkinfo){
-            return <h1>LOADING...</h1>
+            return <div className="loading-spinner"></div>
         }
         console.log('Camp Page: ', this.props)
         const name = this.props.item.parkinfo[0].park_name
