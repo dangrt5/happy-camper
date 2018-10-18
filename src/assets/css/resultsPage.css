@@ -143,6 +143,12 @@
 
 .resultList img {
   object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resultList img:hover {
+  opacity: 0.7;
 }
 
 .resultList .info {
@@ -154,6 +160,12 @@
 
 .resultList .info .parkName {
   width: 98%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resultList .info .parkName:hover {
+  opacity: 0.7;
 }
 
 .resultList .info h3 {
