@@ -32,11 +32,7 @@ if($result){
                 if (empty($updateResult)) {
                     $output = 'database error - apitosql';
                 } else {
-                    if (mysqli_affected_rows($conn) > 0 ) {
-                        // $output = true;  
-                    } else {
-                        // $output = $query;
-                    };
+                    $output = $query;
                 };
                 $query = '';
                 $count++;
@@ -47,12 +43,10 @@ if($result){
     }
 }
 
-echo "done" ;
 
 function formatAddr($InputData){
     if( isset($InputData)){
          $string = str_replace(', USA', ' ' , $InputData);
-        //  echo  'parkAddr',$string;
     }else{
         $string ='';
     }  
