@@ -1,3 +1,57 @@
+@media (min-width: 1281px) {
+  /* Desktops */
+
+  div[role] > div:first-of-type {
+    height: 100vh;
+    width: 15vw;
+    overflow-y: unset;
+    position: fixed;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+
+  div[role] > div:first-of-type {
+    height: 100vh;
+    width: 20vw;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+
+  div[role] > div:first-of-type {
+    width: 27vw;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Low Res Tablets, Mobile Phones (Landscape) */
+
+  div[role] > div:first-of-type {
+    width: 40vw;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile Phones */
+  div[role] > div:first-of-type {
+    width: 50vw;
+  }
+
+  .sidebar div.pages h1 {
+    font-size: 1.25em;
+  }
+
+}
+
+
+
 .sidebar h1 {
   color: white;
 }
@@ -12,9 +66,9 @@
 
 .sidebar .pages {
   position: absolute;
-  left: 8%;
-  top: 50%;
   transform: translate(0,-50%);
+  left: 8%;
+  top: 35%;
 }
 
 .sidebar .pages h1 {
@@ -22,4 +76,8 @@
   font-weight: 300;
   line-height: 225%;
   text-align: left;
+}
+
+div[role] > div:first-of-type {
+  height: 100vh;
 }
