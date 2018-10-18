@@ -1,5 +1,127 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
+@media (min-width: 1281px) {
+  /* Desktops */
+
+  .results .header-input {
+    width: 75%;
+    display: block;
+    margin: auto;
+  }
+
+  .results .autocomplete-container {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .results .autocomplete-dropdown-container {
+    width: 76%;
+    margin: auto;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 20%;
+    margin: auto;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+
+  .results .header-input {
+    width: 85%;
+    display: block;
+    margin: auto;
+  }
+
+  .results .autocomplete-container {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .results .autocomplete-dropdown-container {
+    width: 85%;
+    margin: auto;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 25%;
+    margin: auto;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+
+  .results .header-input {
+    width: 85%;
+    display: block;
+    margin: auto;
+  }
+
+  .results .autocomplete-container {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .results .autocomplete-dropdown-container {
+    width: 88%;
+    margin: auto;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 30%;
+    margin: auto;
+  }
+
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Low Res Tablets, Mobile Phones (Landscape) */
+
+  .results .autocomplete-container {
+    width: 100vw;
+  }
+
+  .results .header-input {
+      width: 95%;
+  }
+
+  .results .autocomplete-dropdown-container {
+    width: 98%;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 40%;
+    margin: auto;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile Phones */
+
+  .results .autocomplete-container {
+    width: 100vw;
+  }
+
+  .results .header-input {
+      width: 95%;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 76%;
+    margin: auto;
+  }
+
+}
+
+
+
+
 body,html {
     width: 100vw;
     height: 100vh;
@@ -37,12 +159,10 @@ a {
 
 
 .autocomplete-container {
-  width: 100vw;
   height: 5vh;
 }
 
 .header-input {
-    width: 95%;
     height: 85%;
     font-size: 1em;
     border-radius: .5em;
