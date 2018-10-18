@@ -479,9 +479,12 @@
 }
 
 .overview a{
-    /* margin: 10px; */
     word-wrap: break-word;
     display: block;
+}
+
+.overview > p:first-of-type > a {
+  margin: 0;
 }
 
 .read-more{
