@@ -1,5 +1,4 @@
 import React from "react";
-import resultImg from "../assets/images/resultimg.png";
 import Header from "./header";
 import CampSiteCard from "./results_page_list_card";
 import {connect} from "react-redux";
