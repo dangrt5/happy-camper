@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import '../assets/css/about-us.css';
-import github from "../assets/images/github.png";
-import linkedin from "../assets/images/linkedin.png";
-import portfolio from "../assets/images/portfolio.png";
+import github from "../assets/images/about_us/github.png";
+import linkedin from "../assets/images/about_us/linkedin.png";
+import portfolio from "../assets/images/about_us/portfolio.png";
 import Header from "./header";
-import randy from "../assets/images/randy.png";
-import rachel from "../assets/images/rachel.jpeg";
-import david from "../assets/images/david.jpeg";
+import randy from "../assets/images/about_us/randy.jpg";
+import rachel from "../assets/images/about_us/rachel.jpg";
+import david from "../assets/images/about_us/david.jpg";
+import hank from "../assets/images/about_us/hank.jpg";
 
 export default class AboutUs extends Component {
   constructor(props) {
@@ -55,12 +56,12 @@ export default class AboutUs extends Component {
                         </div>
                     </div>
                     <div className="dev">
-                        <img className="memberPhoto" src="" alt=""/>
+                        <img className="memberPhoto" src={hank} alt=""/>
                         <h3>Hank Kim</h3>
                         <div>
-                          <img src={github} alt=""/>
-                          <img src={linkedin} alt=""/>
-                          <img src={portfolio} alt=""/>
+                          <a href="https://github.com/citation0097"><img src={github} alt=""/></a>
+                          <a href="https://www.linkedin.com/in/hank-k-8b0088135/"><img src={linkedin} alt=""/></a>
+                          <a href="http://kimhank.com"><img src={portfolio} alt=""/></a>
                         </div>
                     </div>
                 </div>

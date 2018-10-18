@@ -1,3 +1,116 @@
+@media (min-width: 1281px) {
+  /* Desktops */
+
+  .team {
+    display: inline-block;
+    width: 48%;
+  }
+
+  .team .memberPhoto {
+    width: 75%
+  }
+
+  .dev div {
+    width: 80%
+  }
+
+  .team img {
+    width: 3em;
+  }
+  .team h3 {
+    font-size: 1.5em;
+    margin: 1em;
+  }
+
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+  .team {
+    display: inline-block;
+    width: 48%;
+  }
+
+  .team .memberPhoto {
+    width: 75%
+  }
+
+  .dev div {
+    width: 80%
+  }
+
+  .team img {
+    width: 3em;
+  }
+  .team h3 {
+    font-size: 1.5em;
+    margin: 1em;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+  .team {
+    display: inline-block;
+    width: 48%;
+  }
+
+  .team .memberPhoto {
+    width: 75%
+  }
+
+  .dev div {
+    width: 80%
+  }
+
+  .team img {
+    width: 2em;
+  }
+  .team h3 {
+    font-size: 1em;
+    margin: 1em;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .team img {
+    width: 2em;
+  }
+  .team .memberPhoto {
+    width: 9em;
+  }
+  .dev div {
+    width: 70%;
+  }
+  .team h3 {
+    font-size: 1.1em;
+    margin: .7em;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile Phones */
+
+  .team img {
+    width: 2em;
+  }
+  .team .memberPhoto {
+    width: 9em;
+  }
+  .dev div {
+    width: 70%;
+  }
+  .team h3 {
+    font-size: 1.1em;
+    margin: .7em;
+  }
+}
+
+
 .header-title {
   font-size: 6em;
   font-weight: 500;
@@ -6,27 +119,22 @@
 
 .team {
   padding: 1%;
-  margin-top: 5%;
+  text-align: center;
 }
 
 .team:last-of-type {
-  margin-top: 10%;
+  margin-top: 4%;
 }
 
 .team img {
-  width: 2.5em;
   margin-left: 2.5%;
 }
 
 .team .memberPhoto {
   display: block;
-  width: 5em;
   margin: auto;
-}
-
-.header h1, .team h2, .team h3 {
-  font-size: 1em;
-  text-align: center;
+  border-radius: 5%;
+  box-shadow: 2px 4px 10px 0px rgb(100, 100, 100, .50);
 }
 
 .dev {
@@ -36,5 +144,6 @@
 
 .dev div {
   margin: auto;
-  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
 }
