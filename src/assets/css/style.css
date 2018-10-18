@@ -76,7 +76,6 @@
     margin: auto;
   }
 
-
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -150,6 +149,7 @@ a {
 
 .header h1 {
   color: white;
+  font-weight: 200;
 }
 
 .header img{
@@ -157,6 +157,10 @@ a {
     padding: 1em;
 }
 
+.header-title {
+  width: 85%;
+  text-align: center;
+}
 
 .autocomplete-container {
   height: 5vh;

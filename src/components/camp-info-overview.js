@@ -65,9 +65,9 @@ export default class Overview extends React.Component {
         return (
             <div className="overview">
                 <h3>Website</h3>
-                    <a href={park_website}>{park_website}</a>
+                    <a target="_blank" href={park_website}>{park_website}</a>
                 <h3>Phone</h3>
-                    <p>{phone}</p>
+                    <p><a href={`tel:${phone}`}>{phone}</a></p>
                 <h3>Description</h3>
                     <p>{this.editDescription(park_desc)}</p>
                     <p className="read-more" onClick={this.readMoreHandler}>{showFullDescription ? '' : 'Read More'}</p>
