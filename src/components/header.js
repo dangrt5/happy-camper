@@ -105,7 +105,7 @@ class Header extends Component {
               <div className="header">
                 <img onClick={() => this.onSetSidebarOpen(true)} className="menu-btn" src={menuBtn}/>
                 <div className="header-title">
-                  <h1 style={this.aboutUs}>Meet the Team</h1>
+                  <h1>Meet the Team</h1>
                 </div>
               </div>
           </Sidebar>
