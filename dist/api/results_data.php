@@ -9,7 +9,7 @@ $output =[
 
 $lat = $_GET['lat'];
 $lng = $_GET['lng'];
-// set serach radious 50 mile
+// set search radius 50 mile
 $radius = 50;
 
 $query = "SELECT id, park_name, addr, lat, lng, img_url, phone, direction_info, park_website, 
