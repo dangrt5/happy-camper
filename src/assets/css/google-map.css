@@ -1,0 +1,191 @@
+@media (min-width: 1281px) {
+  /* Desktops */
+
+  .google-modal {
+    left: 40%;
+    height: 25vh;
+    width: 25vw;
+  }
+
+  .google-modal img {
+    width: 45%;
+  }
+
+  .google-modal .info .parkName {
+    font-size: 1vw;
+    width: 100%;
+  }
+
+  .google-modal .info h3 {
+    font-size: .85vw;
+  }
+
+  .google-modal .info a {
+    font-size: .85vw;
+  }
+
+  .google-modal .info h3 a {
+    font-size: .85vw;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+
+  .google-modal {
+    left: 35%;
+    height: 30vh;
+    width: 35vw;
+  }
+
+  .google-modal img {
+    width: 45%;
+  }
+
+  .google-modal .info .parkName {
+    font-size: 1.45vw;
+  }
+
+  .google-modal .info h3 {
+    font-size: 1.25vw;
+  }
+
+  .google-modal .info a {
+    font-size: 1.25vw;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+
+  .google-modal {
+    left: 34%;
+    height: 20vh;
+    width: 40vw;
+  }
+
+  .google-modal img {
+    width: 45%;
+  }
+
+  .google-modal .info .parkName {
+    font-size: 2vw;
+  }
+
+  .google-modal .info h3 {
+    font-size: 1.5vw;
+  }
+
+  .google-modal .info a {
+    font-size: 1.5vw;
+  }
+
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Low Res Tablets, Mobile Phones (Landscape) */
+
+  .google-modal {
+    left: 23%;
+    height: 20vh;
+    width: 60vw;
+  }
+
+  .google-modal img {
+    width: 45%;
+  }
+
+  .google-modal .info .parkName {
+    font-size: 2vw;
+  }
+
+  .google-modal .info h3 {
+    font-size: 2vw;
+  }
+
+  .google-modal .info a {
+    font-size: 2vw;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile Phones */
+
+  .google-modal {
+    left: 17%;
+    height: 23.5vh;
+    width: 80vw;
+  }
+
+  .google-modal img {
+    width: 45%;
+  }
+
+  .google-modal .info .parkName {
+    font-size: 3.75vw;
+  }
+
+  .google-modal .info h3 {
+    font-size: 3.25vw;
+  }
+
+  .google-modal .info a {
+    font-size: 3.25vw;
+  }
+
+}
+
+
+
+
+
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.google-modal {
+  position: fixed;
+  bottom: 5%;
+  background-color: white;
+}
+
+.google-modal .camp-thumbnail {
+  display: inline-block;
+  width: 50%;
+}
+
+.google-modal img {
+  height: 95%;
+  position: absolute;
+  object-fit: cover;
+  left: 2.5%;
+  top: 2.5%;
+}
+
+
+
+.google-modal .card {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.google-modal .info{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.google-modal .info .parkName {
+  width: 100%;
+}
+
+.google-modal .info h3 {
+  font-weight: 200;
+  width: 98%;
+}
