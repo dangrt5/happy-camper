@@ -13,7 +13,7 @@ export default class Weather extends React.Component {
     }
     async getWeatherData(){
         const {lat, lng} = this.props
-        const resp = await axios.get(`http://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lng}&units=imperial&cnt=15&appid=${config.WEATHER_KEY}`)
+        const resp = await axios.get(`https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lng}&units=imperial&cnt=15&appid=${config.WEATHER_KEY}`)
         this.setState({
             weather: resp.data.list
         })
