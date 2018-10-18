@@ -9,7 +9,7 @@ export async function getResultsData(lat, lng){
 
         headers: {"Content-Type": "application/x-www-form-urlencoded"}
     });
-    console.log("resultsData PHP Call successful:", resp.data.data);
+    // console.log("resultsData PHP Call successful:", resp.data.data);
     return {
         type: types.GET_RESULTS_DATA,
         payload: resp.data.data

@@ -71,7 +71,11 @@ initGoogleMap = () => {
 
   sendToCampSite = (e) => {
     const {markerContent: {id}} = this.state
-    this.props.history.push(`/camp/${id}/overview`);
+    const resultsPath = this.props.history.location.pathname
+    this.props.history.push({
+      pathname: `/camp/${id}/overview`,
+      state: { resultsPath: resultsPath}
+    });
   }
 
 

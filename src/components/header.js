@@ -143,7 +143,7 @@ class Header extends Component {
         return (
           <div>
             <Sidebar
-              sidebar={<HamburgerMenu history={this.props.history} />}
+              sidebar={<HamburgerMenu history={this.props.history} resultsPath={this.props.resultsPath} />}
               open={this.state.sidebarOpen}
               onSetOpen={this.onSetSidebarOpen}
               styles={this.sidebar}
