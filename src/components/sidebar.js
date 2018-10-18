@@ -3,14 +3,20 @@ import {Link} from "react-router-dom";
 import "../assets/css/cheeseburger.css";
 
 class HamburgerMenu extends Component {
+  backToResults(){
+    this.props.history.goBack()
+  }
   render() {
     console.log('sidebar: ', this.props)
-    const {history} = this.props
+    const {history, resultsPath} = this.props
     return (
       <div className="sidebar">
             {window.navigator.onLine ?
               <div className="pages">
-                {history ? <h1 onClick={history.goBack}>back to results</h1>  : ''}
+                {history ?
+                  <h1 onClick={()=>{history.push(resultsPath)}}>back to results</h1>
+                  : ''
+                }
                 <Link to="/"><h1>home</h1></Link>
                 <Link to="/itinerary"><h1>itinerary</h1></Link>
                 <Link to="/about-us"><h1>about us</h1></Link>

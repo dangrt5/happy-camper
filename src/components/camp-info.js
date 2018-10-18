@@ -11,7 +11,6 @@ export default class CampInfo extends React.Component {
         event.target.classList.add("active")
     }
     render(){
-        // console.log('Camp Page Props: ', this.props)
         let {id} = this.props.match.params;
         let {lat, lng} = this.props.item.parkinfo[0]
         let directionsInfo = this.props.item.parkinfo[0].direction_info

@@ -18,11 +18,18 @@ class CampPage extends Component {
     this.state = {
       path: props.match.path,
       checkSave: false,
+      resultsPath: '/'
     }
   }
     componentDidMount(){
         this.props.getSingleItem(this.props.match.params.id);
         this.checkItinerary();
+        if(this.props.location.state){
+            this.setState({
+                resultsPath: this.props.location.state.resultsPath,
+            })
+        }
+
     }
     componentDidUpdate(){
     }
@@ -72,11 +79,10 @@ class CampPage extends Component {
             return <h1>LOADING...</h1>
         }
         const name = this.props.item.parkinfo[0].park_name
-        const {path, checkSave} = this.state;
-        console.log('Camp Page: ', this.props)
+        const {path, checkSave, resultsPath} = this.state;
         return (
             <div>
-              <Header history={this.props.history} path={path}/>
+              <Header resultsPath={resultsPath} history={this.props.history} path={path}/>
                 <div className="container camp-page">
 
                     <div className="camp-title">

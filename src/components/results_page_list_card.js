@@ -6,7 +6,11 @@ class CampSiteCard extends React.Component {
 
   sendToCampPage = (e) => {
     const {id} = this.props.details;
-    this.props.history.push(`/camp/${id}/overview`);
+    const resultsPath = this.props.history.location.pathname
+    this.props.history.push({
+      pathname: `/camp/${id}/overview`,
+      state: { resultsPath: resultsPath}
+    });
   }
 
   render() {
