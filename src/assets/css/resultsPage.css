@@ -4,25 +4,27 @@
 
   .resultList {
     display: block;
-    width: 49%;
+    width: 50%;
     margin: auto;
   }
 
   .resultList img {
-    width: 90%;
-    height: 35vh;
+    width: 65%;
+    height: 23vh;
+    display: block;
+    margin: auto;
   }
 
   .resultList .info .parkName {
-    font-size: 1.5vw;
+    font-size: 1.15vw;
   }
 
   .resultList .info h3 {
-    font-size: 1vw;
+    font-size: .95vw;
   }
 
   .resultList .info a {
-    font-size: 1vw;
+    font-size: .95vw;
   }
 
 }
@@ -140,7 +142,6 @@
 }
 
 .resultList img {
-  display: inline-block;
   object-fit: cover;
 }
 

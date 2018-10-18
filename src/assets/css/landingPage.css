@@ -14,7 +14,7 @@
   /* Laptops/Desktops */
 
   .logo{
-      width: 25vw;
+      width: 20vw;
   }
 
   .landing-page-input {
@@ -52,7 +52,7 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   /* Mobile Phones */
-  
+
   .logo{
       width: 75vw;
   }
@@ -78,6 +78,7 @@
     font-family: 'Raleway', sans-serif;
     margin-top: 20px;
     text-align: center;
+    background-color: whitesmoke;
 }
 
 .autocomplete-dropdown-container{
