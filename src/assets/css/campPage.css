@@ -46,7 +46,7 @@
   .amenity-container {
     width: 100vw;
   }
-  
+
   .weather {
     width: 65%;
     margin: auto;
@@ -55,7 +55,8 @@
   .weather-item {
     height: 7vh;
     padding: 1% 0;
-    
+  }
+
   .camp-page #map {
     width: 65%;
     height: 53vh;
@@ -126,7 +127,8 @@
   .weather-item {
     height: 8vh;
     padding: 1% 0;
-    
+  }
+
   .camp-page #map {
     width: 65%;
     height: 35vh;
@@ -192,6 +194,8 @@
   .weather-item {
     height: 8vh;
     padding: 1% 0;
+  }
+
 
   .camp-page #map {
     width: 65%;
@@ -265,7 +269,7 @@
   .weather-item > div,.weather-symbol img{
       padding: 1vw;
   }
-  
+
   .camp-page #map {
       height: 50vh;
   }
@@ -332,6 +336,8 @@
 
     .weather-item > div,.weather-symbol img{
         padding: 1vw;
+
+    }
 
     .camp-page #map {
         height: 41vh;
