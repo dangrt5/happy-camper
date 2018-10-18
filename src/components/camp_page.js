@@ -31,8 +31,6 @@ class CampPage extends Component {
         }
 
     }
-    componentDidUpdate(){
-    }
     checkItinerary(){
         let check = false;
         const thisId = this.props.match.params.id;
@@ -78,6 +76,7 @@ class CampPage extends Component {
         if(!this.props.item.parkinfo){
             return <h1>LOADING...</h1>
         }
+        console.log('Camp Page: ', this.props)
         const name = this.props.item.parkinfo[0].park_name
         const {path, checkSave, resultsPath} = this.state;
         return (
@@ -93,7 +92,7 @@ class CampPage extends Component {
                     <span onClick={this.closeModal} className="close">&times;</span>
                     <img className="modal-content" id="img"/>
                 </div>
-                <PhotoCarousel openModal={this.openModal} images={this.props.item.park_img}/>
+                <PhotoCarousel openModal={this.openModal} images={Object.values(this.props.item.park_img)}/>
 
                 <CampInfo {...this.props}/>
                 {window.navigator.onLine ?

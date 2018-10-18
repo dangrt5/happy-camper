@@ -7,7 +7,6 @@ class HamburgerMenu extends Component {
     this.props.history.goBack()
   }
   render() {
-    console.log('sidebar: ', this.props)
     const {history, resultsPath} = this.props
     return (
       <div className="sidebar">
