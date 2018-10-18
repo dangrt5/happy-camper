@@ -3,8 +3,6 @@ header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST');
 require_once("../../server/backendAPI/mysql_connect.php");
 
-// $_POST = json_decode(file_get_contents("php://input"), true);
-
 $output =[
     'success'=> false,
 ];
@@ -33,9 +31,5 @@ if($result){
     $output['error'][] = 'Error with query';
 }
 
-$newOutput = json_encode($output);
-echo $newOutput;
-// $utf8_chars_string = mb_convert_encoding($output, 'UTF-8', 'UTF-8');
-// print_r(json_encode($utf8_chars_string));
-
+print (json_encode($output));
 ?>

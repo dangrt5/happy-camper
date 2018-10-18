@@ -45,7 +45,6 @@ export default class Overview extends React.Component {
         return description + "..."
     }
     render(){
-        // console.log('Overview Props ', this.props)
         const {showFullDescription} = this.state
         let {direction_info, park_desc, park_website, phone} = this.props.item.parkinfo[0];
 

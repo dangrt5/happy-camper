@@ -16,14 +16,15 @@ foreach($parkList["data"] as $key ){
     $parkID = $key['id'];
     $parkName = $key["attributes"]["name"];
     $parkName = checkInputData($parkName);
-
+   
     $parkDesc = $key["attributes"]["description"];
     $parkDesc = checkInputData($parkDesc);
  
     $parkImgUrl = $key["attributes"]["photo-url"];
     $parkImgUrl = checkInputData($parkImgUrl);
 
-    $query = "UPDATE `park_info` SET `img_url` = '$parkImgUrl', `park_desc` = '$parkDesc' WHERE `park_id` = $parkID";
+    $query = "UPDATE `park_info` SET `img_url` = '$parkImgUrl', `park_desc` = '$parkDesc'  
+               WHERE `park_id` = $parkID";
 
     $result = mysqli_query($conn, $query);
 
@@ -57,4 +58,6 @@ function checkInputData($InputData){
     }  
     return $string;
 }
+
+
 ?>

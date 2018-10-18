@@ -64,7 +64,7 @@ class Header extends Component {
   }
 
   sidebar = {
-    sidebar: { height: "100vh", width: "50vw", "overflowY": "unset", position: "fixed" },
+    sidebar: {"overflowY": "unset", position: "fixed"},
     overlay: {backgroundColor: "rgba(0,0,0,0.85)"}
   }
 
@@ -143,7 +143,7 @@ class Header extends Component {
         return (
           <div>
             <Sidebar
-              sidebar={<HamburgerMenu history={this.props.history} />}
+              sidebar={<HamburgerMenu history={this.props.history} resultsPath={this.props.resultsPath} />}
               open={this.state.sidebarOpen}
               onSetOpen={this.onSetSidebarOpen}
               styles={this.sidebar}

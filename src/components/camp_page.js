@@ -18,13 +18,18 @@ class CampPage extends Component {
     this.state = {
       path: props.match.path,
       checkSave: false,
+      resultsPath: '/'
     }
   }
     componentDidMount(){
         this.props.getSingleItem(this.props.match.params.id);
         this.checkItinerary();
-    }
-    componentDidUpdate(){
+        if(this.props.location.state){
+            this.setState({
+                resultsPath: this.props.location.state.resultsPath,
+            })
+        }
+
     }
     checkItinerary(){
         let check = false;
@@ -71,12 +76,12 @@ class CampPage extends Component {
         if(!this.props.item.parkinfo){
             return <h1>LOADING...</h1>
         }
-        const name = this.props.item.parkinfo[0].park_name
-        const {path, checkSave} = this.state;
         console.log('Camp Page: ', this.props)
+        const name = this.props.item.parkinfo[0].park_name
+        const {path, checkSave, resultsPath} = this.state;
         return (
             <div>
-              <Header history={this.props.history} path={path}/>
+              <Header resultsPath={resultsPath} history={this.props.history} path={path}/>
                 <div className="container camp-page">
 
                     <div className="camp-title">
@@ -87,7 +92,7 @@ class CampPage extends Component {
                     <span onClick={this.closeModal} className="close">&times;</span>
                     <img className="modal-content" id="img"/>
                 </div>
-                <PhotoCarousel openModal={this.openModal} images={this.props.item.park_img}/>
+                <PhotoCarousel openModal={this.openModal} images={Object.values(this.props.item.park_img)}/>
 
                 <CampInfo {...this.props}/>
                 {window.navigator.onLine ?
