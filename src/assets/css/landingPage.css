@@ -97,12 +97,13 @@
 .landing-page-background3{
     top:100%;
     animation:load_up 1s forwards;
-    animation-delay: .5s;
+
     background-image: url(../images/backgrounds/wallpaper-layer3.png);
 }
 .landing-page-background2{
     top:100%;
     animation:load_up 1s forwards;
+    animation-delay: .5s;
     background-image: url(../images/backgrounds/wallpaper-layer2.png);
 }
 .landing-page-background1{

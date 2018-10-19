@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {getSingleItem, clearSingleItem, addItem, removeItem} from '../actions'
-
+import axios from 'axios';
+import config from './config/config'
 import Header from './header';
 import CampInfo from './camp-info'
 import PhotoCarousel from './camp_images_carousel'
@@ -9,7 +10,6 @@ import '../assets/css/campPage.css';
 
 import save from "../assets/images/icons/shortcuts/save.png";
 import isSaved from "../assets/images/icons/shortcuts/saved.png"
-import itinerary from './itinerary';
 
 class CampPage extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ class CampPage extends Component {
     }
     saveFunction=()=>{
         if(!this.state.checkSave){
-            this.props.addItem(this.props.item)
+            this.props.addItem(this.saveWeatherInformation())
             this.setState({
                 checkSave: true
             })
@@ -61,6 +61,13 @@ class CampPage extends Component {
                 checkSave: false
             })
         }
+    }
+    async saveWeatherInformation(){
+        const {lat, lng} = this.props.item.parkinfo[0]
+        const resp = await axios.get(`https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lng}&units=imperial&cnt=15&appid=${config.WEATHER_KEY}`)
+        let {item} = this.props;
+        item.weather = resp.data.list;
+        return item;
     }
     openModal(event){
         var modal = document.getElementById('myModal');
@@ -76,7 +83,6 @@ class CampPage extends Component {
         if(!this.props.item.parkinfo){
             return <div className="loading-spinner"></div>
         }
-        console.log('Camp Page: ', this.props)
         const name = this.props.item.parkinfo[0].park_name
         const {path, checkSave, resultsPath} = this.state;
         return (

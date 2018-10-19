@@ -8,11 +8,9 @@ export default class ItineraryCard extends React.Component {
   }
 
   render(){
-    // console.log("Itinerary Card: ", this.props)
     const {park_img_1} = this.props.data.park_img;
     const {park_name} = this.props.data.parkinfo[0]
     const {id} = this.props.data.parkinfo[0];
-    //TODO: turn park name into LINK to camp-page
     return (
         <div className="itinerary-card">
           <img onClick={this.sendToCampPage} src={park_img_1} alt=""/>
