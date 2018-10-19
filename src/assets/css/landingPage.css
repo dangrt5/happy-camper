@@ -14,7 +14,7 @@
   /* Laptops/Desktops */
 
   .logo{
-      width: 25vw;
+      width: 20vw;
   }
 
   .landing-page-input {
@@ -52,7 +52,7 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   /* Mobile Phones */
-  
+
   .logo{
       width: 75vw;
   }
@@ -62,28 +62,58 @@
   }
 }
 
+
 .landing-page-container{
     width: 100vw;
     position: absolute;
-    top: 15%;
+    top: 23%;
     text-align: center;
 }
 
 
 .landing-page-input {
-    height: 10vh;
+    height: 2.5em;
     font-size: 1.5em;
     border-style: none;
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
-    margin-top: 20px;
+    margin-top: 2em;
     text-align: center;
+    background-color: whitesmoke;
 }
 
 .autocomplete-dropdown-container{
     font-family: 'Raleway', sans-serif;
 }
 
+.landing-page-background1, .landing-page-background2, .landing-page-background3 {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.landing-page-background3{
+    top:100%;
+    animation:load_up 1s forwards;
+
+    background-image: url(../images/backgrounds/wallpaper-layer3.png);
+}
+.landing-page-background2{
+    top:100%;
+    animation:load_up 1s forwards;
+    animation-delay: .5s;
+    background-image: url(../images/backgrounds/wallpaper-layer2.png);
+}
+.landing-page-background1{
+    background-image: url(../images/backgrounds/wallpaper-layer1.png);
+}
+
+@keyframes load_up{
+    from{top:100%}
+    to{top:0%;}
+}
 
 /* .submit-button {
     width: 80vw;

@@ -9,8 +9,9 @@ $imgArray = array();
 $id = $_GET['itemId'];
 
 for( $type =1; $type <= 4 ; $type++){
-    // park detail
+    
     if($type == 1 ){
+        // select park detail info
         $query = "SELECT id, park_name,addr,phone, lat, lng, park_desc, direction_info, park_website
                 FROM park_info   WHERE ID = '$id'";
         $result = mysqli_query($conn, $query);
@@ -30,7 +31,7 @@ for( $type =1; $type <= 4 ; $type++){
         }
 
     }else if($type == 2){
-     // park amenity
+        // select park amenites
         $query = "SELECT park_amenity.AMENITY_TYPE, park_amenity.DETAIL    FROM `park_info`
                 JOIN `park_amenity` ON `park_amenity`.`PARK_ID` = `park_info`.`ID`
                 WHERE `park_info`.`ID` = $id";
@@ -46,7 +47,7 @@ for( $type =1; $type <= 4 ; $type++){
         }
 
     } else if($type == 3){
-    // park camp
+        // seelct park campsite info
         $query = "SELECT park_camp.CAMPSITE_TYPE, park_camp.CAMP_DETAIL
                 FROM `park_info`
                 JOIN `park_camp` ON `park_camp`.`PARK_ID` = `park_info`.`ID`
@@ -62,7 +63,7 @@ for( $type =1; $type <= 4 ; $type++){
             }
         }
     }else{
-    // park img
+        // select park img
         $query = "SELECT   PARK_IMG_URL  FROM  `park_image`
                     LEFT JOIN `park_info` ON `park_info`.`ID` = `park_image`.`park_ID`
                     WHERE `park_info`.`ID` = $id";
@@ -82,6 +83,5 @@ for( $type =1; $type <= 4 ; $type++){
 }
 
 print(json_encode($output));
-
 mysqli_close($conn);
 ?>

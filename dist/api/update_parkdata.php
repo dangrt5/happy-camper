@@ -27,25 +27,19 @@ foreach($parkList["data"] as $key ){
                WHERE `park_id` = $parkID";
 
     $result = mysqli_query($conn, $query);
-
-    print_r ($conn);
-
+    
     if (empty($result)) {
         $output['errors'][] = 'database error - apitosql';
-        
     } else {
-
-        print_r (mysqli_affected_rows($conn));
         if (mysqli_affected_rows($conn) > 0 ) {
             $output['success'] = true;  
-            print 'success'.$output;
         } else {
             $output['errors'][] = $query;
-            print 'error'.$output;
         };
     };
     $query = '';
 }; 
+
 
 function checkInputData($InputData){
     if( isset($InputData)){
