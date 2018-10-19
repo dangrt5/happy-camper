@@ -110,6 +110,13 @@
   }
 }
 
+
+.header-title {
+  font-size: 6em;
+  font-weight: 500;
+  padding-right: .5em;
+}
+
 .team {
   padding: 1%;
   text-align: center;

@@ -1,4 +1,5 @@
 import React from 'react';
+import dyrtGallery from './dummydata/dyrt_gallery'
 import Images from './camp_images_carousel_images'
 
 export default class PhotoCarousel extends React.Component {
