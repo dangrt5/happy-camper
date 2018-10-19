@@ -28,8 +28,9 @@ foreach($parkList["data"] as $key ){
     curl_close($photoHandler);
 
     $count = 0;
+    
     foreach($photoList["data"] as $item ){
-        // get 7 images for carousel 
+        // img limit <= 7 
         if($count == 7){
             break;
         }
@@ -44,5 +45,5 @@ foreach($parkList["data"] as $key ){
     }
    
 }   
-
+// print('done');
 ?>

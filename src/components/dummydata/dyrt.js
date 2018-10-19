@@ -6,6 +6,7 @@ $.getJSON('http://allorigins.me/get?url=https%3A//thedyrt.com/camping/oregon/ore
 function scrapeWebData(resp){
     const data = resp.contents;
     let parkData = data.match(/<script type="application\/ld\+json">([\w\W]+)<\/script>\n(.*)<script type="application\/ld\+json">/)[1]
+    // console.log(parkData)
 }
 https://thedyrt.imgix.net/photo/37886/photo/oregon-south-beach-state-park_caed16cd295e8abd41e5e75fd725015c.jpg?ixlib=rb-1.1.0
 var dyrtData = {

@@ -1,4 +1,5 @@
 <?php
+
 require_once("../../server/backendAPI/mysql_connect.php");
 ini_set("max_execution_time", 0);
 
@@ -17,18 +18,15 @@ for ($i=0; $i < count($parkArray); ++$i) {
     $phone = checkPhoneNumber($phoneString);
     $parkName  = $parkArray[$i]['park_name'];
     $parkName =  changeToCamelcase($parkName);
-    
     $updatequery = "UPDATE `park_info` SET `phone` = '$phone' , `park_name` = '$parkName' WHERE `ID` = '$ID'";
     $descripresult = mysqli_query($conn, $updatequery);
     $updatequery = '';
 }; 
 
-
 function checkPhoneNumber($phoneString){
     $phoneString= preg_replace('/[^\w\s]/', '', $phoneString); 
     $len = strlen($phoneString);
     if($len > 6 ){
-        //Change phone number format as ***-***-****
         $resultphone = substr($phoneString,0,3)."-".substr($phoneString,3,3)."-".substr($phoneString,6,4); 
         return $resultphone;
     }else{
@@ -49,6 +47,7 @@ function changeToCamelcase($inputData){
         $strParkName = $strParkName." ".$ucLetter;  
     }    
     return $strParkName;
+
 }
 
 ?>

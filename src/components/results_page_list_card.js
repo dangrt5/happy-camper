@@ -26,7 +26,7 @@ class CampSiteCard extends React.Component {
           <h1 onClick={this.sendToCampPage} className="parkName">{park_name}</h1>
           <h3>{addr || `lat: (${lat}), lng: (${lng})`}</h3>
           <h3>{phone ? <a href={`tel:${formattedPhone}`}>{formattedPhone}</a> : "No Phone # Available"}</h3>
-          <a target="_blank" href={park_website}>Website</a>
+          <a href={park_website}>Website</a>
         </div>
       </div>
     )

@@ -51,6 +51,18 @@ class Header extends Component {
     }
   }
 
+  aboutUs = {
+    fontSize: "2em",
+    fontWeight: "200",
+    marginLeft: "5%"
+  }
+
+  itinerary = {
+    fontSize: "2em",
+    fontWeight: "200",
+    marginLeft: "15%"
+  }
+
   sidebar = {
     sidebar: {"overflowY": "unset", position: "fixed"},
     overlay: {backgroundColor: "rgba(0,0,0,0.85)"}
@@ -104,9 +116,7 @@ class Header extends Component {
             >
               <div className="header">
                 <img onClick={() => this.onSetSidebarOpen(true)} className="menu-btn" src={menuBtn}/>
-                <div className="header-title">
-                  <h1>Meet the Team</h1>
-                </div>
+                <h1 style={this.aboutUs}>Meet the Team</h1>
               </div>
           </Sidebar>
           </div>
@@ -123,9 +133,7 @@ class Header extends Component {
             >
             <div className="header">
               <img onClick={() => this.onSetSidebarOpen(true)} className="menu-btn" src={menuBtn}/>
-              <div className="header-title">
-                <h1>Itinerary</h1>
-              </div>
+              <h1 style={this.itinerary}>Itinerary</h1>
             </div>
           </Sidebar>
           </div>
