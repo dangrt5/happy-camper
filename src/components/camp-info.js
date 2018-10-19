@@ -13,7 +13,6 @@ export default class CampInfo extends React.Component {
     render(){
         let {id} = this.props.match.params;
         let {lat, lng, addr, direction_info} = this.props.item.parkinfo[0]
-        // let directionsInfo = this.props.item.parkinfo[0].direction_info
         return (
             <div className="info-container">
                 <div className="info-menu">
