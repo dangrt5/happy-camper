@@ -13,7 +13,7 @@ export default class Weather extends React.Component {
             const itinerary = JSON.parse(localStorage.getItem('itinerary'))
             let item = itinerary.filter(item => item.parkinfo[0].lat === this.props.lat && item.parkinfo[0].lng === this.props.lng)
             this.setState({
-                weather: item.weather
+                weather: item[0].weather
             })
         } else {
             this.getWeatherData();
