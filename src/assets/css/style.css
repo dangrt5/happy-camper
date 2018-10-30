@@ -59,6 +59,11 @@
     width: 85%;
     display: block;
     margin: auto;
+    font-size: 1.75em;
+  }
+
+  .results .autocomplete-dropdown-container .suggestion-item {
+    font-size: 1.5em;
   }
 
   .results .autocomplete-container {
@@ -79,7 +84,7 @@
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  /* Low Res Tablets, Mobile Phones (Landscape) */
+  /* Low Res Tablets, Mobile Phones (Portrait) */
 
   .results .autocomplete-container {
     width: 100vw;
@@ -100,6 +105,24 @@
 
 }
 
+
+@media (min-width: 481px) and (max-width: 786px) and (orientation: landscape) {
+  /* Low Res Tablets, Mobile Phones (Landscape) */
+
+  .results .autocomplete-container {
+    height: 8vh;
+  }
+
+  .results .header-input {
+    height: 6vh;
+  }
+
+  .results .header {
+    height: 15%;
+  }
+
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   /* Mobile Phones */
 
@@ -108,15 +131,53 @@
   }
 
   .results .header-input {
-      width: 95%;
+    width: 95%;
   }
 
   .landing-page-container .autocomplete-dropdown-container {
     width: 76%;
     margin: auto;
   }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:portrait) {
+  /* Iphone 4 Portrait */
+
+  .results .header-input {
+    font-size: .9em;
+  }
+
+  .results .autocomplete-dropdown-container .suggestion-item {
+    font-size: .85em;
+  }
 
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+  /* Iphone 4 Landscape */
+
+  .results .header {
+    height: 15%;
+  }
+
+  .results .autocomplete-container {
+    height: 8vh;
+  }
+
+  .results .header-input {
+    font-size: .9em;
+  }
+
+  .results .autocomplete-dropdown-container .suggestion-item {
+    font-size: .85em;
+  }
+
+  .results .card:first-of-type {
+    padding-top: 4%;
+  }
+}
+
 
 body,html {
     width: 100vw;
