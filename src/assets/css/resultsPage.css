@@ -183,10 +183,30 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
   /* Iphone 4 Portrait */
 
+  .results div.resultList:first-of-type {
+    padding-top: 5%;
+  }
+
   .results .resultList img {
     height: 38vh;
   }
 
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+  /* Iphone X Landscape */
+
+  .results .resultList img {
+    height: 53vh;
+  }
+
+
+}
+
+@media only screen and (orientation: landscape) {
+  .results .resultList:first-of-type {
+    padding-top: 3%;
+  }
 }
 
 
