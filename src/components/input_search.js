@@ -34,7 +34,7 @@ export default class LocationSearchInput extends React.Component {
           <div className="autocomplete-container">
             <input
               {...getInputProps({
-                placeholder: 'Search Places ...',
+                placeholder: 'Enter CA address or city',
                 className: `location-search-input ${this.props.class}`,
               })}
             />

@@ -7,6 +7,7 @@
 
   .landing-page-input {
       width: 20vw;
+      font-size: 1.5em;
   }
 }
 
@@ -19,9 +20,8 @@
 
   .landing-page-input {
       width: 25vw;
+      font-size: 1.5em;
   }
-
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -32,9 +32,9 @@
   }
 
   .landing-page-input {
-      width: 30vw;
+      width: 40vw;
+      font-size: 1.5em;
   }
-
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -44,11 +44,9 @@
 
   .landing-page-input {
       width: 40vw;
-      /* height: 7vh; */
+      font-size: 1.5em;
   }
-
 }
-
 
 @media (min-width: 320px) and (max-width: 480px) {
   /* Mobile Phones */
@@ -59,9 +57,9 @@
 
   .landing-page-input {
       width: 75vw;
+      font-size: 1em;
   }
 }
-
 
 .landing-page-container{
     width: 100vw;
@@ -70,16 +68,18 @@
     text-align: center;
 }
 
-
 .landing-page-input {
     height: 2.5em;
-    font-size: 1.5em;
     border-style: none;
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
     margin-top: 2em;
     text-align: center;
     background-color: whitesmoke;
+}
+
+.landing-page-input:focus::-webkit-input-placeholder {
+    opacity: 0;
 }
 
 .autocomplete-dropdown-container{
@@ -113,6 +113,18 @@
 @keyframes load_up{
     from{top:100%}
     to{top:0%;}
+}
+
+@media screen and (orientation: landscape) {
+    .logo{
+        width: 25vw;
+    }
+
+    .landing-page-input {
+        font-size: .8em;
+        margin-top: .5em;
+        width: 37%;
+    }
 }
 
 /* .submit-button {
