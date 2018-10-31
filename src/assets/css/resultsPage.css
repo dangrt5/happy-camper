@@ -217,6 +217,7 @@
 }
 
 .resultList .camp-thumbnail {
+  padding-top: 1%;
   display: inline-block;
   width: 50%;
 }
