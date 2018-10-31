@@ -209,6 +209,13 @@
   }
 }
 
+.results > div > div:first-of-type {
+  z-index: 1;
+}
+
+.results > div > .container {
+  z-index: 0;
+}
 
 .resultList {
   position: relative;
