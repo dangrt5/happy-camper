@@ -16,6 +16,7 @@ class Itinerary extends Component {
     this.props.removeItem(id);
   }
     render(){
+      // console.log('Itinerary props', this.props.itinerary)
       const {path} = this.state;
       const list = this.props.itinerary;
       const itineraryList = list.map((item,index)=>{

@@ -3,27 +3,25 @@
 
   .resultList {
     display: block;
-    width: 50%;
+    width: 49%;
     margin: auto;
   }
 
   .resultList img {
-    width: 65%;
-    height: 23vh;
-    display: block;
-    margin: auto;
+    width: 90%;
+    height: 35vh;
   }
 
   .resultList .info .parkName {
-    font-size: 1.15vw;
+    font-size: 1.5vw;
   }
 
   .resultList .info h3 {
-    font-size: .95vw;
+    font-size: 1vw;
   }
 
   .resultList .info a {
-    font-size: .95vw;
+    font-size: 1vw;
   }
 
 }
@@ -230,13 +228,8 @@
 }
 
 .resultList img {
+  display: inline-block;
   object-fit: cover;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.resultList img:hover {
-  opacity: 0.7;
 }
 
 .resultList .info {
@@ -248,12 +241,6 @@
 
 .resultList .info .parkName {
   width: 98%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.resultList .info .parkName:hover {
-  opacity: 0.7;
 }
 
 .resultList .info h3 {

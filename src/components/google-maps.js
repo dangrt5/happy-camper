@@ -93,8 +93,8 @@ initGoogleMap = () => {
               <div className="info">
                 <h1 onClick={this.sendToCampSite} className="parkName">{park_name}</h1>
                 <h3>{addr || `lat: (${lat}), lng: (${lng})`}</h3>
-                <h3>{phone ? <a target="_blank" href={`tel:${phone}`}>{phone}</a> : "No Phone # Available"}</h3>
-                <a target="_blank" href={park_website}>Website</a>
+                <h3>{phone ? <a href={`tel:${phone}`}>{phone}</a> : "No Phone # Available"}</h3>
+                <a href={park_website}>Website</a>
               </div>
             </div>
           : <div></div>

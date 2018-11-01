@@ -68,15 +68,6 @@
     margin: auto;
   }
 
-  .modal img {
-    width: 30vw;
-    height: 60vh;
-  }
-
-  .photo-slide img {
-    width: 8vw;
-  }
-
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -149,16 +140,6 @@
     margin: auto;
   }
 
-  .modal img {
-    width: 45vw;
-    height: 65vh;
-  }
-
-  .photo-slide img {
-    width: 11vw;
-  }
-
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -227,15 +208,6 @@
     margin: auto;
   }
 
-  .modal img {
-    width: 50vw;
-    height: 65vh;
-  }
-
-  .photo-slide img {
-    width: 14vw;
-  }
-
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -299,15 +271,6 @@
 
   .camp-page #map {
       height: 50vh;
-  }
-
-  .modal img {
-    width: 70vw;
-    height: 55vh;
-  }
-
-  .photo-slide img {
-    width: 18vw;
   }
 
 }
@@ -375,15 +338,6 @@
         height: 41vh;
     }
 
-    .photo-slide img {
-      width: 35vw;
-    }
-
-    .modal img {
-      width: 85vw;
-      height: 55vh;
-    }
-
 }
 
 @media (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
@@ -413,7 +367,7 @@
 }
 
 .photo-slide img {
-    object-fit: cover;
+    width: auto;
     height: 100px;
     cursor: pointer;
     transition: 0.3s;
@@ -445,7 +399,7 @@
 }
 
 .modal img {
-    object-fit: cover;
+    width: 80%;
 }
 
 /* Add Animation */
@@ -528,12 +482,9 @@
 }
 
 .overview a{
+    /* margin: 10px; */
     word-wrap: break-word;
     display: block;
-}
-
-.overview > p:first-of-type > a {
-  margin: 0;
 }
 
 .read-more{
