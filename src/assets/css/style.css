@@ -328,3 +328,13 @@ a {
     transform: rotate(360deg);
   }
 }
+
+
+@media only screen and (orientation: landscape){
+  .header {
+    padding: 1% 0;
+  }
+  .header img {
+    height: 85%
+  }
+}

@@ -44,8 +44,8 @@
   .sidebar div.pages h1 {
     font-size: 1.25em;
   }
-
 }
+
 
 
 
@@ -77,4 +77,13 @@
 
 div[role] > div:first-of-type {
   height: 100vh;
+}
+
+
+
+
+@media only screen and (orientation: landscape){
+  .sidebar .pages {
+    top: 40%
+  }
 }

@@ -224,6 +224,7 @@
 }
 
 .resultList .camp-thumbnail {
+  padding-top: 1%;
   display: inline-block;
   width: 50%;
 }
@@ -264,4 +265,8 @@
   display: block;
   margin: auto;
   padding-top: 5%
+}
+
+.no-results{
+  text-align: center;
 }
