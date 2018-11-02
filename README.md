@@ -2,19 +2,23 @@
 > Mobile first application that allows users to search for campsites in California and save information for offline usage.
 
 Users can input a California location into the auto-complete search bar and get back a list of campground results.
-![](./demo/demo1.gif)
+
+<img src="./demo/demo1.gif" alt="demo 1" width="25%" height="25%">
 
 
 Clicking one of the results reveals information on the campsite such as photos, amenities, directions, and weather.
-![](./demo/demo2.gif)
+
+<img src="./demo/demo2.gif" alt="demo 2" width="25%" height="25%">
 
 
 Use the icon next to the campground name to save it into itinerary. Clicking trash can icons will remove the item from the itinerary.
-![](./demo/demo3.gif)
+
+<img src="./demo/demo3.gif" alt="demo 3" width="25%" height="25%">
 
 
 This site implements service workers to save data into the browser cache for offline accessibilities akin to a progressive web app.
-![](./demo/demo4.gif)
+
+<img src="./demo/demo4.gif" alt="demo 4" width="25%" height="25%">
 
 
 ## Installation
