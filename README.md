@@ -1,17 +1,20 @@
 # Happy Camper
 > Mobile first application that allows users to search for campsites in California and save information for offline usage.
 
-Search and overview
-itinerary
-Offline capability
+Users can input a California location into the auto-complete search bar and get back a list of campground results.
+![](./demo/demo1.gif =240x483)
 
-Happy Camper is a mobile-based website that searches for
 
-Disaster Tracker is a website that pulls disaster information from ReliefWeb and EarthquakeUSGS APIs. The right hand display uses the Google News and Twitter APIs, and clicking on the map markers filters the information to show related data.
-![](demo1.gif)
+Clicking one of the results reveals information on the campsite such as photos, amenities, directions, and weather.
+![](./demo/demo2.gif =240x483)
 
-Under the "Search By Location" toggle, the user is able to enter in a location and email to recieve information about nearby disasters.
-![](demo2.gif)
+
+Use the icon next to the campground name to save it into itinerary. Clicking trash can icons will remove the item from the itinerary.
+![](./demo/demo3.gif =240x483)
+
+
+This site implements service workers to save data into the browser cache for offline accessibilities akin to a progressive web app.
+![](./demo/demo4.gif =240x483)
 
 
 ## Installation
