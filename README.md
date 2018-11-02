@@ -1,20 +1,30 @@
 # Happy Camper
 > Mobile first application that allows users to search for campsites in California and save information for offline usage.
 
-Users can input a California location into the auto-complete search bar and get back a list of campground results.
-![](./demo/demo1.gif)
 
 
-Clicking one of the results reveals information on the campsite such as photos, amenities, directions, and weather.
-![](./demo/demo2.gif)
+## Usage
+1. Users can input a California location into the auto-complete search bar and get back a list of campground results.
+
+<img src="./demo/demo1.gif" alt="demo 1" width="25%" height="25%">
 
 
-Use the icon next to the campground name to save it into itinerary. Clicking trash can icons will remove the item from the itinerary.
-![](./demo/demo3.gif)
+
+2. Clicking one of the results reveals information on the campsite such as photos, amenities, directions, and weather.
+
+<img src="./demo/demo2.gif" alt="demo 2" width="25%" height="25%">
 
 
-This site implements service workers to save data into the browser cache for offline accessibilities akin to a progressive web app.
-![](./demo/demo4.gif)
+
+3. Use the icon next to the campground name to save it into itinerary. Clicking trash can icons will remove the item from the itinerary.
+
+<img src="./demo/demo3.gif" alt="demo 3" width="25%" height="25%">
+
+
+
+4. This site implements service workers to save data into the browser cache for offline accessibilities akin to a progressive web app.
+
+<img src="./demo/demo4.gif" alt="demo 4" width="25%" height="25%">
 
 
 ## Installation
@@ -34,9 +44,14 @@ This site implements service workers to save data into the browser cache for off
 ## Authors
 
 *Front End Developers*
-Randy Dang [https://github.com/dangrt5](https://github.com/dangrt5)
-Rachel Pan [https://github.com/rpan06/](https://github.com/rpan06/)
+
+- Randy Dang [https://github.com/dangrt5](https://github.com/dangrt5)
+
+- Rachel Pan [https://github.com/rpan06/](https://github.com/rpan06/)
+
 
 *Back End Developers*
-David Ahn [https://github.com/d-ahn10](https://github.com/d-ahn10)
-Hank Kim [https://github.com/citation0097](https://github.com/citation0097)
+
+- David Ahn [https://github.com/d-ahn10](https://github.com/d-ahn10)
+
+- Hank Kim [https://github.com/citation0097](https://github.com/citation0097)
