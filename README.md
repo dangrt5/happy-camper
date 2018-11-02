@@ -1,6 +1,9 @@
 # Happy Camper
 > Mobile first application that allows users to search for campsites in California and save information for offline usage.
 
+
+
+## Usage
 1. Users can input a California location into the auto-complete search bar and get back a list of campground results.
 
 <img src="./demo/demo1.gif" alt="demo 1" width="25%" height="25%">
@@ -19,7 +22,7 @@
 
 
 
-This site implements service workers to save data into the browser cache for offline accessibilities akin to a progressive web app.
+4. This site implements service workers to save data into the browser cache for offline accessibilities akin to a progressive web app.
 
 <img src="./demo/demo4.gif" alt="demo 4" width="25%" height="25%">
 
