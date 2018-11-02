@@ -1,5 +1,188 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
+@media (min-width: 1281px) {
+  /* Desktops */
+
+  .results .header-input {
+    width: 75%;
+    display: block;
+    margin: auto;
+  }
+
+  .results .autocomplete-container {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .results .autocomplete-dropdown-container {
+    width: 76%;
+    margin: auto;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 20%;
+    margin: auto;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Laptops/Desktops */
+
+  .results .header-input {
+    width: 85%;
+    display: block;
+    margin: auto;
+  }
+
+  .results .autocomplete-container {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .results .autocomplete-dropdown-container {
+    width: 85%;
+    margin: auto;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 25%;
+    margin: auto;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablets, Ipads, Portrait */
+
+  .results .header-input {
+    width: 85%;
+    display: block;
+    margin: auto;
+  }
+
+  .results .autocomplete-container {
+    width: 55vw;
+    margin: auto;
+  }
+
+  .results .autocomplete-dropdown-container {
+    width: 88%;
+    margin: auto;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 30%;
+    margin: auto;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Low Res Tablets, Mobile Phones (Portrait) */
+
+  .results .autocomplete-container {
+    width: 100vw;
+  }
+
+  .results .header-input {
+      width: 95%;
+  }
+
+  .results .autocomplete-dropdown-container {
+    width: 98%;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 40%;
+    margin: auto;
+  }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 786px) and (orientation: landscape) {
+  /* Low Res Tablets, Mobile Phones (Landscape) */
+
+  .results .autocomplete-container {
+    height: 8vh;
+  }
+
+  .results .header-input {
+    height: 6vh;
+  }
+
+  .results .header {
+    height: 15%;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile Phones */
+
+  .results .autocomplete-container {
+    width: 100vw;
+  }
+
+  .results .header-input {
+    width: 95%;
+  }
+
+  .landing-page-container .autocomplete-dropdown-container {
+    width: 76%;
+    margin: auto;
+  }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:portrait) {
+  /* Iphone 4 Portrait */
+
+  .results .header-input {
+    font-size: .9em;
+  }
+
+  .results .autocomplete-dropdown-container .suggestion-item {
+    font-size: .85em;
+  }
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+  /* Iphone 4 Landscape */
+
+  .results .header {
+    height: 15%;
+  }
+
+  .results .autocomplete-container {
+    height: 8vh;
+  }
+
+  .results .header-input {
+    font-size: .9em;
+  }
+
+  .results .autocomplete-dropdown-container .suggestion-item {
+    font-size: .85em;
+  }
+
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+  /* Iphone X Landscape */
+
+  .results div.header {
+    height: 15%;
+  }
+
+  .results .autocomplete-container {
+    height: 10vh;
+  }
+
+}
+
 body,html {
     width: 100vw;
     height: 100vh;
@@ -63,4 +246,90 @@ a {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.loading-spinner {
+  -webkit-animation-duration: 0.75s;
+  -moz-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: rotate-forever;
+  -moz-animation-name: rotate-forever;
+  animation-name: rotate-forever;
+  animation-timing-function: linear;
+  height: 30px;
+  width: 30px;
+  border: 8px solid #ffffff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+
+}
+
+
+/* From Matt Sisto on codepen.io */
+@-webkit-keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (orientation: landscape){
+  .header {
+    padding: 1% 0;
+  }
+  .header img {
+    height: 85%
+  }
 }

@@ -11,7 +11,15 @@ class ResultsPageMap extends Component {
     return (
       <div>
         <Header history={history} params={params} path={path}/>
-        <GoogleMap history={history} list={list} hideCard={false} params={params}/>
+        {typeof list === 'undefined' ?
+          <div className="container">
+            <div className="no-results">
+              <h1>No Results Found</h1>
+              <p>Please try again! Did you search within California?</p>
+            </div>
+          </div>
+
+          : <GoogleMap history={history} list={list} hideCard={false} params={params}/>}
       </div>
     )
   }

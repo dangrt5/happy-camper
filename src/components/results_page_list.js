@@ -22,10 +22,19 @@ class ResultsPageList extends React.Component {
     const {history, match: {path, params}} = this.props
     const {list} = this.props;
 
+    let campDetails;
 
-    const campDetails = list.map(item => {
-      return <CampSiteCard history={history} key={item.id} details={item}/>
-    });
+    if (typeof list === 'undefined'){
+      campDetails = (
+      <div className="no-results">
+        <h1>No Results Found</h1>
+        <p>Please try again! Did you search within California?</p>
+      </div>
+    )} else {
+        campDetails = list.map(item => {
+        return <CampSiteCard history={history} key={item.id} details={item}/>
+      });
+    }
 
     return (
       <div>

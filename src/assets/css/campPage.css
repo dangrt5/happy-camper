@@ -193,7 +193,7 @@
 
   .weather-item {
     height: 8vh;
-    padding: 1% 0;
+    padding: 3% 0;
   }
 
 
@@ -239,7 +239,6 @@
     margin: 10px 0;
   }
 
-
   .info-menu ul li {
     padding-right: 20%;
   }
@@ -263,7 +262,7 @@
 
   .weather-item {
       height: 10vh;
-      padding-bottom: 3vh;
+      padding-bottom: 5vh;
   }
 
   .weather-item > div,.weather-symbol img{
@@ -304,10 +303,6 @@
       margin: 10px 0;
   }
 
-  .info-menu ul {
-    padding: 0 10px;
-  }
-
   .info-menu ul li {
       padding-right: 15%;
   }
@@ -331,7 +326,7 @@
 
     .weather-item {
         height: 10vh;
-        padding-bottom: 3vh;
+        padding-bottom: 2vh;
     }
 
     .weather-item > div,.weather-symbol img{
@@ -345,14 +340,18 @@
 
 }
 
-
-
-.camp-page h3, .camp-page p{
-    /* margin: 10px; */
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+    padding-bottom: 4vh;
 }
+
+
 
 .header {
     justify-content: left;
+}
+
+.camp-title img{
+  padding: 2%
 }
 
 .slider-container {
@@ -440,6 +439,10 @@
 }
 
 
+.info-menu > ul {
+  display: flex;
+  justify-content: space-around;
+}
 
 .info-menu ul li {
     list-style-type: none;
