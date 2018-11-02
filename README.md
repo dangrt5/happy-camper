@@ -44,9 +44,14 @@
 ## Authors
 
 *Front End Developers*
-Randy Dang [https://github.com/dangrt5](https://github.com/dangrt5)
-Rachel Pan [https://github.com/rpan06/](https://github.com/rpan06/)
+
+- Randy Dang [https://github.com/dangrt5](https://github.com/dangrt5)
+
+- Rachel Pan [https://github.com/rpan06/](https://github.com/rpan06/)
+
 
 *Back End Developers*
-David Ahn [https://github.com/d-ahn10](https://github.com/d-ahn10)
-Hank Kim [https://github.com/citation0097](https://github.com/citation0097)
+
+- David Ahn [https://github.com/d-ahn10](https://github.com/d-ahn10)
+
+- Hank Kim [https://github.com/citation0097](https://github.com/citation0097)
