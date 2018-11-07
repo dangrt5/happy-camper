@@ -25,7 +25,7 @@ class Itinerary extends Component {
           <div>
             <Header path={path}/>
               <div className="container">
-                {itineraryList}
+              {list.length !== 0 ? itineraryList : <h1 class="empty-itinerary">There are no items in your itinerary.</h1>}
                 {window.navigator.onLine ?
                   '' :
                   <div className="offline-bar">
