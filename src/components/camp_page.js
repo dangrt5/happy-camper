@@ -18,7 +18,8 @@ class CampPage extends Component {
     this.state = {
       path: props.match.path,
       checkSave: false,
-      resultsPath: '/'
+      resultsPath: '/',
+      internet: true,
     }
   }
     componentDidMount(){
@@ -27,12 +28,18 @@ class CampPage extends Component {
         if(this.props.location.state){
             this.setState({
                 resultsPath: this.props.location.state.resultsPath,
+                internet: window.navigator.onLine
             })
         }
 
-    }
-    componentDidUpdate(){
-        console.log('test')
+        setInterval(()=>{
+            if(window.navigator.onLine !== this.state.internet){
+                this.setState({
+                    internet: window.navigator.onLine
+                })
+            }
+        }, 500);
+
     }
     checkItinerary(){
         let check = false;
@@ -87,7 +94,7 @@ class CampPage extends Component {
             return <div className="loading-spinner"></div>
         }
         const name = this.props.item.parkinfo[0].park_name
-        const {path, checkSave, resultsPath} = this.state;
+        const {path, checkSave, resultsPath, internet} = this.state;
         return (
             <div>
               <Header resultsPath={resultsPath} history={this.props.history} path={path}/>
@@ -104,7 +111,7 @@ class CampPage extends Component {
                 <PhotoCarousel openModal={this.openModal} images={Object.values(this.props.item.park_img)}/>
 
                 <CampInfo {...this.props}/>
-                {window.navigator.onLine ?
+                {internet ?
                   '' :
                   <div className="offline-bar">
                     <p>OFFLINE: Only saved campsites are accessible</p>
