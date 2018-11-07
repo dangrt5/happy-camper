@@ -1,7 +1,6 @@
 import React from "react";
 import resultImg from "../assets/images/resultimg.png";
-import {getResultsData} from "../actions";
-import {connect} from "react-redux";
+import {Link} from "react-router-dom";
 import "../assets/css/google-map.css";
 
 class GoogleMap extends React.Component {
@@ -80,7 +79,7 @@ initGoogleMap = () => {
 
 
   render() {
-    const { markerContent: {park_name, addr, phone, park_website, img_url, lat, lng}, showInfoCard} = this.state;
+    const { markerContent: {park_name, id, addr, phone, park_website, img_url, lat, lng}, showInfoCard} = this.state;
     return (
       <div>
         <div id="map"></div>
@@ -91,7 +90,7 @@ initGoogleMap = () => {
                 <img onClick={this.sendToCampSite} src={img_url || resultImg}/>
               </div>
               <div className="info">
-                <h1 onClick={this.sendToCampSite} className="parkName">{park_name}</h1>
+                <Link className="parkName" to={`/camp/${id}/overview`}>{park_name}</Link>
                 <h3>{addr || `lat: (${lat}), lng: (${lng})`}</h3>
                 <h3>{phone ? <a target="_blank" href={`tel:${phone}`}>{phone}</a> : "No Phone # Available"}</h3>
                 <a target="_blank" href={park_website}>Website</a>
