@@ -31,6 +31,9 @@ class CampPage extends Component {
         }
 
     }
+    componentDidUpdate(){
+        console.log('test')
+    }
     checkItinerary(){
         let check = false;
         const thisId = this.props.match.params.id;
@@ -116,7 +119,7 @@ class CampPage extends Component {
 function mapStateToProps(state){
     return {
         item: state.list.single,
-        itinerary: state.list.itinerary
+        itinerary: state.list.itinerary,
     }
 }
 
