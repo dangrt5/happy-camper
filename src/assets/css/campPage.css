@@ -50,6 +50,7 @@
   .weather {
     width: 65%;
     margin: auto;
+    padding-bottom: 1%;
   }
 
   .weather-item {
@@ -390,14 +391,21 @@
     padding-bottom: 4vh;
 }
 
-
+.camp-page .overview a:hover {
+  text-decoration: underline;
+}
 
 .header {
     justify-content: left;
 }
 
 .camp-title img{
-  padding: 2%
+  padding: 2%;
+  cursor: pointer;
+}
+
+.camp-title img:hover {
+  cursor: pointer;
 }
 
 .slider-container {
@@ -501,6 +509,10 @@
     position: relative;
   }
 
+  .info-menu ul li a:hover {
+    color: green;
+  }
+
 .info-menu ul li a.active {
       color: green;
   }
@@ -573,6 +585,10 @@
     justify-content: space-around;
     border-bottom: 2px solid rgba(56,29,29,0.15);
 }
+
+.weather-item:hover {
+  box-shadow: 0 0 2px 2px grey;
+} 
 
 .weather-item > div,.weather-symbol img{
     height: 100%;

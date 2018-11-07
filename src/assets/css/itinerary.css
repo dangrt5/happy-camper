@@ -121,6 +121,10 @@
     padding-right: 5%
 }
 
+.empty-itinerary {
+    text-align: center;
+}
+
 @media screen and (orientation: landscape) {
     .itinerary-card {
         height: 40%;

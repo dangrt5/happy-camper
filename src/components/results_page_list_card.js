@@ -23,7 +23,7 @@ class CampSiteCard extends React.Component {
           <img onClick={this.sendToCampPage} src={img_url || resultImg}/>
         </div>
         <div className="info">
-          <h1 onClick={this.sendToCampPage} className="parkName">{park_name}</h1>
+          <Link className="parkName" to={`/camp/${id}/overview`}>{park_name}</Link>
           <h3>{addr || `lat: (${lat}), lng: (${lng})`}</h3>
           <h3>{phone ? <a href={`tel:${formattedPhone}`}>{formattedPhone}</a> : "No Phone # Available"}</h3>
           <a target="_blank" href={park_website}>Website</a>

@@ -68,11 +68,19 @@
   top: 35%;
 }
 
+.sidebar .pages > * {
+  cursor: pointer;
+}
+
 .sidebar .pages h1 {
   font-size: 1.5em;
   font-weight: 300;
   line-height: 225%;
   text-align: left;
+}
+
+.sidebar .pages h1:hover {
+  text-decoration: underline;
 }
 
 div[role] > div:first-of-type {

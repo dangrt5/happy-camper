@@ -10,13 +10,26 @@ class Itinerary extends Component {
     super(props);
     this.state = {
       path: props.match.path,
+      internet: true,
     }
+  }
+  componentDidMount(){
+    this.setState({
+      internet: window.navigator.onLine
+    })
+    setInterval(()=>{
+      if(window.navigator.onLine !== this.state.internet){
+          this.setState({
+              internet: window.navigator.onLine
+          })
+      }
+    }, 500);
   }
   trashButton=(id)=>{
     this.props.removeItem(id);
   }
     render(){
-      const {path} = this.state;
+      const {path, internet} = this.state;
       const list = this.props.itinerary;
       const itineraryList = list.map((item,index)=>{
           return <ItineraryCard trashButton={this.trashButton} history={this.props.history} key={index} data={item}/>
@@ -25,8 +38,8 @@ class Itinerary extends Component {
           <div>
             <Header path={path}/>
               <div className="container">
-                {itineraryList}
-                {window.navigator.onLine ?
+              {list.length !== 0 ? itineraryList : <h1 className="empty-itinerary">There are no items in your itinerary.</h1>}
+                {internet ?
                   '' :
                   <div className="offline-bar">
                     <p>OFFLINE: Only saved campsites are accessible</p>
