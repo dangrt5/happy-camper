@@ -50,6 +50,7 @@
   .weather {
     width: 65%;
     margin: auto;
+    padding-bottom: 1%;
   }
 
   .weather-item {
@@ -397,7 +398,8 @@
 }
 
 .camp-title img{
-  padding: 2%
+  padding: 2%;
+  cursor: pointer;
 }
 
 .slider-container {

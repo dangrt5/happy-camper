@@ -218,6 +218,7 @@ a {
 .header img{
     height: 45%;
     padding: 1em;
+    cursor: pointer;
 }
 
 .header-title {

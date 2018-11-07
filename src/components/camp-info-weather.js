@@ -29,6 +29,11 @@ export default class Weather extends React.Component {
     }
     render(){
         const {weather} = this.state;
+
+        if(!weather.length){
+            return <div className="loading-spinner"></div>
+        }
+
         const weatherElements = weather.map(item=>{
             return <WeatherItem key={item.dt} item={item}/>
         })
