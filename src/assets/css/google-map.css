@@ -24,6 +24,10 @@
     font-size: .85vw;
   }
 
+  .google-modal .info a:hover {
+    text-decoration: underline;
+  }
+
   .google-modal .info h3 a {
     font-size: .85vw;
   }
@@ -139,9 +143,63 @@
 
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:portrait) {
+  /* Iphone 4 Portrait */
 
+  .google-modal {
+    left: 17%;
+    height: 34.5vh;
+    width: 80vw;
+  }
 
+ 
+}
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+  /* Iphone 4 Portrait */
+
+  .google-modal {
+    left: 17%;
+    height: 42vh;
+    width: 80vh
+  }
+
+  .google-modal .info .parkName {
+    font-size: 75%;
+  }
+
+  .google-modal .info h3 {
+    font-size: 75%;
+  }
+
+  .google-modal .info a {
+    font-size: 75%;
+  }
+
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+  /* Iphone X Landscape */
+
+  .google-modal {
+    left: 17%;
+    height: 42vh;
+    width: 80vh
+  }
+
+  .google-modal .info .parkName {
+    font-size: 75%;
+  }
+
+  .google-modal .info h3 {
+    font-size: 75%;
+  }
+
+  .google-modal .info a {
+    font-size: 75%;
+  }
+
+}
 
 #map {
   width: 100vw;
