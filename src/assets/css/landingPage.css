@@ -7,7 +7,7 @@
 
   .landing-page-input {
       width: 20vw;
-      font-size: 1.5em;
+      font-size: 1em;
   }
 }
 
@@ -20,7 +20,7 @@
 
   .landing-page-input {
       width: 25vw;
-      font-size: 1.5em;
+      font-size: 1em;
   }
 }
 
@@ -33,7 +33,7 @@
 
   .landing-page-input {
       width: 40vw;
-      font-size: 1.5em;
+      font-size: 1em;
   }
 }
 
@@ -44,7 +44,7 @@
 
   .landing-page-input {
       width: 40vw;
-      font-size: 1.5em;
+      font-size: 1em;
   }
 }
 
@@ -121,10 +121,24 @@
     }
 
     .landing-page-input {
-        font-size: .8em;
+        /* font-size: .8em; */
         margin-top: .5em;
         width: 37%;
     }
+}
+
+.itinerary-logo {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    z-index: 5;
+    background-image: url("../images/itinerary-icon.png");
+    background-size: contain;
+}
+
+.itinerary-logo:hover {
+    cursor: pointer;
+    background-image: url("../images/itinerary-icon-hover.png");
 }
 
 /* .submit-button {
